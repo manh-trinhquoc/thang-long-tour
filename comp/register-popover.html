@@ -1,0 +1,58 @@
+<div class="popover__background" onclick="hidePopover('register-popover')">
+    <div class="register" id=register onclick="showPopover('register-popover')">
+        <button type="button" class="btn_icon register__cancel-btn" onclick="hidePopover('register-popover')">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="row register__choose">
+            <div class="col btn_no-bg" onclick="showSignUpForm()" id="sign-up-btn">
+                <h2 class="title">Đăng ký</h2>
+            </div>
+            <div class="col btn_no-bg deactive" onclick="showSignInForm()" id="sign-in-btn">
+                <h2 class="title">Đăng nhập</h2>
+            </div>
+        </div>
+        <form id="sign-up" class="register__form">
+            <div class="register__input">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" placeholder="Họ tên*" class="input__text" id="sign-up-name" />
+                        <p class="input__remark"></p>
+                    </div>
+                    <div class="col_fill"></div>
+                    <div class="col">
+                        <input type="text" placeholder="Số điện thoại*" class="input__text" id="sign-up-phone" />
+                        <p class="input__remark"></p>
+                    </div>
+                </div>
+                <input type="email" placeholder="Email*" class="input__text" id="sign-up-email" />
+                <p class="input__remark"></p>
+                <div style="position: relative;">
+                    <button type="button" class="btn-show-pass" onclick="showPassWord(this)" id="btn-show-pass">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+                    <input type="password" placeholder="Mật khẩu*" class="input__text" id="sign-up-pass" />
+                    <p class="input__remark"></p>
+                </div>
+                <input type="password" placeholder="Nhắc lại mật khẩu*" class="input__text" id="sign-up-pass-2" />
+                <p class="input__remark"></p>
+                <p class="register__note">Các trường có dấu * bắt buộc phải điền</p>
+            </div>
+            <div class="btn__wrapper">
+                <button type="submit" class="btn_sm" onclick="submitSignUp(event)">Gửi đi</button>
+            </div>
+        </form>
+        <form action="#" id="sign-in" hidden="" class="register__form">
+            <h2 class="title">Chào mừng bạn quay trở lại</h2>
+            <div class="register__input">
+                <input type="text" placeholder="Email*" class="input__text" />
+                <p class="input__remark"></p>
+                <input type="text" placeholder="Mật khẩu*" class="input__text" />
+                <p class="input__remark"></p>
+                <p class="register__note">Các trường có dấu * bắt buộc phải điền</p>
+            </div>
+            <div class="btn__wrapper">
+                <button type="submit" class="btn_sm">Gửi đi</button>
+            </div>
+        </form>
+    </div>
+</div>

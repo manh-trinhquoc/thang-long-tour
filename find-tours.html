@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Thang Long Tour</title>
+    <!-- script for live reload - develop only -->
+    <!-- <script type="text/javascript" src="js/live.js"></script> -->
+    <script type="text/javascript" src="http://livejs.com/live.js"></script>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- custom -->
+    <link rel="stylesheet" href="css/find.css">
+</head>
+
+<body>
+    <div class="popover" id="register-popover" hidden="">
+        <div class="popover__background" onclick="hidePopover('register-popover')">
+            <div class="register" id=register onclick="showPopover('register-popover')">
+                <button type="button" class="btn_icon register__cancel-btn" onclick="hidePopover('register-popover')">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="row register__choose">
+                    <div class="col btn_no-bg" onclick="signUp()" id="sign-up-btn">
+                        <h2 class="title">Đăng ký</h2>
+                    </div>
+                    <div class="col btn_no-bg deactive" onclick="signIn()" id="sign-in-btn">
+                        <h2 class="title">Đăng nhập</h2>
+                    </div>
+                </div>
+                <form id="sign-up" class="register__form">
+                    <div class="register__input">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="Họ tên*" class="input__text" id="sign-up-name" />
+                                <p class="input__remark"></p>
+                            </div>
+                            <div class="col_fill"></div>
+                            <div class="col">
+                                <input type="text" placeholder="Số điện thoại*" class="input__text" id="sign-up-phone" />
+                                <p class="input__remark"></p>
+                            </div>
+                        </div>
+                        <input type="email" placeholder="Email*" class="input__text" id="sign-up-email" />
+                        <p class="input__remark"></p>
+                        <div style="position: relative;">
+                            <button type="button" class="btn-show-pass" onclick="showPassWord(this)" id="btn-show-pass">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                            <input type="password" placeholder="Mật khẩu*" class="input__text" id="sign-up-pass" />
+                            <p class="input__remark"></p>
+                        </div>
+                        <input type="password" placeholder="Nhắc lại mật khẩu*" class="input__text" id="sign-up-pass-2" />
+                        <p class="input__remark"></p>
+                        <p class="register__note">Các trường có dấu * bắt buộc phải điền</p>
+                    </div>
+                    <div class="btn__wrapper">
+                        <button type="submit" class="btn_sm" onclick="submitSignUp(event)">Gửi đi</button>
+                    </div>
+                </form>
+                <form action="#" id="sign-in" hidden="" class="register__form">
+                    <h2 class="title">Chào mừng bạn quay trở lại</h2>
+                    <div class="register__input">
+                        <input type="text" placeholder="Email*" class="input__text" />
+                        <p class="input__remark"></p>
+                        <input type="text" placeholder="Mật khẩu*" class="input__text" />
+                        <p class="input__remark"></p>
+                        <p class="register__note">Các trường có dấu * bắt buộc phải điền</p>
+                    </div>
+                    <div class="btn__wrapper">
+                        <button type="submit" class="btn_sm">Gửi đi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <a href="/thang-long-tour/index.html"><img src="img/logo.png" alt="logo image" class="logo" /></a>
+        <div class="topnav" id="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="toggleClassResponsive('topnav')">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="/thang-long-tour/index.html">Trang chủ</a>
+            <a href="/thang-long-tour/find-tours.html">Tìm tour</a>
+            <a href="/thang-long-tour/find-places.html">Địa danh du lịch</a>
+            <a href="/thang-long-tour/find-hotels.html">Khách sạn</a>
+            <a href="/thang-long-tour/find-blogs.html">Blog du lịch</a>
+            <a href="/thang-long-tour/about.html">Liên hệ</a>
+            <form class="topnav__search search" action="#">
+                <input type="text" placeholder="Search.." name="search" class="input__text search__input-text">
+                <button type="submit" class="search__button"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="a">
+                <button class="topnav__sign-in" onclick="togglePopover('register-popover')"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+    </header>
+    <ul class="breadcrumb">
+        <li><a href="/thang-long-tour/index.html">Trang chủ</a></li>
+        <li><a href="" class="active">Tìm tour</a></li>
+    </ul>
+    <div class="row_align_start filter">
+        <div class="col_3 filter__form-wrapper">
+            <form class="filter__form" action="find-tours.html" target="_self" method="GET" id="filter-form">
+                <h2>Bộ lọc tour</h2>
+                <div class="filter__item">
+                    <p>Điểm khởi hành</p>
+                    <select name="departure" id="departure" class="input__select">
+                        <option value="null">Điểm khởi hành</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                    </select>
+                </div>
+                <div class="filter__item">
+                    <p>Điểm đến</p>
+                    <select name="destination" id="destination" class="input__select">
+                        <option value="null">Điểm đến</option>
+                        <option value="Phú Quốc">Phú Quốc</option>
+                        <option value="Bình Định">Bình Định</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Sapa">Sapa</option>
+                        <option value="Hạ Long">Hạ Long</option>
+                        <option value="Ấn Độ">Ấn Độ</option>
+                        <option value="Tây Tạng">Tây Tạng</option>
+                        <option value="Hoa Kỳ">Hoa Kỳ</option>
+                        <option value="Úc">Úc</option>
+                        <option value="Hàn Quốc">Hàn Quốc</option>
+                        <option value="Pháp">Pháp</option>
+                        <option value="Nhật Bản">Nhật Bản</option>
+                    </select>
+                </div>
+                <div class="filter__item">
+                    <p>Ngày khởi hành</p>
+                    <input type="date" name="departure-date" id="departure-date" class="input__date">
+                </div>
+                <div class="filter__item">
+                    <p>Thời gian</p>
+                    <select name="duration" id="duration" class="input__select">
+                        <option value="null">Thời gian</option>
+                        <option value="1">Trong ngày</option>
+                        <option value="2">2 ngày</option>
+                        <option value="3">3 ngày</option>
+                        <option value="4">4 ngày</option>
+                        <option value="5">5 ngày</option>
+                        <option value="6">6 ngày</option>
+                        <option value="7">1 tuần</option>
+                        <option value="8">&gt; 1 tuần</option>
+                    </select>
+                </div>
+                <div class="filter__item">
+                    <p>Loại hình tour</p>
+                    <ul id="">
+                        <li class="checkbox__wrapper">
+                            <input class="input__checkbox" type="checkbox" name="trip-type" value="viet-nam" id="viet-nam">
+                            <label class="checkbox__label" for="viet-nam">Trong nước</label>
+                        </li>
+                        <li class="checkbox__wrapper">
+                            <input class="input__checkbox" type="checkbox" name="trip-type" value="international" id="international">
+                            <label class="checkbox__label" for="international">Quốc tế</label>
+                        </li>
+                        <li class="checkbox__wrapper">
+                            <input class="input__checkbox" type="checkbox" name="trip-type" value="tam-linh" id="tam-linh">
+                            <label class="checkbox__label" for="tam-linh">Tâm linh</label>
+                        </li>
+                        <li class="checkbox__wrapper">
+                            <input class="input__checkbox" type="checkbox" name="trip-type" value="bike" id="bike">
+                            <label class="checkbox__label" for="bike">Xe đạp</label>
+                        </li>
+                        <li class="checkbox__wrapper">
+                            <input class="input__checkbox" type="checkbox" name="trip-type" value="motor" id="motor">
+                            <label class="checkbox__label" for="motor">Xe máy</label>
+                        </li>
+                        <li class="checkbox__wrapper">
+                            <input class="input__checkbox" type="checkbox" name="trip-type" value="fishing" id="fishing">
+                            <label class="checkbox__label" for="fishing">Câu cá</label>
+                        </li>
+                        <li class="checkbox__wrapper">
+                            <input class="input__checkbox" type="checkbox" name="trip-type" value="picture" id="picture">
+                            <label class="checkbox__label" for="picture">Nhiếp ảnh</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn__wrapper filter__button">
+                    <button type="submit" class="btn_sm">Tìm kiếm</button>
+                </div>
+            </form>
+        </div>
+        <div class="col_9 filter__result">
+            <div class="filter__item_arrange">
+                <p>Sắp xếp</p>
+                <select name="sort" id="sort" form="filter-form" onchange="onClickSort()" class="input__select_background">
+                    <option value="null">Sắp xếp</option>
+                    <option value="price-incre">Giá tăng dần</option>
+                    <option value="price-decre">Giá giảm dần</option>
+                    <option value="departure-date-incre">Ngày khởi hành tăng dần</option>
+                    <option value="departure-date-decre">Ngày khởi hành giảm dần</option>
+                </select>
+            </div>
+            <div id="filter-result">
+                <!-- js inject data here -->
+            </div>
+            <nav class="pagination" id="pagination">
+                <a href="#" class="disable">&laquo;</a>
+                <a href="" class="active">1</a>
+                <a href="">2</a>
+                <a href="">&raquo;</a>
+            </nav>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="row footer__inner-wrapper">
+            <div class="footer__logo">
+                <a href="/thang-long-tour/index.html"><img src="img/logo.png" alt="logo image" class="logo" /></a> <br />
+                Ⓒ Copyright 2019 Manh
+            </div>
+            <ul class="footer__link">
+                <li><i class="fas fa-map-marker"></i> Địa chỉ: Hà Nội</li>
+                <li><a href="tel:+84-090"><i class="fas fa-phone"></i> Tel: +84 090</a></li>
+                <li><a href="mailto:abc@gmail.com"><i class="fas fa-envelope"></i> Mail: abc@gmail.com</a></li>
+                <li><a href="https://manh-trinhquoc.github.io"><i class="fas fa-globe-asia"></i> Website: manh-trinhquoc.github.io</a></li>
+                <li>Kết bạn với mình qua <br />
+                    <ul class="footer__social-list">
+                        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href=""><i class="fab fa-github-square"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer__fb">
+                <!-- facebook like page -->
+                <div id="fb-root"></div>
+                <div class="fb-page" data-href="https://www.facebook.com/Frontend-3-2448958151999364/" data-tabs="" data-width="310" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/Frontend-3-2448958151999364/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Frontend-3-2448958151999364/">Frontend 3</a></blockquote>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- custome -->
+    <script type="text/javascript" src="js/lib.js"></script>
+    <script type="text/javascript" src="js/find-tours.js"></script>
+    <!-- firebase auth -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+    <!-- custome -->
+    <script defer type="text/javascript" src="js/firebase.js"></script>
+    <!-- facebook chat -->
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v3.3'
+        });
+    };
+
+    (function(d, s, id) {
+        console.log("facebook function");
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="2448958151999364" theme_color="#4A381D" logged_in_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3" logged_out_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3">
+    </div>
+</body>
+
+</html>

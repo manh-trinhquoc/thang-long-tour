@@ -1,0 +1,162 @@
+/*component special in find page: find-tour, find-hotel, find-place, find-news*/
+@import 'common.scss';
+
+.filter {
+    @include container;
+    position: relative;
+
+    &__form {
+        background-color: $page-color-darker;
+        padding: $padding-sm;
+    }
+
+    &__form-wrapper {
+        @include media(padding-right, $padding-md);
+    }
+
+    &__item {
+        padding-top: $padding-md*2;
+
+        p {
+            padding-bottom: $padding-sm;
+        }
+
+
+    }
+
+    &__item_arrange {
+        @extend .filter__item;
+        padding-top: $padding-md;
+        @include media(padding-top, 0);
+        padding-bottom: $padding-md;
+        width: 100%;
+        @include media(width, 30%);
+        text-align: center;
+        @include media(text-align, left);
+
+        p {
+            padding-left: $padding-sm;
+        }
+    }
+
+    &__button {
+        padding-top: $padding-md*2;
+    }
+
+    &__result {
+        position: relative;
+        -ms-align-self: stretch;
+        align-self: stretch;
+    }
+
+}
+
+#filter-result {
+    padding-bottom: $search-height;
+}
+
+.checkbox {
+    &__wrapper {
+        @extend .input__text;
+        width: 100%;
+        @include d-flex;
+        -ms-align-items: center;
+        align-items: center;
+    }
+
+    &__label {
+        padding-left: $padding-md;
+    }
+}
+
+.pagination {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    @extend %d-flex_center;
+    @include media(padding-right, $padding-md);
+
+    a {
+        color: $text-no-color;
+        padding: $padding-sm;
+        display: inline-block;
+        min-width: $search-height;
+        min-height: $search-height;
+        text-align: center;
+        font-size: $text-size-md;
+        text-decoration: none;
+        transition: background-color .3s;
+    }
+
+    .active {
+        background-color: $page-color-lighter;
+        color: white;
+    }
+
+    .disable {
+        visibility: hidden;
+    }
+
+    a:hover:not(.active):not(.disable) {
+        background-color: #ddd;
+    }
+}
+
+.filter-hotel__result {
+    @extend .row_align_start;
+    padding-top: 0;
+    position: relative;
+    padding-bottom: $search-height;
+    -ms-align-self: stretch;
+    align-self: stretch;
+}
+
+.card-hotel {
+    @extend .card;
+    padding-top: 0;
+    margin-top: 0;
+
+    &__category {
+        @extend .card__country;
+    }
+
+    &__name {
+        @extend .card__header;
+    }
+
+    &__address {
+        color: $text-color-darker;
+        padding-top: $padding-sm;
+    }
+}
+
+.search-gg {
+    @include container;
+    padding-top: $padding-md;
+    padding-bottom: $padding-md;
+}
+
+.search-inpage {
+    @extend .search;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: $padding-sm;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $page-color-darker;
+
+    input {
+        color: $text-no-color;
+    }
+
+}
+
+.place-result {
+    position: relative;
+    padding-bottom: $search-height;
+}
+
+.blog-result {
+    @extend .place-result;
+}

@@ -1,0 +1,6 @@
+# cache file of sass
+**/.sass-cache
+
+# Dependency directories
+node_modules/
+

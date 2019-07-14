@@ -1,0 +1,102 @@
+/*Cac mau sac chinh*/
+$page-color: #806000;
+$page-color-darker: #403000;
+$page-color-lighter: #BF8F00;
+$page-color-darker_trans: rgba(64, 48, 0, 0.9);
+$page-color-darker_trans-more: rgba(64, 48, 0, 0.5);
+$text-color: #FFBF00;
+$text-color-filter: invert(80%) sepia(65%) saturate(2893%) hue-rotate(359deg) brightness(102%) contrast(105%);
+$text-color-darker: #E6AC00;
+$text-color-lighter: #FFBF00;
+$text-no-color: white;
+/*font size*/
+$text-size-xs: 8px;
+$text-size-sm: 13px;
+$text-size-md: 18px;
+$text-size-lg: 35px;
+$text-size-banner-sm: $text-size-sm+10;
+$text-size-banner-md: $text-size-md+15;
+$text-size-banner-lg: $text-size-lg+20;
+$icon-color: $text-color-lighter;
+$icon-size: 33px;
+/*tag size*/
+$search-height: 44px;
+$padding-xs: 5px;
+$padding-sm: 10px;
+$padding-md: 20px;
+$padding-lg: 70px;
+$btn-sm: 100px;
+$btn-md: 200px;
+$btn-padding: $padding-sm;
+$btn-bg-color: $text-color-darker;
+
+%responsive-max-width {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
+@mixin d-flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+%d-flex_responsive {
+    @include d-flex;
+    flex-wrap: nowrap;
+
+    @media (max-width: 576px) {
+        flex-flow: column;
+    }
+}
+
+%d-flex_center {
+    @include d-flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+@mixin d-flex-col-responsive {
+    @media (max-width: 576px) {
+        align-self: stretch;
+    }
+}
+
+%sm-screen-padding {
+    @media (max-width: 576px) {
+        padding: $padding-xs;
+    }
+}
+
+@mixin container {
+    padding-top: $padding-lg;
+    @extend %responsive-max-width;
+    padding-bottom: $padding-lg;
+    padding-left: $padding-xs;
+    padding-right: $padding-xs;
+}
+
+@mixin media($property, $value, $min-width: 576px) {
+    @media (min-width: $min-width) {
+        #{$property}: $value;
+    }
+}

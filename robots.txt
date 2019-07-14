@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /comp/
+Disallow: /css/
+Disallow: /html/
+Disallow: /img/
+Disallow: /js/
+Disallow: /json/
+Disallow: /scss/
+Disallow: /svg/
+Disallow: /personal.html
+Disallow: /to-do-list.html
+Disallow: /detail-blog.html
+Disallow: /detail-hotel.html
+Disallow: /detail-place.html
+Disallow: /detail-tour.html

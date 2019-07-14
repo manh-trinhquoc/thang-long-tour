@@ -1,0 +1,21 @@
+/*component that show only in single page*/
+@import 'common.scss';
+
+.contact {
+    @include container;
+
+    &__note {
+        padding-left: $padding-md;
+    }
+
+    &__info {
+        margin-bottom: $padding-md;
+        border-bottom: 1px solid $page-color-darker;
+    }
+}
+
+.personal {
+    @include container;
+    @extend .row_align_start;
+    border-bottom: 1px solid $page-color-darker;
+}

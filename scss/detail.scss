@@ -1,0 +1,89 @@
+/*component only show in detail page: tour-detail, place-detail, hotel-detail, news-detail*/
+@import 'find.scss';
+
+.detail {
+    padding: $padding-xs;
+    @include media(padding, 0);
+    padding-bottom: $padding-md;
+    @include media(padding-bottom, $padding-md);
+
+    &__wrapper {
+        @include container;
+
+        border-bottom: 1px solid $page-color-darker;
+    }
+}
+
+
+.tour-info {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-bottom: $padding-md;
+    background-color: $page-color-darker;
+    margin-right: auto;
+    @include media(margin-right, 0);
+
+    h2 {
+        padding-top: $padding-md;
+        padding-bottom: $padding-md;
+        color: $text-color;
+    }
+
+    p {
+
+        font-size: $text-size-md;
+    }
+}
+
+.map_small {
+    width: 90%;
+    height: 90%;
+    max-height: 90%;
+    margin-left: auto;
+    padding: 0;
+    margin-right: auto;
+    @include media(margin-right, 0);
+}
+
+.book-tour {
+    width: 100%;
+    background-color: $page-color-darker;
+    padding: $padding-xs;
+    position: relative;
+
+    @media (min-width: 576px) {
+        width: 50%;
+    }
+}
+
+.popover {
+    &_always-sticky {
+        @extend .popover;
+        position: sticky;
+        top: -$padding-lg;
+        bottom: -$padding-lg;
+
+    }
+
+    &-always-sticky__background {
+        @extend .popover__background;
+        height: 200vh;
+    }
+
+}
+
+.side-list {
+    @extend .map_small;
+    max-height: auto;
+}
+
+/*facebook modification*/
+._50f7 {
+    color: white;
+}
+
+.fb-comments,
+.fb-like {
+    width: 100%;
+}

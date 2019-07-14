@@ -1,0 +1,22 @@
+{
+  "name": "thang-long-tour",
+  "version": "1.0.0",
+  "description": "graduation project techmaster",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manh-trinhquoc/thang-long-tour.git"
+  },
+  "author": "manh trinh quoc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manh-trinhquoc/thang-long-tour/issues"
+  },
+  "homepage": "https://github.com/manh-trinhquoc/thang-long-tour#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
