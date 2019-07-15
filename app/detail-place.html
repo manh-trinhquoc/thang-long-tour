@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Thang Long Tour</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- custom -->
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<body>
+    <div class="popover" id="register-popover" hidden="">
+        <div class="popover__background" onclick="hidePopover('register-popover')">
+            <div class="register" id=register onclick="showPopover('register-popover')">
+                <button type="button" class="btn_icon register__cancel-btn" onclick="hidePopover('register-popover')">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="row register__choose">
+                    <div class="col btn_no-bg" onclick="signUp()" id="sign-up-btn">
+                        <h2 class="title">Đăng ký</h2>
+                    </div>
+                    <div class="col btn_no-bg deactive" onclick="signIn()" id="sign-in-btn">
+                        <h2 class="title">Đăng nhập</h2>
+                    </div>
+                </div>
+                <form action="#" id="sign-up" class="register__form">
+                    <div class="register__input">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="Họ tên*" class="input__text" />
+                                <p class="input__remark"></p>
+                            </div>
+                            <div class="col_fill"></div>
+                            <div class="col">
+                                <input type="text" placeholder="Số điện thoại*" class="input__text" />
+                                <p class="input__remark"></p>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="Email*" class="input__text" />
+                        <p class="input__remark"></p>
+                        <input type="text" placeholder="Mật khẩu*" class="input__text" />
+                        <p class="input__remark"></p>
+                        <input type="text" placeholder="Nhắc lại mật khẩu*" class="input__text" />
+                        <p class="input__remark"></p>
+                        <p class="register__note">Các trường có dấu * bắt buộc phải điền</p>
+                    </div>
+                    <div class="btn__wrapper">
+                        <button type="submit" class="btn_sm">Gửi đi</button>
+                    </div>
+                </form>
+                <form action="#" id="sign-in" hidden="" class="register__form">
+                    <h2 class="title">Chào mừng bạn quay trở lại</h2>
+                    <div class="register__input">
+                        <input type="text" placeholder="Email*" class="input__text" />
+                        <p class="input__remark"></p>
+                        <input type="text" placeholder="Mật khẩu*" class="input__text" />
+                        <p class="input__remark"></p>
+                        <p class="register__note">Các trường có dấu * bắt buộc phải điền</p>
+                    </div>
+                    <div class="btn__wrapper">
+                        <button type="submit" class="btn_sm">Gửi đi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <a href="index.html"><img src="img/logo.png" alt="logo image" class="logo" /></a>
+        <div class="topnav" id="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="toggleClassResponsive('topnav')">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="index.html">Trang chủ</a>
+            <a href="find-tours.html">Tìm tour</a>
+            <a href="find-places.html">Địa danh du lịch</a>
+            <a href="find-hotels.html">Khách sạn</a>
+            <a href="find-blogs.html">Blog du lịch</a>
+            <a href="about.html">Liên hệ</a>
+            <form class="topnav__search search" action="#">
+                <input type="text" placeholder="Search.." name="search" class="input__text search__input-text">
+                <button type="submit" class="search__button"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="a">
+                <button class="topnav__sign-in" onclick="togglePopover('register-popover')"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+    </header>
+    <ul class="breadcrumb">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="" class="active">Chi tiết địa danh</a></li>
+    </ul>
+    <div class="detail__wrapper">
+        <h2 class="title_left">CHÙA SANGHAMANGALA, VŨNG LIÊM, VĨNH LONG</h2>
+        <div class="row_no-wrap">
+            <main class="col_9">
+                <div class="detail">
+                    <div class="detail__carosel">
+                        <img class="img-responsive" src="img/quang-ninh-1.jpg" alt="phong cảnh Quảng Ninh" />
+                    </div>
+                    <h3>Giới thiệu địa danh</h3>
+                    <p>
+                        Vịnh Hạ Long có diện tích 1.553 km2 với 1969 đảo, trong đó khu di sản thế giới được UNESCO công nhận có diện tích trên 434 km2 với 788 đảo, có giá trị đặc biệt về văn hoá, thẩm mĩ, địa chất, sinh học và kinh tế. Trên vịnh có nhiều đảo đất, hang động, bãi tắm, cảnh quan đẹp thuận lợi cho phát triển nhiều điểm, nhiều hình thức du lịch hấp dẫn. Hệ thống hang động hấp dẫn nhất là Thiên Cung, hang Đầu Gỗ, động Sửng Sốt, hang Trinh Nữ, động Tam Cung...
+                    </p>
+                    <p>
+                        Nằm ở phía nam Vịnh Hạ Long, di sản - kỳ quan thiên nhiên thế giới, quần đảo Cát Bà là khu dự trữ sinh quyển thế giới đã được UNESCO công nhận, thuộc huyện Cát Hải, TP Hải Phòng. Đã nhiều năm nay, Cát Bà được coi là đảo du lịch nổi tiếng nhất của TP Hải Phòng. Mỗi năm, khi mùa hè đến, hòn đảo này lại thu hút một lượng lớn khách du lịch đến tham quan, nghỉ dưỡng...
+                    </p>
+                    <h3>Lịch trình chuyến đi:</h3>
+                    <p>
+                        <strong>- Ngày 1:</strong>
+                        Amongst these limestone formations are the fascinating floating fishing villages where life is lived on the opal green sea. In one of the bays you’ll visit Amazing Grotto, one of the largest and most beautiful caves in Halong Bay. Cruise to Titop Island for a panoramic view of the bay where you can also have a refreshing swim. Cruise to a quiet cove where the junk will anchor for the night. As the sun disappears behind the islands you will be served an authentic Vietnamese dinner.
+                        Accommodation: On board a traditional boat | Meals: Lunch, Dinner
+                    </p>
+                    <p>
+                        <strong> - Ngày 2:</strong>
+                        Amongst these limestone formations are the fascinating floating fishing villages where life is lived on the opal green sea. In one of the bays you’ll visit Amazing Grotto, one of the largest and most beautiful caves in Halong Bay. Cruise to Titop Island for a panoramic view of the bay where you can also have a refreshing swim. Cruise to a quiet cove where the junk will anchor for the night. As the sun disappears behind the islands you will be served an authentic Vietnamese dinner.
+                        Accommodation: On board a traditional boat | Meals: Lunch, Dinner
+                    </p>
+                    <p>
+                        <strong>- Ngày 3:</strong>
+                        Amongst these limestone formations are the fascinating floating fishing villages where life is lived on the opal green sea. In one of the bays you’ll visit Amazing Grotto, one of the largest and most beautiful caves in Halong Bay. Cruise to Titop Island for a panoramic view of the bay where you can also have a refreshing swim. Cruise to a quiet cove where the junk will anchor for the night. As the sun disappears behind the islands you will be served an authentic Vietnamese dinner.
+                        Accommodation: On board a traditional boat | Meals: Lunch, Dinner
+                    </p>
+                </div>
+                <!-- facebook like and share -->
+                <div class="fb-like" data-href="https://manh-trinhquoc.github.io" data-width="" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                <!-- facebook comment -->
+                <div class="fb-comments" data-href="https://manh-trinhquoc.github.io" data-width="100%" data-numposts="15"></div>
+            </main>
+            <aside class="col_3">
+                <!-- google map -->
+                <div class="map-marker map_small" id="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.865473837358!2d105.7924504147627!3d20.99802898601497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acba8ad197a5%3A0xa55e51322131e722!2zNDggVOG7kSBI4buvdSwgVHJ1bmcgVsSDbiwgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1560764940205!5m2!1sen!2s" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="side-list">
+                    <h2 class="title">Các tour đến địa danh này</h2>
+                    <div class="card">
+                        <a href="detail-tour.html">
+                            <div class="card__img">
+                                <img src="img/india-1.jpg" alt="demo image" />
+                                <div class="card__sale">-600.000</div>
+                            </div>
+                            <h4 class="card__country">Ấn độ</h4>
+                            <h3 class="card__header">Tour du lịch Bắc Ấn độ: Ladakh - “tiểu tây tạng trên đất ấn</h3>
+                            <h5 class="card__price">4.500.000</h5>
+                            <h5 class="card__duration">Thời gian: 04 ngày 03 đêm</h5>
+                            <h5 class="card__start-date">Khởi hành: 28/04; 29/04; 2/5</h5>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="detail-tour.html">
+                            <div class="card__img">
+                                <img src="img/india-1.jpg" alt="demo image" />
+                                <div class="card__sale">-600.000</div>
+                            </div>
+                            <h4 class="card__country">Ấn độ</h4>
+                            <h3 class="card__header">Tour du lịch Bắc Ấn độ: Ladakh - “tiểu tây tạng trên đất ấn</h3>
+                            <h5 class="card__price">4.500.000</h5>
+                            <h5 class="card__duration">Thời gian: 04 ngày 03 đêm</h5>
+                            <h5 class="card__start-date">Khởi hành: 28/04; 29/04; 2/5</h5>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="detail-tour.html">
+                            <div class="card__img">
+                                <img src="img/india-1.jpg" alt="demo image" />
+                                <div class="card__sale">-600.000</div>
+                            </div>
+                            <h4 class="card__country">Ấn độ</h4>
+                            <h3 class="card__header">Tour du lịch Bắc Ấn độ: Ladakh - “tiểu tây tạng trên đất ấn</h3>
+                            <h5 class="card__price">4.500.000</h5>
+                            <h5 class="card__duration">Thời gian: 04 ngày 03 đêm</h5>
+                            <h5 class="card__start-date">Khởi hành: 28/04; 29/04; 2/5</h5>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <section class="tour-list">
+        <h2 class="title">Các địa danh cùng khu vực</h2>
+        <div class="row">
+            <div class="col card">
+                <a href="detail-place.html">
+                    <div class="card__img">
+                        <img src="img/vung-liem-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Chùa Vũng Liêm, Vĩnh Long</h3>
+                </a>
+            </div>
+            <div class="col card">
+                <a href="detail-place.html">
+                    <div class="card__img">
+                        <img src="img/vung-liem-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Chùa Vũng Liêm, Vĩnh Long</h3>
+                </a>
+            </div>
+            <div class="col card">
+                <a href="detail-place.html">
+                    <div class="card__img">
+                        <img src="img/vung-liem-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Chùa Vũng Liêm, Vĩnh Long</h3>
+                </a>
+            </div>
+            <div class="col card">
+                <a href="detail-place.html">
+                    <div class="card__img">
+                        <img src="img/vung-liem-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Chùa Vũng Liêm, Vĩnh Long</h3>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col card">
+                <a href="detail-place.html">
+                    <div class="card__img">
+                        <img src="img/vung-liem-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Chùa Vũng Liêm, Vĩnh Long</h3>
+                </a>
+            </div>
+            <div class="col card">
+                <a href="detail-place.html">
+                    <div class="card__img">
+                        <img src="img/vung-liem-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Chùa Vũng Liêm, Vĩnh Long</h3>
+                </a>
+            </div>
+            <div class="col card"></div>
+            <div class="col card"></div>
+        </div>
+    </section>
+    <section class="tour-list">
+        <h2 class="title">Blog du lịch</h2>
+        <div class="row">
+            <div class="col card">
+                <a href="detail-blog.html">
+                    <div class="card__img">
+                        <img src="img/news-japan-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Du lịch Nhật Bản</h3>
+                    <p>
+                        Đến với “đất nước mặt trời mọc”, nơi truyền thống và hiện đại giao hòa, với đường chân trời được tạo thành từ những tòa cao ốc chọc trời chen chân cùng những đền đài cổ kính và đỉnh núi tuyết phủ quanh năm...
+                    </p>
+                </a>
+            </div>
+            <div class="col card">
+                <a href="detail-blog.html">
+                    <div class="card__img">
+                        <img src="img/news-japan-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Du lịch Nhật Bản</h3>
+                    <p>
+                        Đến với “đất nước mặt trời mọc”, nơi truyền thống và hiện đại giao hòa, với đường chân trời được tạo thành từ những tòa cao ốc chọc trời chen chân cùng những đền đài cổ kính và đỉnh núi tuyết phủ quanh năm...
+                    </p>
+                </a>
+            </div>
+            <div class="col card">
+                <a href="detail-blog.html">
+                    <div class="card__img">
+                        <img src="img/news-japan-1.jpg" alt="demo image" />
+                    </div>
+                    <h5 class="card__upload-date">01/07/2019</h5>
+                    <h3 class="card__header">Du lịch Nhật Bản</h3>
+                    <p>
+                        Đến với “đất nước mặt trời mọc”, nơi truyền thống và hiện đại giao hòa, với đường chân trời được tạo thành từ những tòa cao ốc chọc trời chen chân cùng những đền đài cổ kính và đỉnh núi tuyết phủ quanh năm...
+                    </p>
+                </a>
+            </div>
+            <div class="col card"></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="row footer__inner-wrapper">
+            <div class="footer__logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo image" class="logo" /></a> <br />
+                Ⓒ Copyright 2019 Manh
+            </div>
+            <ul class="footer__link">
+                <li><i class="fas fa-map-marker"></i> Địa chỉ: Hà Nội</li>
+                <li><a href="tel:+84-090"><i class="fas fa-phone"></i> Tel: +84 090</a></li>
+                <li><a href="mailto:abc@gmail.com"><i class="fas fa-envelope"></i> Mail: abc@gmail.com</a></li>
+                <li><a href="https://manh-trinhquoc.github.io"><i class="fas fa-globe-asia"></i> Website: manh-trinhquoc.github.io</a></li>
+                <li>Kết bạn với mình qua <br />
+                    <ul class="footer__social-list">
+                        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href=""><i class="fab fa-github-square"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer__fb">
+                <!-- facebook like page -->
+                <div id="fb-root"></div>
+                <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script> -->
+                <div class="fb-page" data-href="https://www.facebook.com/Frontend-3-2448958151999364/" data-tabs="" data-width="310" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/Frontend-3-2448958151999364/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Frontend-3-2448958151999364/">Frontend 3</a></blockquote>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- custome -->
+    <script type="text/javascript" src="js/script.js">
+    <script type="text/javascript" src="js/detail.js">
+    </script>
+    <!-- google street view -->
+    <!-- <div class="map-marker" id="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1560766712311!6m8!1m7!1sCAoSLEFGMVFpcE12MU0teTc3MWFMNFBHdGltbUtGQzRSZTJlLUQxelRSamhWOWgt!2m2!1d20.99798364323391!2d105.7947524055053!3f52.166519230599775!4f0!5f0.7820865974627469" width="600" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div> -->
+    <!-- facebook chat -->
+    <!-- <a href="https://m.me/2448958151999364">
+    Message us on facebook bằng thẻ a
+</a> -->
+    <!-- facebook chat set 1 -->
+    <!-- <div class="fb-customerchat" page_id="2448958151999364">
+        </div> -->
+    <!-- face book chat set 2 -->
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v3.3'
+        });
+    };
+
+    (function(d, s, id) {
+        console.log("facebook function");
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="2448958151999364" theme_color="#4A381D" logged_in_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3" logged_out_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3">
+    </div>
+</body>
+
+</html>

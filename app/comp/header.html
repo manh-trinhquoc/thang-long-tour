@@ -1,0 +1,26 @@
+<a href="index.html"><img src="img/logo.png" alt="logo image" class="logo" /></a>
+<div class="topnav" id="topnav">
+    <a href="javascript:void(0);" class="icon" onclick="toggleClassResponsive('topnav')">
+        <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html">Trang chủ</a>
+    <a href="find-tours.html">Tìm tour</a>
+    <a href="find-places.html">Địa danh du lịch</a>
+    <a href="find-hotels.html">Khách sạn</a>
+    <a href="find-blogs.html">Blog du lịch</a>
+    <a href="about.html">Liên hệ</a>
+    <form class="topnav__search search a" action="#">
+        <input type="text" placeholder="Search.." name="search" class="input__text search__input-text">
+        <button type="submit" class="search__button"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="a" id="topnav__register">
+        <button class="topnav__sign-in" onclick="togglePopover('register-popover')"><i class="fas fa-user"></i></button>
+    </div>
+    <div class="a dropdown-wrapper" id="register-dropdown-wrapper" style="display: none">
+        <button class="topnav__sign-in dropdown-control" onclick="toggleRegisterDropdown()"><i class="fas fa-user"></i></button>
+        <div class="dropdown" id="register-dropdown" hidden="">
+            <a href="personal.html">Trang cá nhân</a>
+            <button onclick="signOut()">Thoát</button>
+        </div>
+    </div>
+</div>

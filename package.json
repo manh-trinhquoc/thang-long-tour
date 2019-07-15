@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/manh-trinhquoc/thang-long-tour#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.12.0",
+    "sass": "^1.22.4"
   }
 }

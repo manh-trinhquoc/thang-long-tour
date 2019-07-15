@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Thang Long Tour</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- custom -->
+    <link rel="stylesheet" href="css/orphan-pages.css">
+</head>
+
+<body>
+    <div class="popover" id="register-popover" hidden="" include-html="comp/register-popover.html">
+    </div>
+    <header class="header" include-html="comp/header.html">
+    </header>
+    <ul class="breadcrumb">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="" class="active">Liên hệ</a></li>
+    </ul>
+    <div class="contact">
+        <div class="row_align_start contact__info">
+            <div class="col_4">
+                <h2 class="title_left-top">Thăng Long Tour</h2>
+                <ul>
+                    <li><i class="fas fa-map-marker"></i> Địa chỉ: Hà Nội</li>
+                    <li><a href="tel:+84-090"><i class="fas fa-phone"></i> Tel: +84 090</a></li>
+                    <li><a href="mailto:abc@gmail.com"><i class="fas fa-envelope"></i> Mail: abc@gmail.com</a></li>
+                    <li><a href="https://manh-trinhquoc.github.io"><i class="fas fa-globe-asia"></i> Website: manh-trinhquoc.github.io</a></li>
+                </ul>
+                <h2 class="title_left"><a href="tel:+84-090"><i class="fas fa-phone"></i> Hotline: +84 090</a></h2>
+                <p class="contact__note">(Miễn cước người gọi)</p>
+            </div>
+            <div class="col_8">
+                <p class="contact__title">Để biết thêm thông tin vui lòng liên hệ với chúng tôi qua e-mail hoặc điền thông tin và thắc mắc của bạn theo mẫu biểu sau. Cám ơn!</p>
+                <div class="row">
+                    <div class="col">
+                        <input class="input__text" type="text" placeholder="Họ tên*" />
+                        <p class="input__remark"></p>
+                    </div>
+                    <div class="col_fill"></div>
+                    <div class="col">
+                        <input class="input__text" type="text" placeholder="Số điện thoại*" />
+                        <p class="input__remark"></p>
+                    </div>
+                </div>
+                <input class="input__text" type="text" placeholder="Email*" />
+                <p class="input__remark"></p>
+                <input class="input__text" type="text" placeholder="Ghi chú" />
+                <p class="input__remark"></p>
+                <div class="btn__wrapper">
+                    <button type="submit" class="btn_sm">Gửi đi</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="title_left">Bản đồ</h2>
+        <!-- google map -->
+        <div class="map-marker" id="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.865473837358!2d105.7924504147627!3d20.99802898601497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acba8ad197a5%3A0xa55e51322131e722!2zNDggVOG7kSBI4buvdSwgVHJ1bmcgVsSDbiwgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1560764940205!5m2!1sen!2s" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <footer class="footer" include-html="comp/footer.html">
+    </footer>
+    <!-- custome -->
+    <script type="text/javascript" src="js/lib.js"></script>
+    <!-- firebase auth -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+    <!-- custome -->
+    <script defer type="text/javascript" src="js/firebase.js"></script>
+    <!-- face book chat-->
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v3.3'
+        });
+    };
+
+    (function(d, s, id) {
+        console.log("facebook function");
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="2448958151999364" theme_color="#4A381D" logged_in_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3" logged_out_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3">
+    </div>
+</body>
+
+</html>

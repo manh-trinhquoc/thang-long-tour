@@ -1,0 +1,184 @@
+{
+    "H001":
+    {
+        "name": "Avani Quy Nhon Resort",
+        "category": "Resort",
+        "stars": 5,
+        "address": "Ghenh Rang,, Bai Dai Beach, Ghềnh Ráng, Tp. Qui Nhơn, Bình Định, Vietnam",
+        "city": "Quy Nhơn",
+        "ward": "Ghềnh Ráng",
+        "street": null,
+        "location-related": ["Bình Định"],
+        "img": ["img/h001.webp"],
+        "link": "html/h001.html",
+        "map": "m-h001.html"
+    },
+    "H002":
+    {
+        "name": "Casa Marina Resort",
+        "category": "Resort",
+        "stars": 3,
+        "address": "Zone 1, Km 15, National Road 1D, Ghenh Rang, Quy Nhơn, Vietnam",
+        "city": "Quy Nhơn",
+        "ward": "Ghềnh Ráng",
+        "street": null,
+        "location-related": ["Bình Định"],
+        "img": ["img/h002.webp"],
+        "link": "html/h002.html",
+        "map": "m-h002.html"
+    },
+    "H003":
+    {
+        "name": "Quy Nhon Homestay Bnb",
+        "category": "Homestay",
+        "stars": 0,
+        "address": "66/2 Chang Lia Street, Ghenh Rang, Quy Nhon, Vietnam",
+        "city": "Quy Nhơn",
+        "ward": "Ghềnh Ráng",
+        "street": "Chang Lia",
+        "location-related": ["Bình Định"],
+        "img": ["img/h003.webp"],
+        "link": "html/h003.html",
+        "map": "m-h003.html"
+    },
+    "H004":
+    {
+        "name": "Khách sạn Thanh Thanh",
+        "category": "Hotel",
+        "stars": 3,
+        "address": "88 Tay Son, Quy Nhon, Vietnam",
+        "city": "Quy Nhơn",
+        "ward": null,
+        "street": "Tây Sơn",
+        "location-related": ["Bình Định"],
+        "img": ["img/h004.webp"],
+        "link": "html/h004.html",
+        "map": "m-h004.html"
+    },
+    "H005":
+    {
+        "name": "OYO 164 Mely Wow Resort",
+        "category": "Resort",
+        "stars": 3,
+        "address": "71/7 Tran Hung Dao, Duong Dong Phú Quốc, Phu Quoc, Vietnam",
+        "city": "Phú Quốc",
+        "ward": "Dương Đông",
+        "street": "Trần Hưng Đạo",
+        "location-related": ["Phú Quốc"],
+        "img": ["img/h005.webp"],
+        "link": "html/h005.html",
+        "map": "m-h005.html"
+    },
+    "H006":
+    {
+        "name": "Khách sạn Emis",
+        "category": "Hotel",
+        "stars": 3,
+        "address": "Suối Mây, Dương Tơ, tp. Phú Quốc, tỉnh Kiên Giang, Vietnam",
+        "city": "Phú Quốc",
+        "ward": "Dương Tơ",
+        "street": "Suối Mây",
+        "location-related": ["Phú Quốc"],
+        "img": ["img/h006.webp"],
+        "link": "html/h006.html",
+        "map": "m-h006.html"
+    },
+    "H007":
+    {
+        "name": "Icon 36 Hotel Sapa",
+        "category": "Hotel",
+        "stars": 3,
+        "address": "29 Thac Bac Str, Sapa, Vietnam",
+        "city": "Sapa",
+        "ward": null,
+        "street": "Thác Bạc",
+        "location-related": ["Sapa"],
+        "img": ["img/h007.webp"],
+        "link": "html/h007.html",
+        "map": "m-h007.html"
+    },
+    "H008":
+    {
+        "name": "Sapa Friendly Inn & Travel",
+        "category": "Homestay",
+        "stars": 0,
+        "address": "01B So Than Street, Sapa Town, Lao cai, Sa Pa, Vietnam",
+        "city": "Sapa",
+        "ward": null,
+        "street": "So Than",
+        "location-related": ["Sapa"],
+        "img": ["img/h008.webp"],
+        "link": "html/h008.html",
+        "map": "m-h008.html"
+    },
+    "H009":
+    {
+        "name": "Khách sạn Sapa Auberge Dang Trung",
+        "category": "Hotel",
+        "stars": 4,
+        "address": "31 Cau May, 00000, Sapa, Vietnam",
+        "city": "Sapa",
+        "ward": null,
+        "street": "Cầu Mây",
+        "location-related": ["Sapa"],
+        "img": ["img/h009.webp"],
+        "link": "html/h009.html",
+        "map": "m-h009.html"
+    },
+    "H010":
+    {
+        "name": "Linda Boutique Homestay",
+        "category": "Homestay",
+        "stars": null,
+        "address": "Tòa Green Bay, 17T2-1001, 202400, Hạ Long, Vietnam",
+        "city": "Hạ Long",
+        "ward": null,
+        "street": null,
+        "location-related": ["Hạ Long"],
+        "img": ["img/h010.webp"],
+        "link": "html/h010.html",
+        "map": "m-h010.html"
+    },
+    "H011":
+    {
+        "name": "Khách sạn Mường Thanh Hạ Long",
+        "category": "Hotel",
+        "stars": 4,
+        "address": "Số 7, Lô 20, Đông, Hùng Thắng, Tp. Hạ Long, Quảng Ninh, Vietnam",
+        "city": "Hạ Long",
+        "ward": "Hùng Thắng",
+        "street": null,
+        "location-related": ["Hạ Long"],
+        "img": ["img/h011.webp"],
+        "link": "html/h011.html",
+        "map": "m-h011.html"
+    },
+    "H012":
+    {
+        "name": "Khách sạn Phố Núi",
+        "category": "Homestay",
+        "stars": null,
+        "address": "Block 15-16, Le Duc Tho, Son Tra, Da Nang, Vietnam",
+        "city": "Đà Nẵng",
+        "ward": "Sơn Trà",
+        "street": "Lê Đức Thọ",
+        "location-related": ["Đà Nẵng"],
+        "img": ["img/h012.webp"],
+        "link": "html/h012.html",
+        "map": "m-h012.html"
+    },
+    "H013":
+    {
+        "name": "Khách sạn Công Đoàn Thanh Bình",
+        "category": "Hotel",
+        "stars": 3,
+        "address": "2 Ông Ích Khiêm, Q. Hải Châu, Đà Nẵng, Vietnam",
+        "city": "Đà Nẵng",
+        "ward": "Hải Châu",
+        "street": "Ông Ích Khiêm",
+        "location-related": ["Đà Nẵng"],
+        "img": ["img/h013.webp"],
+        "link": "html/h013.html",
+        "map": "m-h013.html"
+    }
+}

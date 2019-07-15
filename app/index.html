@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Thang Long Tour</title>
+    <!-- <meta name="referrer" content="origin"> -->
+    <!-- google search engine verifycation -->
+    <meta name="google-site-verification" content="yymV1012MLTyQWHgbmSzXvnZ1msQY_KXxxX7TaL4JpQ" />
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- SEO -->
+    <meta name="description" content="Trang tìm kiếm và đặt tour du lịch trực tuyến với thông tin khuyến mại du lịch. Hiển thị trên di động và thanh toán điện tử, đặt vé máy bay giá rẻ, thủ tục visa du lịch nước ngoài. Giữ chỗ khách sạn du lịch nhanh chóng thuận tiện. Tư vấn du lịch doanh nghiệp, tổ chức phù hợp và kinh tế">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- custom -->
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <div class="popover" id="register-popover" hidden="" include-html="comp/register-popover.html">
+    </div>
+    <div class="header__wrapper">
+        <header class="header" include-html="comp/header.html">
+        </header>
+    </div>
+    <section class="banner" include-html="comp/banner.html">
+    </section>
+    <section class="tour-list">
+        <h2 class="title">Du lịch nước ngoài</h2>
+        <div id="filter-international">
+            <!-- js inject data here -->
+        </div>
+        <div class="btn_sm"><a href="find-tours.html?trip-type=international">Tìm thêm</a></div>
+    </section>
+    <section class="tour-list">
+        <h2 class="title">Du lịch Việt Nam</h2>
+        <div id="filter-vietnam">
+            <!-- js inject data here -->
+        </div>
+        <div class="btn_sm"><a href="find-tours.html?trip-type=viet-nam">Tìm thêm</a></div>
+    </section>
+    <section class="tour-list">
+        <h2 class="title">Tour đã xem gần đây</h2>
+        <div id="filter-history">
+            <!-- js inject data here -->
+        </div>
+    </section>
+    <footer class="footer" include-html="comp/footer.html">
+    </footer>
+    <!-- custome -->
+    <script type="text/javascript" src="js/lib.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- firebase auth -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+    <!-- custome -->
+    <script defer type="text/javascript" src="js/firebase.js"></script>
+    <!-- face book chat-->
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v3.3'
+        });
+    };
+
+    (function(d, s, id) {
+        console.log("facebook function");
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="2448958151999364" theme_color="#4A381D" logged_in_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3" logged_out_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3">
+    </div>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+{
+    "B001":
+    {
+        "name": "DU LỊCH NHẬT BẢN",
+        "name-full": "DU LỊCH NHẬT BẢN",
+        "upload-date": "2018-08-01",
+        "location-related": ["Nhật Bản"],
+        "img": ["img/b001.jpg"],
+        "link": "b001.html"
+    },
+    "B002":
+    {
+        "name": "MUA SẮM Ở LHASA, TÂY TẠNG",
+        "name-full": "MUA SẮM Ở LHASA, TÂY TẠNG",
+        "upload-date": "2018-08-01",
+        "location-related": ["Tây Tạng"],
+        "img": ["img/b002.jpg"],
+        "link": "b002.html"
+    },
+    "B003":
+    {
+        "name": "NHỮNG ĐIỀU CHÚ Ý KHI ĐI DU LỊCH CHÂU ÂU",
+        "name-full": "NHỮNG ĐIỀU CHÚ Ý KHI ĐI DU LỊCH CHÂU ÂU",
+        "upload-date": "2018-08-01",
+        "location-related": ["Pháp"],
+        "img": ["img/b003.jpg"],
+        "link": "b003.html"
+    },
+    "B004":
+    {
+        "name": "Đến Huế uống bia “của Huế”",
+        "name-full": "Đến Huế uống bia “của Huế”",
+        "upload-date": "2018-09-01",
+        "location-related": ["Đà Nẵng"],
+        "img": ["img/b004.jpg"],
+        "link": "b004.html"
+    },
+    "B005":
+    {
+        "name": "Rong ruổi miền Tây bằng xe máy có núi, có sông, có hồ, có biển.",
+        "name-full": "Rong ruổi miền Tây bằng xe máy có núi, có sông, có hồ, có biển.",
+        "upload-date": "2019-09-01",
+        "location-related": ["Sapa"],
+        "img": ["img/b005.jpg"],
+        "link": "b005.html"
+    },
+    "B006":
+    {
+        "name": "Canon 80D thích hợp cho dân du lịch thich chụp hình và quay phim",
+        "name-full": "Canon 80D thích hợp cho dân du lịch thich chụp hình và quay phim",
+        "upload-date": "2019-09-01",
+        "location-related": [],
+        "img": ["img/b006.jpg"],
+        "link": "b006.html"
+    },
+    "B007":
+    {
+        "name": "Kinh nghiệm sử dụng thẻ an toàn khi đặt phòng online",
+        "name-full": "Kinh nghiệm sử dụng thẻ an toàn khi đặt phòng online",
+        "upload-date": "2019-09-21",
+        "location-related": [],
+        "img": ["img/b007.jpg"],
+        "link": "b007.html"
+    },
+    "B008":
+    {
+        "name": "8 lý do thuyết phục bạn nhất định phải đến Nhật Bản vào mùa xuân này",
+        "name-full": "8 lý do thuyết phục bạn nhất định phải đến Nhật Bản vào mùa xuân này",
+        "upload-date": "2019-09-21",
+        "location-related": ["Nhật Bản"],
+        "img": ["img/b008.jpg"],
+        "link": "b008.html"
+    },
+    "B009":
+    {
+        "name": "BÍ KÍP CHO HỘI CHỊ EM DU LỊCH TỰ TÚC KUALA LUMPUR VỚI LỊCH TRÌNH 4N4Đ",
+        "name-full": "BÍ KÍP CHO HỘI CHỊ EM DU LỊCH TỰ TÚC KUALA LUMPUR VỚI LỊCH TRÌNH 4N4Đ",
+        "upload-date": "2019-09-22",
+        "location-related": [],
+        "img": ["img/b009.jpg"],
+        "link": "b009.html"
+    },
+    "B010":
+    {
+        "name": "TRẢI NGHIỆM ĐI HÁI CHERRY TẠI US",
+        "name-full": "TRẢI NGHIỆM ĐI HÁI CHERRY TẠI US",
+        "upload-date": "2019-09-22",
+        "location-related": ["Hoa Kỳ"],
+        "img": ["img/b010.jpg"],
+        "link": "b010.html"
+    }
+}
