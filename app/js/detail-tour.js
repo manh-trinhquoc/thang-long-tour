@@ -32,8 +32,8 @@ xmlhttp.onreadystatechange = function() {
         showBookInfo(allToursData[id]);
         showDetail(allToursData[id]);
         // show tour tương tự
-        visibleTours = filterConditionArr(allToursData, ['viet-nam']);
-        displayTours(visibleTours, undefined, "filter-similar-tour", 4, 1);
+        visibleTours = getSimilar(allToursData, id);
+        displayTours(visibleTours, undefined, "filter-similar-tour", 4, 2);
         // show tour đã xem gần đây
         visibleTours = getRecentlyViewedTours(allToursData, currentUserObj.historyViewed);
         displayTours(visibleTours, undefined, "filter-history", 4, 2);
@@ -83,4 +83,24 @@ function showBookInfo(tourObj) {
 
     document.getElementById('book-info').innerHTML = elem;
     document.getElementById('tour-title').innerText = tourObj['name-full'];
+}
+
+function getSimilar(productData, currentID) {
+    // trả về tối đa 4 data nằm trước và 4 data nằm sau id hiện tại
+    let productDataArr = convertDataObjToArr(productData);
+    let resultArr = [];
+    for (let i in productDataArr) {
+        if (productDataArr[i].id == currentID) {
+            for (let count = 1; count <= 4; count++) {
+                resultArr.push(productDataArr[i + count]);
+                resultArr.push(productDataArr[i - count]);
+            }
+        }
+    }
+    // lọc ra các đối tượng undefine
+    let resultArr2 = [];
+    for (each of resultArr) {
+        if (each) resultArr2.push(each);
+    }
+    return convertDataArrToObj(resultArr2);
 }

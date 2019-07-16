@@ -13,7 +13,8 @@
         "departure-date": "2019-04-01",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
-        "link": "html/t001.html"
+        "link": "html/t001.html",
+        "link-map": "html/t001-map.html"
     },
     "T1907002":
     {
@@ -29,7 +30,8 @@
         "departure-date": "2019-04-01",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
-        "link": "html/t001.html"
+        "link": "html/t001.html",
+        "link-map": "html/t001-map.html"
     },
     "T1907011":
     {
@@ -45,7 +47,8 @@
         "departure-date": "2019-04-11",
         "trip-type": ["international", "picture"],
         "img": ["img/france-1.jpg"],
-        "link": "html/t011.html"
+        "link": "html/t011.html",
+        "link-map": "html/t011-map.html"
     },
     "T1907021":
     {
@@ -61,7 +64,8 @@
         "departure-date": "2019-04-21",
         "trip-type": ["international", "bike"],
         "img": ["img/japan-1.jpg"],
-        "link": "html/t021.html"
+        "link": "html/t021.html",
+        "link-map": "html/t021-map.html"
     },
     "T1907031":
     {
@@ -94,7 +98,8 @@
         "departure-date": "2019-04-05",
         "trip-type": ["international", "bike"],
         "img": ["img/america-1.jpg"],
-        "link": "html/t041.html"
+        "link": "html/t041.html",
+        "link-map": "html/t041-map.html"
     },
     "T1907051":
     {
@@ -110,7 +115,8 @@
         "departure-date": "2019-04-06",
         "trip-type": ["international", "picture", "fishing"],
         "img": ["img/tibet-1.jpg"],
-        "link": "html/t051.html"
+        "link": "html/t051.html",
+        "link-map": "html/t051-map.html"
     },
     "T1907061":
     {
@@ -126,7 +132,8 @@
         "departure-date": "2019-04-07",
         "trip-type": ["international", "tam-linh"],
         "img": ["img/india-1.jpg"],
-        "link": "html/t061.html"
+        "link": "html/t061.html",
+        "link-map": "html/t061-map.html"
     },
     "T1907101":
     {
@@ -142,7 +149,8 @@
         "departure-date": "2019-04-11",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1907102":
     {
@@ -158,7 +166,8 @@
         "departure-date": "2019-04-21",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1907103":
     {
@@ -174,7 +183,8 @@
         "departure-date": "2019-04-30",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1907201":
     {
@@ -382,7 +392,8 @@
         "departure-date": "2019-04-01",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
-        "link": "html/t001.html"
+        "link": "html/t001.html",
+        "link-map": "html/t001-map.html"
     },
     "T1908011":
     {
@@ -398,7 +409,8 @@
         "departure-date": "2019-04-11",
         "trip-type": ["international", "picture"],
         "img": ["img/france-1.jpg"],
-        "link": "html/t011.html"
+        "link": "html/t011.html",
+        "link-map": "html/t011-map.html"
     },
     "T1908021":
     {
@@ -414,7 +426,8 @@
         "departure-date": "2019-04-21",
         "trip-type": ["international", "bike"],
         "img": ["img/japan-1.jpg"],
-        "link": "html/t021.html"
+        "link": "html/t021.html",
+        "link-map": "html/t021-map.html"
     },
     "T1908031":
     {
@@ -447,7 +460,8 @@
         "departure-date": "2019-04-05",
         "trip-type": ["international", "bike"],
         "img": ["img/america-1.jpg"],
-        "link": "html/t041.html"
+        "link": "html/t041.html",
+        "link-map": "html/t041-map.html"
     },
     "T1908051":
     {
@@ -463,7 +477,8 @@
         "departure-date": "2019-04-06",
         "trip-type": ["international", "picture", "fishing"],
         "img": ["img/tibet-1.jpg"],
-        "link": "html/t051.html"
+        "link": "html/t051.html",
+        "link-map": "html/t051-map.html"
     },
     "T1908061":
     {
@@ -479,7 +494,8 @@
         "departure-date": "2019-04-07",
         "trip-type": ["international", "tam-linh"],
         "img": ["img/india-1.jpg"],
-        "link": "html/t061.html"
+        "link": "html/t061.html",
+        "link-map": "html/t061-map.html"
     },
     "T1908101":
     {
@@ -495,7 +511,8 @@
         "departure-date": "2019-04-11",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1908102":
     {
@@ -511,7 +528,8 @@
         "departure-date": "2019-04-21",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1908103":
     {
@@ -527,7 +545,8 @@
         "departure-date": "2019-04-30",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1908201":
     {
@@ -735,7 +754,8 @@
         "departure-date": "2019-04-01",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
-        "link": "html/t001.html"
+        "link": "html/t001.html",
+        "link-map": "html/t001-map.html"
     },
     "T1909011":
     {
@@ -751,7 +771,8 @@
         "departure-date": "2019-04-11",
         "trip-type": ["international", "picture"],
         "img": ["img/france-1.jpg"],
-        "link": "html/t011.html"
+        "link": "html/t011.html",
+        "link-map": "html/t011-map.html"
     },
     "T1909021":
     {
@@ -767,7 +788,8 @@
         "departure-date": "2019-04-21",
         "trip-type": ["international", "bike"],
         "img": ["img/japan-1.jpg"],
-        "link": "html/t021.html"
+        "link": "html/t021.html",
+        "link-map": "html/t021-map.html"
     },
     "T1909031":
     {
@@ -800,7 +822,8 @@
         "departure-date": "2019-04-05",
         "trip-type": ["international", "bike"],
         "img": ["img/america-1.jpg"],
-        "link": "html/t041.html"
+        "link": "html/t041.html",
+        "link-map": "html/t041-map.html"
     },
     "T1909051":
     {
@@ -816,7 +839,8 @@
         "departure-date": "2019-04-06",
         "trip-type": ["international", "picture", "fishing"],
         "img": ["img/tibet-1.jpg"],
-        "link": "html/t051.html"
+        "link": "html/t051.html",
+        "link-map": "html/t051-map.html"
     },
     "T1909061":
     {
@@ -832,7 +856,8 @@
         "departure-date": "2019-04-07",
         "trip-type": ["international", "tam-linh"],
         "img": ["img/india-1.jpg"],
-        "link": "html/t061.html"
+        "link": "html/t061.html",
+        "link-map": "html/t061-map.html"
     },
     "T1909101":
     {
@@ -848,7 +873,8 @@
         "departure-date": "2019-04-11",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1909102":
     {
@@ -864,7 +890,8 @@
         "departure-date": "2019-04-21",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1909103":
     {
@@ -880,7 +907,8 @@
         "departure-date": "2019-04-30",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
-        "link": "html/t101.html"
+        "link": "html/t101.html",
+        "link-map": "html/t101-map.html"
     },
     "T1909201":
     {
