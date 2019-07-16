@@ -6,7 +6,7 @@
         "upload-date": "2018-08-01",
         "location-related": ["Nhật Bản"],
         "img": ["img/b001.jpg"],
-        "link": "b001.html"
+        "link": "html/b001.html"
     },
     "B002":
     {
@@ -15,7 +15,7 @@
         "upload-date": "2018-08-01",
         "location-related": ["Tây Tạng"],
         "img": ["img/b002.jpg"],
-        "link": "b002.html"
+        "link": "html/b002.html"
     },
     "B003":
     {
@@ -24,7 +24,7 @@
         "upload-date": "2018-08-01",
         "location-related": ["Pháp"],
         "img": ["img/b003.jpg"],
-        "link": "b003.html"
+        "link": "html/b003.html"
     },
     "B004":
     {
@@ -33,7 +33,7 @@
         "upload-date": "2018-09-01",
         "location-related": ["Đà Nẵng"],
         "img": ["img/b004.jpg"],
-        "link": "b004.html"
+        "link": "html/b004.html"
     },
     "B005":
     {
@@ -42,7 +42,7 @@
         "upload-date": "2019-09-01",
         "location-related": ["Sapa"],
         "img": ["img/b005.jpg"],
-        "link": "b005.html"
+        "link": "html/b005.html"
     },
     "B006":
     {
@@ -51,7 +51,7 @@
         "upload-date": "2019-09-01",
         "location-related": [],
         "img": ["img/b006.jpg"],
-        "link": "b006.html"
+        "link": "html/b006.html"
     },
     "B007":
     {
@@ -60,7 +60,7 @@
         "upload-date": "2019-09-21",
         "location-related": [],
         "img": ["img/b007.jpg"],
-        "link": "b007.html"
+        "link": "html/b007.html"
     },
     "B008":
     {
@@ -69,7 +69,7 @@
         "upload-date": "2019-09-21",
         "location-related": ["Nhật Bản"],
         "img": ["img/b008.jpg"],
-        "link": "b008.html"
+        "link": "html/b008.html"
     },
     "B009":
     {
@@ -78,7 +78,7 @@
         "upload-date": "2019-09-22",
         "location-related": [],
         "img": ["img/b009.jpg"],
-        "link": "b009.html"
+        "link": "html/b009.html"
     },
     "B010":
     {
@@ -87,6 +87,6 @@
         "upload-date": "2019-09-22",
         "location-related": ["Hoa Kỳ"],
         "img": ["img/b010.jpg"],
-        "link": "b010.html"
+        "link": "html/b010.html"
     }
 }
