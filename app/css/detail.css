@@ -772,6 +772,8 @@ ul {
 
 .side-list {
   max-height: auto; }
+  .side-list .card, .side-list .card-hotel {
+    margin: 0; }
 
 /*facebook modification*/
 ._50f7 {

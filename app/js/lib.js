@@ -223,6 +223,32 @@ function isArrContain(smallArr, bigArr) {
     return true;
 }
 
+function getSimilar(productData, currentID) {
+    // trả về tối đa 4 data nằm trước và 4 data nằm sau id hiện tại
+    console.group('getSimilar tour tương tự');
+    let productDataArr = convertDataObjToArr(productData);
+    let resultArr = [];
+    for (let i in productDataArr) {
+        if (productDataArr[i].id == currentID) {
+            // console.log('i: ' + i);
+            // console.log(productDataArr[i]);
+            for (let count = 1; count <= 4; count++) {
+                // console.log('count: ' + count);
+                resultArr.push(productDataArr[+i + count]);
+                resultArr.push(productDataArr[+i - count]);
+            }
+        }
+    }
+    // lọc ra các đối tượng undefine
+    let resultArr2 = [];
+    for (each of resultArr) {
+        if (each) resultArr2.push(each);
+    }
+    // console.log(resultArr);
+    console.groupEnd();
+    return convertDataArrToObj(resultArr2);
+}
+
 function displayPlaces(productData, elemID, maxItemPerRow = 3, maxRow = 4) {
     // Khai báo hiển thị dữ liệu từ data
     let maxItemPerPage = maxRow * maxItemPerRow;

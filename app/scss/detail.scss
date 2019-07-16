@@ -77,6 +77,10 @@
 .side-list {
     @extend .map_small;
     max-height: auto;
+
+    .card {
+        margin: 0;
+    }
 }
 
 /*facebook modification*/

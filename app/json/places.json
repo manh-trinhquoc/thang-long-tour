@@ -7,7 +7,9 @@
         "location": "Ấn Độ",
         "location-related": ["Ấn Độ"],
         "img": ["img/p001.jpg"],
-        "link": "p001.html"
+        "link": "html/p001.html",
+        "link-map": "html/p001-map.html",
+        "link-view": "html/p001-view.html"
     },
     "P002":
     {
@@ -17,7 +19,9 @@
         "location": "Hoa Kỳ",
         "location-related": ["Hoa Kỳ"],
         "img": ["img/p002.jpg"],
-        "link": "p002.html"
+        "link": "html/p002.html",
+        "link-map": "html/p002-map.html",
+        "link-view": "html/p002-view.html"
     },
     "P003":
     {
@@ -27,7 +31,9 @@
         "location": "Albania",
         "location-related": ["Pháp"],
         "img": ["img/p003.jpg"],
-        "link": "p003.html"
+        "link": "html/p003.html",
+        "link-map": "html/p003-map.html",
+        "link-view": "html/p003-view.html"
     },
     "P004":
     {
@@ -37,7 +43,9 @@
         "location": "Pháp",
         "location-related": ["Pháp"],
         "img": ["img/p004.jpg"],
-        "link": "p004.html"
+        "link": "html/p004.html",
+        "link-map": "html/p004-map.html",
+        "link-view": "html/p004-view.html"
     },
     "P005":
     {
@@ -47,7 +55,9 @@
         "location": "Nhật Bản",
         "location-related": ["Nhật Bản"],
         "img": ["img/p005.jpg"],
-        "link": "p005.html"
+        "link": "html/p005.html",
+        "link-map": "html/p005-map.html",
+        "link-view": "html/p005-view.html"
     },
     "P006":
     {
@@ -57,7 +67,9 @@
         "location": "Úc",
         "location-related": ["Úc"],
         "img": ["img/p006.jpg"],
-        "link": "p006.html"
+        "link": "html/p006.html",
+        "link-map": "html/p006-map.html",
+        "link-view": "html/p006-view.html"
     },
     "P007":
     {
@@ -67,7 +79,9 @@
         "location": "Tây Tạng",
         "location-related": ["Tây Tạng"],
         "img": ["img/p007.jpg"],
-        "link": "p007.html"
+        "link": "html/p007.html",
+        "link-map": "html/p007-map.html",
+        "link-view": "html/p007-view.html"
     },
     "P008":
     {
@@ -77,7 +91,9 @@
         "location": "Hàn Quốc",
         "location-related": ["Hàn Quốc"],
         "img": ["img/p008.jpg"],
-        "link": "p008.html"
+        "link": "html/p008.html",
+        "link-map": "html/p008-map.html",
+        "link-view": "html/p008-view.html"
     },
     "P009":
     {
@@ -87,7 +103,9 @@
         "location": "Hạ Long",
         "location-related": ["Hạ Long"],
         "img": ["img/p009.jpg"],
-        "link": "p009.html"
+        "link": "html/p009.html",
+        "link-map": "html/p009-map.html",
+        "link-view": "html/p009-view.html"
     },
     "P010":
     {
@@ -97,7 +115,9 @@
         "location": "Hạ Long",
         "location-related": ["Hạ Long"],
         "img": ["img/p010.jpg"],
-        "link": "p010.html"
+        "link": "html/p010.html",
+        "link-map": "html/p010-map.html",
+        "link-view": "html/p010-view.html"
     },
     "P011":
     {
@@ -107,7 +127,9 @@
         "location": "Hạ Long",
         "location-related": ["Hạ Long"],
         "img": ["img/p011.jpg"],
-        "link": "p011.html"
+        "link": "html/p011.html",
+        "link-map": "html/p011-map.html",
+        "link-view": "html/p011-view.html"
     },
     "P012":
     {
@@ -117,7 +139,9 @@
         "location": "Hạ Long",
         "location-related": ["Hạ Long"],
         "img": ["img/p012.jpg"],
-        "link": "p012.html"
+        "link": "html/p012.html",
+        "link-map": "html/p012-map.html",
+        "link-view": "html/p012-view.html"
     },
     "P013":
     {
@@ -127,7 +151,9 @@
         "location": "Hạ Long",
         "location-related": ["Hạ Long"],
         "img": ["img/p013.jpg"],
-        "link": "p013.html"
+        "link": "html/p013.html",
+        "link-map": "html/p013-map.html",
+        "link-view": "html/p013-view.html"
     },
     "P014":
     {
@@ -137,7 +163,9 @@
         "location": "Đà Nẵng",
         "location-related": ["Đà Nẵng"],
         "img": ["img/p014.jpg"],
-        "link": "p014.html"
+        "link": "html/p014.html",
+        "link-map": "html/p014-map.html",
+        "link-view": "html/p014-view.html"
     },
     "P015":
     {
@@ -147,7 +175,9 @@
         "location": "Đà Nẵng",
         "location-related": ["Đà Nẵng"],
         "img": ["img/p015.jpg"],
-        "link": "p015.html"
+        "link": "html/p015.html",
+        "link-map": "html/p015-map.html",
+        "link-view": "html/p015-view.html"
     },
     "P016":
     {
@@ -157,6 +187,8 @@
         "location": "Đà Nẵng",
         "location-related": ["Đà Nẵng"],
         "img": ["img/p016.jpg"],
-        "link": "p016.html"
+        "link": "html/p016.html",
+        "link-map": "html/p016-map.html",
+        "link-view": "html/p016-view.html"
     }
 }

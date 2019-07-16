@@ -28,9 +28,9 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         let allToursData = JSON.parse(this.responseText);
         // show tour detail
-        let id = getTourID();
+        let id = document.location.href.split('=')[1];
         showBookInfo(allToursData[id]);
-        showDetail(allToursData[id]);
+        showDetailTour(allToursData[id]);
         // show tour tương tự
         visibleTours = getSimilar(allToursData, id);
         displayTours(visibleTours, undefined, "filter-similar-tour", 4, 2);
@@ -40,11 +40,8 @@ xmlhttp.onreadystatechange = function() {
     }
 };
 
-function getTourID() {
-    return document.location.href.split('=')[1];
-}
-
-function showDetail(tourObj) {
+function showDetailTour(tourObj) {
+    // hiển thị chi tiết bài viết về tour
     let elem = `<div class="detail__carosel">
                     <img class="img-responsive" src="${tourObj.img[0]}" alt="${tourObj['name-full']}" />
                 </div>`;
@@ -83,30 +80,4 @@ function showBookInfo(tourObj) {
 
     document.getElementById('book-info').innerHTML = elem;
     document.getElementById('tour-title').innerText = tourObj['name-full'];
-}
-
-function getSimilar(productData, currentID) {
-    // trả về tối đa 4 data nằm trước và 4 data nằm sau id hiện tại
-    console.group('getSimilar tour tương tự');
-    let productDataArr = convertDataObjToArr(productData);
-    let resultArr = [];
-    for (let i in productDataArr) {
-        if (productDataArr[i].id == currentID) {
-            // console.log('i: ' + i);
-            // console.log(productDataArr[i]);
-            for (let count = 1; count <= 4; count++) {
-                // console.log('count: ' + count);
-                resultArr.push(productDataArr[+i + count]);
-                resultArr.push(productDataArr[+i - count]);
-            }
-        }
-    }
-    // lọc ra các đối tượng undefine
-    let resultArr2 = [];
-    for (each of resultArr) {
-        if (each) resultArr2.push(each);
-    }
-    // console.log(resultArr);
-    console.groupEnd();
-    return convertDataArrToObj(resultArr2);
 }
