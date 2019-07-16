@@ -10,7 +10,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hàn Quốc",
-        "departure-date": "2019-04-01",
+        "departure-date": "2019-07-01",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
         "link": "html/t001.html",
@@ -27,7 +27,7 @@
         "night": 3,
         "departure": "Hồ Chí Minh",
         "destination": "Hàn Quốc",
-        "departure-date": "2019-04-01",
+        "departure-date": "2019-07-01",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
         "link": "html/t001.html",
@@ -44,7 +44,7 @@
         "night": 9,
         "departure": "Hà Nội",
         "destination": "Pháp",
-        "departure-date": "2019-04-11",
+        "departure-date": "2019-07-11",
         "trip-type": ["international", "picture"],
         "img": ["img/france-1.jpg"],
         "link": "html/t011.html",
@@ -61,7 +61,7 @@
         "night": 4,
         "departure": "Hà Nội",
         "destination": "Nhật Bản",
-        "departure-date": "2019-04-21",
+        "departure-date": "2019-07-21",
         "trip-type": ["international", "bike"],
         "img": ["img/japan-1.jpg"],
         "link": "html/t021.html",
@@ -78,7 +78,7 @@
         "night": 5,
         "departure": "Hà Nội",
         "destination": "Úc",
-        "departure-date": "2019-04-30",
+        "departure-date": "2019-07-30",
         "trip-type": ["international", "motor"],
         "img": ["img/sydney-1.jpg"],
         "link": "html/t031.html",
@@ -95,7 +95,7 @@
         "night": 7,
         "departure": "Hà Nội",
         "destination": "Hoa Kỳ",
-        "departure-date": "2019-04-05",
+        "departure-date": "2019-07-05",
         "trip-type": ["international", "bike"],
         "img": ["img/america-1.jpg"],
         "link": "html/t041.html",
@@ -112,7 +112,7 @@
         "night": 5,
         "departure": "Hà Nội",
         "destination": "Tây Tạng",
-        "departure-date": "2019-04-06",
+        "departure-date": "2019-07-06",
         "trip-type": ["international", "picture", "fishing"],
         "img": ["img/tibet-1.jpg"],
         "link": "html/t051.html",
@@ -129,7 +129,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Ấn Độ",
-        "departure-date": "2019-04-07",
+        "departure-date": "2019-07-07",
         "trip-type": ["international", "tam-linh"],
         "img": ["img/india-1.jpg"],
         "link": "html/t061.html",
@@ -146,7 +146,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-11",
+        "departure-date": "2019-07-11",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -163,7 +163,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-21",
+        "departure-date": "2019-07-21",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -180,7 +180,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-30",
+        "departure-date": "2019-07-30",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -197,10 +197,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-12",
+        "departure-date": "2019-07-12",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1907202":
     {
@@ -213,10 +214,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-22",
+        "departure-date": "2019-07-22",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1907203":
     {
@@ -229,10 +231,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-23",
+        "departure-date": "2019-07-23",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1907301":
     {
@@ -245,10 +248,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-13",
+        "departure-date": "2019-07-13",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1907302":
     {
@@ -261,10 +265,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-23",
+        "departure-date": "2019-07-23",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1907303":
     {
@@ -277,10 +282,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-03",
+        "departure-date": "2019-07-03",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1907401":
     {
@@ -293,10 +299,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-14",
+        "departure-date": "2019-07-14",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1907402":
     {
@@ -309,10 +316,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-24",
+        "departure-date": "2019-07-24",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1907403":
     {
@@ -325,10 +333,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-04",
+        "departure-date": "2019-07-04",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1907501":
     {
@@ -341,10 +350,11 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-15",
+        "departure-date": "2019-07-15",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     },
     "T1907502":
     {
@@ -357,10 +367,11 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-25",
+        "departure-date": "2019-07-25",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     },
     "T1907503":
     {
@@ -373,10 +384,11 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-05",
+        "departure-date": "2019-07-05",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     },
     "T1908001":
     {
@@ -389,7 +401,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hàn Quốc",
-        "departure-date": "2019-04-01",
+        "departure-date": "2019-08-01",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
         "link": "html/t001.html",
@@ -406,7 +418,7 @@
         "night": 9,
         "departure": "Hà Nội",
         "destination": "Pháp",
-        "departure-date": "2019-04-11",
+        "departure-date": "2019-08-11",
         "trip-type": ["international", "picture"],
         "img": ["img/france-1.jpg"],
         "link": "html/t011.html",
@@ -423,7 +435,7 @@
         "night": 4,
         "departure": "Hà Nội",
         "destination": "Nhật Bản",
-        "departure-date": "2019-04-21",
+        "departure-date": "2019-08-21",
         "trip-type": ["international", "bike"],
         "img": ["img/japan-1.jpg"],
         "link": "html/t021.html",
@@ -440,7 +452,7 @@
         "night": 5,
         "departure": "Hà Nội",
         "destination": "Úc",
-        "departure-date": "2019-04-30",
+        "departure-date": "2019-08-30",
         "trip-type": ["international", "motor"],
         "img": ["img/sydney-1.jpg"],
         "link": "html/t031.html",
@@ -457,7 +469,7 @@
         "night": 7,
         "departure": "Hà Nội",
         "destination": "Hoa Kỳ",
-        "departure-date": "2019-04-05",
+        "departure-date": "2019-08-05",
         "trip-type": ["international", "bike"],
         "img": ["img/america-1.jpg"],
         "link": "html/t041.html",
@@ -474,7 +486,7 @@
         "night": 5,
         "departure": "Hà Nội",
         "destination": "Tây Tạng",
-        "departure-date": "2019-04-06",
+        "departure-date": "2019-08-06",
         "trip-type": ["international", "picture", "fishing"],
         "img": ["img/tibet-1.jpg"],
         "link": "html/t051.html",
@@ -491,7 +503,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Ấn Độ",
-        "departure-date": "2019-04-07",
+        "departure-date": "2019-08-07",
         "trip-type": ["international", "tam-linh"],
         "img": ["img/india-1.jpg"],
         "link": "html/t061.html",
@@ -508,7 +520,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-11",
+        "departure-date": "2019-08-11",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -525,7 +537,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-21",
+        "departure-date": "2019-08-21",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -542,7 +554,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-30",
+        "departure-date": "2019-08-30",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -559,10 +571,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-12",
+        "departure-date": "2019-08-12",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1908202":
     {
@@ -575,10 +588,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-22",
+        "departure-date": "2019-08-22",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1908203":
     {
@@ -591,10 +605,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-23",
+        "departure-date": "2019-08-23",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1908301":
     {
@@ -607,10 +622,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-13",
+        "departure-date": "2019-08-13",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1908302":
     {
@@ -623,10 +639,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-23",
+        "departure-date": "2019-08-23",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1908303":
     {
@@ -639,10 +656,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-03",
+        "departure-date": "2019-08-03",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1908401":
     {
@@ -655,10 +673,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-14",
+        "departure-date": "2019-08-14",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1908402":
     {
@@ -671,10 +690,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-24",
+        "departure-date": "2019-08-24",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1908403":
     {
@@ -687,10 +707,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-04",
+        "departure-date": "2019-08-04",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1908501":
     {
@@ -703,10 +724,11 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-15",
+        "departure-date": "2019-08-15",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     },
     "T1908502":
     {
@@ -719,10 +741,11 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-25",
+        "departure-date": "2019-08-25",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     },
     "T1908503":
     {
@@ -735,10 +758,11 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-05",
+        "departure-date": "2019-08-05",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     },
     "T1909001":
     {
@@ -751,7 +775,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hàn Quốc",
-        "departure-date": "2019-04-01",
+        "departure-date": "2019-09-01",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
         "link": "html/t001.html",
@@ -768,7 +792,7 @@
         "night": 9,
         "departure": "Hà Nội",
         "destination": "Pháp",
-        "departure-date": "2019-04-11",
+        "departure-date": "2019-09-11",
         "trip-type": ["international", "picture"],
         "img": ["img/france-1.jpg"],
         "link": "html/t011.html",
@@ -785,7 +809,7 @@
         "night": 4,
         "departure": "Hà Nội",
         "destination": "Nhật Bản",
-        "departure-date": "2019-04-21",
+        "departure-date": "2019-09-21",
         "trip-type": ["international", "bike"],
         "img": ["img/japan-1.jpg"],
         "link": "html/t021.html",
@@ -802,7 +826,7 @@
         "night": 5,
         "departure": "Hà Nội",
         "destination": "Úc",
-        "departure-date": "2019-04-30",
+        "departure-date": "2019-09-30",
         "trip-type": ["international", "motor"],
         "img": ["img/sydney-1.jpg"],
         "link": "html/t031.html",
@@ -819,7 +843,7 @@
         "night": 7,
         "departure": "Hà Nội",
         "destination": "Hoa Kỳ",
-        "departure-date": "2019-04-05",
+        "departure-date": "2019-09-05",
         "trip-type": ["international", "bike"],
         "img": ["img/america-1.jpg"],
         "link": "html/t041.html",
@@ -836,7 +860,7 @@
         "night": 5,
         "departure": "Hà Nội",
         "destination": "Tây Tạng",
-        "departure-date": "2019-04-06",
+        "departure-date": "2019-09-06",
         "trip-type": ["international", "picture", "fishing"],
         "img": ["img/tibet-1.jpg"],
         "link": "html/t051.html",
@@ -853,7 +877,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Ấn Độ",
-        "departure-date": "2019-04-07",
+        "departure-date": "2019-09-07",
         "trip-type": ["international", "tam-linh"],
         "img": ["img/india-1.jpg"],
         "link": "html/t061.html",
@@ -870,7 +894,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-11",
+        "departure-date": "2019-09-11",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -887,7 +911,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-21",
+        "departure-date": "2019-09-21",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -904,7 +928,7 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Hạ Long",
-        "departure-date": "2019-04-30",
+        "departure-date": "2019-09-30",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/ha-long-1.jpg"],
         "link": "html/t101.html",
@@ -921,10 +945,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-12",
+        "departure-date": "2019-09-12",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1909202":
     {
@@ -937,10 +962,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-22",
+        "departure-date": "2019-09-22",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1909203":
     {
@@ -953,10 +979,11 @@
         "night": 2,
         "departure": "Hà Nội",
         "destination": "Sapa",
-        "departure-date": "2019-04-23",
+        "departure-date": "2019-09-23",
         "trip-type": ["viet-nam", "picture", "motor"],
         "img": ["img/sapa-1.jpg"],
-        "link": "html/t201.html"
+        "link": "html/t201.html",
+        "link-map": "html/t201-map.html"
     },
     "T1909301":
     {
@@ -969,10 +996,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-13",
+        "departure-date": "2019-09-13",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1909302":
     {
@@ -985,10 +1013,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-23",
+        "departure-date": "2019-09-23",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1909303":
     {
@@ -1001,10 +1030,11 @@
         "night": 6,
         "departure": "Hà Nội",
         "destination": "Đà Nẵng",
-        "departure-date": "2019-04-03",
+        "departure-date": "2019-09-03",
         "trip-type": ["viet-nam", "picture"],
         "img": ["img/da-nang-1.jpg"],
-        "link": "html/t301.html"
+        "link": "html/t301.html",
+        "link-map": "html/t301-map.html"
     },
     "T1909401":
     {
@@ -1017,10 +1047,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-14",
+        "departure-date": "2019-09-14",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1909402":
     {
@@ -1033,10 +1064,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-24",
+        "departure-date": "2019-09-24",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1909403":
     {
@@ -1049,10 +1081,11 @@
         "night": 3,
         "departure": "Hà Nội",
         "destination": "Bình Định",
-        "departure-date": "2019-04-04",
+        "departure-date": "2019-09-04",
         "trip-type": ["viet-nam"],
         "img": ["img/binh-dinh-1.jpg"],
-        "link": "html/t401.html"
+        "link": "html/t401.html",
+        "link-map": "html/t401-map.html"
     },
     "T1909501":
     {
@@ -1065,10 +1098,11 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-15",
+        "departure-date": "2019-09-15",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     },
     "T1909502":
     {
@@ -1081,10 +1115,11 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-25",
+        "departure-date": "2019-09-25",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     },
     "T1909503":
     {
@@ -1097,9 +1132,10 @@
         "night": 1,
         "departure": "Hà Nội",
         "destination": "Phú Quốc",
-        "departure-date": "2019-04-05",
+        "departure-date": "2019-09-05",
         "trip-type": ["viet-nam", "fishing"],
         "img": ["img/phu-quoc-1.jpg"],
-        "link": "html/t501.html"
+        "link": "html/t501.html",
+        "link-map": "html/t501-map.html"
     }
 }
