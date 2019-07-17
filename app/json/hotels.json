@@ -11,7 +11,7 @@
         "location-related": ["Bình Định"],
         "img": ["img/h001.webp"],
         "link": "html/h001.html",
-        "map": "m-h001.html"
+        "link-map": "html/h001-map.html"
     },
     "H002":
     {
@@ -25,11 +25,11 @@
         "location-related": ["Bình Định"],
         "img": ["img/h002.webp"],
         "link": "html/h002.html",
-        "map": "m-h002.html"
+        "link-map": "html/h002-map.html"
     },
     "H003":
     {
-        "name": "Quy Nhon Homestay Bnb",
+        "name": "Wonderful Hometown",
         "category": "Homestay",
         "stars": 0,
         "address": "66/2 Chang Lia Street, Ghenh Rang, Quy Nhon, Vietnam",
@@ -39,7 +39,7 @@
         "location-related": ["Bình Định"],
         "img": ["img/h003.webp"],
         "link": "html/h003.html",
-        "map": "m-h003.html"
+        "link-map": "html/h003-map.html"
     },
     "H004":
     {
@@ -53,7 +53,7 @@
         "location-related": ["Bình Định"],
         "img": ["img/h004.webp"],
         "link": "html/h004.html",
-        "map": "m-h004.html"
+        "link-map": "html/h004-map.html"
     },
     "H005":
     {
@@ -67,7 +67,7 @@
         "location-related": ["Phú Quốc"],
         "img": ["img/h005.webp"],
         "link": "html/h005.html",
-        "map": "m-h005.html"
+        "link-map": "html/h005-map.html"
     },
     "H006":
     {
@@ -81,7 +81,7 @@
         "location-related": ["Phú Quốc"],
         "img": ["img/h006.webp"],
         "link": "html/h006.html",
-        "map": "m-h006.html"
+        "link-map": "html/h006-map.html"
     },
     "H007":
     {
@@ -95,7 +95,7 @@
         "location-related": ["Sapa"],
         "img": ["img/h007.webp"],
         "link": "html/h007.html",
-        "map": "m-h007.html"
+        "link-map": "html/h007-map.html"
     },
     "H008":
     {
@@ -109,7 +109,7 @@
         "location-related": ["Sapa"],
         "img": ["img/h008.webp"],
         "link": "html/h008.html",
-        "map": "m-h008.html"
+        "link-map": "html/h008-map.html"
     },
     "H009":
     {
@@ -123,7 +123,7 @@
         "location-related": ["Sapa"],
         "img": ["img/h009.webp"],
         "link": "html/h009.html",
-        "map": "m-h009.html"
+        "link-map": "html/h009-map.html"
     },
     "H010":
     {
@@ -137,7 +137,7 @@
         "location-related": ["Hạ Long"],
         "img": ["img/h010.webp"],
         "link": "html/h010.html",
-        "map": "m-h010.html"
+        "link-map": "html/h010-map.html"
     },
     "H011":
     {
@@ -151,7 +151,7 @@
         "location-related": ["Hạ Long"],
         "img": ["img/h011.webp"],
         "link": "html/h011.html",
-        "map": "m-h011.html"
+        "link-map": "html/h011-map.html"
     },
     "H012":
     {
@@ -165,7 +165,7 @@
         "location-related": ["Đà Nẵng"],
         "img": ["img/h012.webp"],
         "link": "html/h012.html",
-        "map": "m-h012.html"
+        "link-map": "html/h012-map.html"
     },
     "H013":
     {
@@ -179,6 +179,6 @@
         "location-related": ["Đà Nẵng"],
         "img": ["img/h013.webp"],
         "link": "html/h013.html",
-        "map": "m-h013.html"
+        "link-map": "html/h013-map.html"
     }
 }

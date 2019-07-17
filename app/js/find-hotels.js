@@ -72,62 +72,6 @@ function changeWard(wardValue) {
     // console.groupEnd();
 }
 
-function displayHotels(productData, elemID, maxItemPerRow = 3, maxRow = 4) {
-    // Khai báo hiển thị dữ liệu từ data
-    let maxItemPerPage = maxRow * maxItemPerRow;
-    let elem = '<div class="row">';
-    let countInProductData = 0;
-    let countItemInRow = 0;
-    let countRow = 0;
-
-    for (id in productData) {
-        countInProductData++;
-        countItemInRow++;
-        let product = productData[id];
-        elem +=
-            `<div class="card-hotel">
-                <a href="detail-hotel.html?id=${id}">
-                    <div class="card__img">
-                        <img src="${product.img[0]}" alt="demo image" class="img-responsive"/>
-                    </div>
-                    <div class="row">
-                        <h4 class="card-hotel__category">${product.category}</h4>
-                        <h4 class="card-hotel__star"> ${addStars(product.stars)}</h4>
-                    </div>
-                    <h3 class="card-hotel__name">${product.name}</h3>
-                    <h5 class="card-hotel__address"><i class="fas fa-map-marker"></i>
-                            ${product.address}
-                    </h5>
-                </a>
-            </div>`;
-        if (countItemInRow >= maxItemPerRow) {
-            countItemInRow = 0;
-            elem += `</div><div class="row">`;
-            countRow++;
-        }
-        if (countRow >= maxRow) {
-            break;
-        }
-    }
-    // Bổ sung thẻ card cho đủ số cột
-    if (countRow < maxRow && countItemInRow > 0) {
-        for (let i = countItemInRow; i < maxItemPerRow; i++) {
-            elem += `<div class="card"></div>`;
-        }
-    }
-    // Đóng thẻ .row
-    elem += `</div>`
-    document.getElementById(elemID).innerHTML = elem;
-}
-
-function addStars(numbOfStar) {
-    let result = '';
-    for (let i = 0; i < numbOfStar; i++) {
-        result += `<i class="fas fa-star"></i>`
-    }
-    return result;
-}
-
 // Tạo request lấy data từ file json sau đó hiển thị
 let xmlhttp = new XMLHttpRequest();
 let url = "json/hotels.json";
@@ -138,7 +82,7 @@ xmlhttp.send();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         allHotelData = JSON.parse(this.responseText);
-        displayHotels(allHotelData, "hotel-result", 4, 4);
+        displayHotels(allHotelData, "hotel-result", 3, 5);
     }
 };
 

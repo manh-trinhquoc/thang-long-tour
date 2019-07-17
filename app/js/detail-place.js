@@ -23,7 +23,7 @@ function showDetailPlace(placeObj) {
     let elem = `<div class="detail__carosel">
                     <img class="img-responsive" src="${placeObj.img[0]}" alt="${placeObj['name-full']}" />
                 </div>`;
-    // Tạo request lấy chi tiết về tour trong file html sau đó hiển thị
+    // Tạo request lấy chi tiết về địa điểm trong file html sau đó hiển thị
     let xmlhttp = new XMLHttpRequest();
     let url = placeObj.link;
     xmlhttp.open("GET", url, true);
@@ -51,14 +51,15 @@ function showDetailPlace(placeObj) {
 // Hiển thị blog du lịch
 let xmlhttp = new XMLHttpRequest();
 let url = "json/blogs.json";
-let allBlogsData = {};
 
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        allBlogsData = JSON.parse(this.responseText);
+        let allBlogsData = JSON.parse(this.responseText);
         let id = document.location.href.split('=')[1].replace(/[pP]/, 'B');
+        // Do có nhiều place hơn blog nên giới hạn giá trị id
+        if (id > 'B010') id = 'B010';
         let visibleBlogs = getSimilar(allBlogsData, id);
         displayBlogs(visibleBlogs, "blog-result", 4, 2);
     }
