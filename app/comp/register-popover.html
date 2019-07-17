@@ -27,7 +27,7 @@
                 <input type="email" placeholder="Email*" class="input__text" id="sign-up-email" />
                 <p class="input__remark"></p>
                 <div style="position: relative;">
-                    <button type="button" class="btn-show-pass" onclick="showPassWord(this)" id="btn-show-pass">
+                    <button type="button" class="btn-show-pass" onclick="showPassWord()" id="sign-up-show-pass">
                         <i class="fas fa-eye-slash"></i>
                     </button>
                     <input type="password" placeholder="Mật khẩu*" class="input__text" id="sign-up-pass" />
@@ -44,14 +44,19 @@
         <form action="#" id="sign-in" hidden="" class="register__form">
             <h2 class="title">Chào mừng bạn quay trở lại</h2>
             <div class="register__input">
-                <input type="text" placeholder="Email*" class="input__text" />
+                <input type="text" placeholder="Email*" class="input__text" id="sign-in-email" />
                 <p class="input__remark"></p>
-                <input type="text" placeholder="Mật khẩu*" class="input__text" />
-                <p class="input__remark"></p>
+                <div style="position: relative;">
+                    <button type="button" class="btn-show-pass" onclick="showPassWord()" id="sign-in-show-pass">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+                    <input type="password" placeholder="Mật khẩu*" class="input__text" id="sign-in-pass" />
+                    <p class="input__remark"></p>
+                </div>
                 <p class="register__note">Các trường có dấu * bắt buộc phải điền</p>
             </div>
             <div class="btn__wrapper">
-                <button type="submit" class="btn_sm">Gửi đi</button>
+                <button type="submit" class="btn_sm" onclick="submitSignIn(event)">Gửi đi</button>
             </div>
         </form>
     </div>

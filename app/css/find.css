@@ -587,8 +587,7 @@ ul {
   .dropdown-control i {
     color: #FFBF00; }
   .dropdown-wrapper {
-    position: relative;
-    background-color: blue; }
+    position: relative; }
 
 .filter {
   padding-top: 70px;

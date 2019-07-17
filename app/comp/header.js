@@ -11,8 +11,15 @@ function signOut() {
     console.group('signOut');
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
-        console.log('Sign-out successful.')
-
+        console.log('Sign-out successful.');
+        currentUserObj.isLoggedIn = false;
+        currentUserObj.email = '';
+        currentUserObj.photoURL = '';
+        currentUserObj.historyViewed = '';
+        currentUserObj.tourbooked = ''
+        currentUserObj.oldTours = '';
+        // thay thế nút bấm
+        manageView();
     }).catch(function(error) {
         // An error happened.
         console.log('Sign-out error');
@@ -21,6 +28,5 @@ function signOut() {
     console.groupEnd();
     toggleRegisterDropdown();
 
-    // thay thế nút bấm
-    manageView();
+
 }

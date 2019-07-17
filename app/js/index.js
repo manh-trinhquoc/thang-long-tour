@@ -15,6 +15,5 @@ xmlhttp.onreadystatechange = function() {
         // show tour đã xem gần đây
         visibleTours = getRecentlyViewedTours(allToursData, currentUserObj.historyViewed);
         displayTours(visibleTours, undefined, "filter-history", 4, 2);
-
     }
 };

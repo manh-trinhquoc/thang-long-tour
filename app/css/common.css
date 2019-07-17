@@ -586,7 +586,6 @@ ul {
   .dropdown-control i {
     color: #FFBF00; }
   .dropdown-wrapper {
-    position: relative;
-    background-color: blue; }
+    position: relative; }
 
 /*# sourceMappingURL=common.css.map */

@@ -34,15 +34,6 @@ function includeHTML() {
     }
 }
 
-// Add js library
-dynamicallyLoadScript('comp/top-nav.js')
-dynamicallyLoadScript('comp/header.js')
-dynamicallyLoadScript('comp/register-popover.js')
-
-// add include html 
-includeHTML();
-
-
 // Các hàm chung thông thường
 function convertDataObjToArr(dataObj) {
     let dataArr = [];
@@ -410,27 +401,10 @@ function getRecentlyViewedTours(productData, historyViewedArr) {
     return newProductData;
 }
 
-// Tạo object lưu thông tin về user
-let currentUserObj = {
-    isAppInitialized: false,
-    isLoggedIn: false,
-    tourbooked: null,
-    historyViewed: [],
-    oldTours: []
-}
-
-// Lấy thông tin về lịch sử duyệt web từ localStorage
-console.group('Lấy thông tin về lịch sử duyệt web từ localStorage')
-if (localStorage.getItem('historyViewed')) {
-    currentUserObj.historyViewed = JSON.parse(localStorage.getItem('historyViewed'));
-    // console.log(currentUserObj.historyViewed);
-}
-// console.log(currentUserObj);
-console.groupEnd();
-
 // Hàm quản lý view
 function manageView() {
     console.group('manageView')
+    // console.log(currentUserObj.isLoggedIn);
     if (currentUserObj.isLoggedIn) {
         document.getElementById('register-dropdown-wrapper').removeAttribute('style');
         document.getElementById('topnav__register').style.display = 'none';

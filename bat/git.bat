@@ -1,4 +1,4 @@
 cd F:\thang-long-tour
 git add .
-git commit -m "finish content of all detail"
+git commit -m "working on about.html"
 git push
