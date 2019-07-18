@@ -1,0 +1,35 @@
+.footer {
+    padding-bottom: $padding-xs;
+    padding-top: $padding-xs;
+    background-color: $page-color-darker;
+
+    &__inner-wrapper {
+        @extend %responsive-max-width;
+    }
+
+    &__logo {
+        text-align: center;
+        padding: $padding-sm;
+    }
+
+    &__link {
+        padding-left: 10%;
+        @include media(padding-left, 0);
+        @include media(padding, $padding-sm);
+    }
+
+    &__fb {
+        min-width: 300px;
+        max-width: 300px;
+        padding-top: $padding-sm;
+        padding-bottom: $padding-sm;
+        padding-left: $padding-md;
+    }
+
+    &__social-list {
+        @include d-flex;
+        justify-content: space-between;
+        font-size: $icon-size;
+    }
+
+}

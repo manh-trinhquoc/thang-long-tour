@@ -1,4 +1,4 @@
 cd F:\thang-long-tour
 git add .
-git commit -m "working on about.html"
+git commit -m "re-structure scss files"
 git push

@@ -20,9 +20,9 @@ function initApp() {
     // Listening for auth state changes.
     firebase.auth().onAuthStateChanged(function(user) {
         console.group('firebas.auth.onAuthStateChanged');
-
         if (user) {
             // User is signed in.
+            currentUserObj.isAppInitialized = true;
             currentUserObj.isLoggedIn = true;
             currentUserObj.displayName = user.displayName;
             currentUserObj.email = user.email;
@@ -65,7 +65,6 @@ function initApp() {
             window.localStorage.clear();
             manageView();
         }
-
         console.groupEnd();
     });
 }

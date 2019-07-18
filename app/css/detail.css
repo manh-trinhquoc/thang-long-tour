@@ -1,24 +1,23 @@
 /*component only show in detail page: tour-detail, place-detail, hotel-detail, news-detail*/
 /*component special in find page: find-tour, find-hotel, find-place, find-news*/
 /*general variable and common component show in every pages*/
-@import url("/comp/top-nav.css");
 /*Cac mau sac chinh*/
 /*font size*/
 /*tag size*/
-.header, .banner__nav, .banner__wrapper, .tour-list, .footer__inner-wrapper, .breadcrumb, .filter, .search-gg, .detail__wrapper {
+.tour-list, .breadcrumb, .header, .banner__nav, .banner__wrapper, .footer__inner-wrapper, .filter, .search-gg, .detail__wrapper {
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 576px) {
-    .header, .banner__nav, .banner__wrapper, .tour-list, .footer__inner-wrapper, .breadcrumb, .filter, .search-gg, .detail__wrapper {
+    .tour-list, .breadcrumb, .header, .banner__nav, .banner__wrapper, .footer__inner-wrapper, .filter, .search-gg, .detail__wrapper {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .header, .banner__nav, .banner__wrapper, .tour-list, .footer__inner-wrapper, .breadcrumb, .filter, .search-gg, .detail__wrapper {
+    .tour-list, .breadcrumb, .header, .banner__nav, .banner__wrapper, .footer__inner-wrapper, .filter, .search-gg, .detail__wrapper {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .header, .banner__nav, .banner__wrapper, .tour-list, .footer__inner-wrapper, .breadcrumb, .filter, .search-gg, .detail__wrapper {
+    .tour-list, .breadcrumb, .header, .banner__nav, .banner__wrapper, .footer__inner-wrapper, .filter, .search-gg, .detail__wrapper {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .header, .banner__nav, .banner__wrapper, .tour-list, .footer__inner-wrapper, .breadcrumb, .filter, .search-gg, .detail__wrapper {
+    .tour-list, .breadcrumb, .header, .banner__nav, .banner__wrapper, .footer__inner-wrapper, .filter, .search-gg, .detail__wrapper {
       max-width: 1140px; } }
 
 .row, .row_justify_start, .row_align_start, .row_no-wrap, .filter-hotel__result {
@@ -32,7 +31,7 @@
     .row, .row_justify_start, .row_align_start, .row_no-wrap, .filter-hotel__result {
       flex-flow: column; } }
 
-.topnav__sign-in, .dropdown a, .dropdown button, .row, .row_justify_start, .row_align_start, .row_no-wrap, .filter-hotel__result, .btn__wrapper, .popover__background, .popover-always-sticky__background, .pagination {
+.row, .row_justify_start, .row_align_start, .row_no-wrap, .filter-hotel__result, .btn__wrapper, .topnav__sign-in, .dropdown a, .dropdown button, .popover__background, .popover-always-sticky__background, .pagination {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -82,188 +81,9 @@ ul {
   ul li {
     padding-top: 5px; }
 
-.logo {
-  width: 290px; }
-
-.header {
-  padding-top: 20px;
-  margin: 0 auto; }
-  .header__wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1; }
-  .header img {
-    max-width: 50%; }
-  .header i {
-    color: white; }
-
-.topnav {
-  background-color: transparent;
-  position: absolute;
-  z-index: 1;
-  margin-top: -35px;
-  width: calc(100% - 10px);
-  justify-content: flex-start; }
-  @media (min-width: 576px) {
-    .topnav {
-      margin-top: 0; } }
-  @media (min-width: 576px) {
-    .topnav {
-      position: relative; } }
-  .topnav__search {
-    min-width: 300px;
-    width: 99%;
-    height: 44px;
-    display: none; }
-  .topnav.responsive {
-    background-color: rgba(64, 48, 0, 0.9); }
-  .topnav.responsive .topnav__search {
-    display: block;
-    margin: 0 auto; }
-  .topnav__sign-in, .dropdown a, .dropdown button {
-    width: 44px;
-    height: 44px;
-    background-color: transparent;
-    padding: 0;
-    border: none; }
-  .topnav .a {
-    padding: 0;
-    padding-left: 16px; }
-    @media (min-width: 576px) {
-      .topnav .a {
-        padding: 0; } }
-  .topnav form {
-    margin-left: auto; }
-  .topnav button {
-    font-size: 23px; }
-  @media (min-width: 576px) {
-    .topnav__search {
-      display: block;
-      min-width: 0;
-      width: 44px;
-      position: relative;
-      background-color: transparent; }
-      .topnav__search:hover input {
-        width: 300px;
-        background-color: #FFBF00;
-        color: white; }
-    .topnav input {
-      position: absolute;
-      right: 0;
-      width: 0;
-      transition: 0.5s linear; } }
-
-.search, .search-inpage {
-  position: relative;
-  background-color: transparent; }
-  .search__input-text {
-    background-color: transparent;
-    padding-left: 5px;
-    padding-right: 44px;
-    overflow: hidden; }
-  .search__button {
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    height: 42px;
-    width: 42px;
-    background-color: transparent;
-    border: none; }
-  .search-result {
-    background-color: #FFBF00;
-    color: white; }
-
 .img-responsive {
   width: 100%;
   max-width: 100%; }
-
-.banner {
-  width: 100%;
-  position: relative; }
-  .banner__content {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 70%;
-    max-width: 70%;
-    padding: 5px;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-flow: column;
-    -ms-align-items: center;
-    justify-content: center; }
-  .banner h4 {
-    display: none; }
-    @media (min-width: 576px) {
-      .banner h4 {
-        display: block; } }
-  .banner > img {
-    width: 100%; }
-  .banner__nav {
-    position: absolute;
-    bottom: 5px;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: space-between;
-    -ms-align-items: flex-end;
-    align-items: flex-end;
-    width: 100%; }
-  .banner__item {
-    display: block;
-    text-align: center;
-    /*min-width: 95px;*/ }
-  .banner__icon {
-    max-width: 33px;
-    max-height: 33px;
-    filter: invert(80%) sepia(65%) saturate(2893%) hue-rotate(359deg) brightness(102%) contrast(105%); }
-    @media (min-width: 992px) {
-      .banner__icon {
-        max-width: 99px; } }
-    @media (min-width: 992px) {
-      .banner__icon {
-        max-height: 99px; } }
-  .banner__wrapper {
-    position: static; }
-
-.nav-background {
-  position: absolute;
-  bottom: 4px;
-  background-color: rgba(64, 48, 0, 0.5);
-  width: 100%; }
-  .nav-background__item {
-    visibility: hidden; }
-
-@media (min-width: 576px) {
-  .banner-content__contry {
-    font-size: 16.5px; } }
-
-@media (min-width: 768px) {
-  .banner-content__contry {
-    font-size: 33px; } }
-
-@media (min-width: 576px) {
-  .banner-content__header {
-    font-size: 27.5px; } }
-
-@media (min-width: 768px) {
-  .banner-content__header {
-    font-size: 55px; } }
-
-@media (min-width: 576px) {
-  .banner-content__duration {
-    font-size: 11.5px; } }
-
-@media (min-width: 768px) {
-  .banner-content__duration {
-    font-size: 23px; } }
 
 .tour-list {
   padding-top: 70px;
@@ -386,85 +206,6 @@ ul {
     top: 22px;
     transform: translateY(-50%); }
 
-.footer {
-  padding-bottom: 5px;
-  padding-top: 5px;
-  background-color: #403000; }
-  .footer__logo {
-    text-align: center;
-    padding: 10px; }
-  .footer__link {
-    padding-left: 10%; }
-    @media (min-width: 576px) {
-      .footer__link {
-        padding-left: 0; } }
-    @media (min-width: 576px) {
-      .footer__link {
-        padding: 10px; } }
-  .footer__fb {
-    min-width: 300px;
-    max-width: 300px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px; }
-  .footer__social-list {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: space-between;
-    font-size: 33px; }
-
-.popover, .popover_always-sticky {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  width: 100%;
-  height: 0; }
-  @media (min-width: 576px) {
-    .popover, .popover_always-sticky {
-      position: sticky; } }
-  .popover__background, .popover-always-sticky__background {
-    background-color: rgba(64, 48, 0, 0.9);
-    width: 100%;
-    height: 200vh; }
-    @media (min-width: 576px) {
-      .popover__background, .popover-always-sticky__background {
-        height: 100vh; } }
-
-.register {
-  background-color: #403000;
-  margin: 0 auto;
-  width: 50%;
-  min-width: 300px;
-  max-width: 600px;
-  position: relative; }
-  .register__cancel-btn {
-    position: absolute;
-    left: calc(100% - 44px);
-    top: -44px; }
-  .register__choose {
-    padding: 0;
-    flex-wrap: nowrap;
-    flex-flow: row;
-    background-color: #806000; }
-  .register__form {
-    position: relative;
-    background-color: #806000;
-    padding: 5px;
-    height: 528px; }
-    @media (min-width: 576px) {
-      .register__form {
-        height: auto; } }
-  .register__input {
-    width: 100%; }
-  .register__note {
-    font-size: 8px; }
-  .register .deactive {
-    opacity: 0.6;
-    background-color: #403000; }
-
 .title, .title_left, .title_left-top {
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -561,6 +302,164 @@ ul {
     width: 100%;
     height: 100%; }
 
+/*W3SCHOOL how to make a responsive  top navigation bar*/
+/* Add a black background color to the top navigation */
+.topnav {
+  /* background-color: #333; */
+  /* overflow: hidden; */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center; }
+
+/* Style the links inside the navigation bar */
+.topnav > a,
+.topnav > .a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px; }
+
+/* Change the color of links on hover */
+.topnav a:hover,
+.topnav .a:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: pointer; }
+
+/* Add an active class to highlight the current page */
+.topnav a.active,
+.topnav .a.active {
+  background-color: #4CAF50;
+  color: white; }
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none; }
+
+/* When the screen is less than 600 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav {
+    flex-flow: column;
+    -ms-align-items: flex-start;
+    align-items: flex-start; }
+  .topnav > a,
+  .topnav > .a {
+    display: none; }
+  .topnav a.icon {
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center; } }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive > a:not(:first-child),
+  .topnav.responsive > .a:not(:first-child) {
+    display: block;
+    text-align: left;
+    width: 100%; } }
+
+.logo {
+  width: 290px; }
+
+.header {
+  padding-top: 20px;
+  margin: 0 auto; }
+  .header__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; }
+  .header img {
+    max-width: 50%; }
+  .header i {
+    color: white; }
+
+.topnav {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  margin-top: -35px;
+  width: calc(100% - 10px);
+  justify-content: flex-start; }
+  @media (min-width: 576px) {
+    .topnav {
+      margin-top: 0; } }
+  @media (min-width: 576px) {
+    .topnav {
+      position: relative; } }
+  .topnav__search {
+    min-width: 300px;
+    width: 99%;
+    height: 44px;
+    display: none; }
+  .topnav.responsive {
+    background-color: rgba(64, 48, 0, 0.9); }
+  .topnav.responsive .topnav__search {
+    display: block;
+    margin: 0 auto; }
+  .topnav__sign-in, .dropdown a, .dropdown button {
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    padding: 0;
+    border: none; }
+  .topnav .a {
+    padding: 0;
+    padding-left: 16px; }
+    @media (min-width: 576px) {
+      .topnav .a {
+        padding: 0; } }
+  .topnav form {
+    margin-left: auto; }
+  .topnav button {
+    font-size: 23px; }
+  @media (min-width: 576px) {
+    .topnav__search {
+      display: block;
+      min-width: 0;
+      width: 44px;
+      position: relative;
+      background-color: transparent; }
+      .topnav__search:hover input {
+        width: 300px;
+        background-color: #FFBF00;
+        color: white; }
+    .topnav input {
+      position: absolute;
+      right: 0;
+      width: 0;
+      transition: 0.5s linear; } }
+
+.search, .search-inpage {
+  position: relative;
+  background-color: transparent; }
+  .search__input-text {
+    background-color: transparent;
+    padding-left: 5px;
+    padding-right: 44px;
+    overflow: hidden; }
+  .search__button {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    height: 42px;
+    width: 42px;
+    background-color: transparent;
+    border: none; }
+  .search-result {
+    background-color: #FFBF00;
+    color: white; }
+
 .dropdown {
   position: absolute;
   right: 0;
@@ -589,6 +488,171 @@ ul {
     color: #FFBF00; }
   .dropdown-wrapper {
     position: relative; }
+
+.banner {
+  width: 100%;
+  position: relative; }
+  .banner__content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    max-width: 70%;
+    padding: 5px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: column;
+    -ms-align-items: center;
+    justify-content: center; }
+  .banner h4 {
+    display: none; }
+    @media (min-width: 576px) {
+      .banner h4 {
+        display: block; } }
+  .banner > img {
+    width: 100%; }
+  .banner__nav {
+    position: absolute;
+    bottom: 5px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    -ms-align-items: flex-end;
+    align-items: flex-end;
+    width: 100%; }
+  .banner__item {
+    display: block;
+    text-align: center;
+    /*min-width: 95px;*/ }
+  .banner__icon {
+    max-width: 33px;
+    max-height: 33px;
+    filter: invert(80%) sepia(65%) saturate(2893%) hue-rotate(359deg) brightness(102%) contrast(105%); }
+    @media (min-width: 992px) {
+      .banner__icon {
+        max-width: 99px; } }
+    @media (min-width: 992px) {
+      .banner__icon {
+        max-height: 99px; } }
+  .banner__wrapper {
+    position: static; }
+
+@media (min-width: 576px) {
+  .banner-content__contry {
+    font-size: 16.5px; } }
+
+@media (min-width: 768px) {
+  .banner-content__contry {
+    font-size: 33px; } }
+
+@media (min-width: 576px) {
+  .banner-content__header {
+    font-size: 27.5px; } }
+
+@media (min-width: 768px) {
+  .banner-content__header {
+    font-size: 55px; } }
+
+@media (min-width: 576px) {
+  .banner-content__duration {
+    font-size: 11.5px; } }
+
+@media (min-width: 768px) {
+  .banner-content__duration {
+    font-size: 23px; } }
+
+.nav-background {
+  position: absolute;
+  bottom: 4px;
+  background-color: rgba(64, 48, 0, 0.5);
+  width: 100%; }
+  .nav-background__item {
+    visibility: hidden; }
+
+.footer {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #403000; }
+  .footer__logo {
+    text-align: center;
+    padding: 10px; }
+  .footer__link {
+    padding-left: 10%; }
+    @media (min-width: 576px) {
+      .footer__link {
+        padding-left: 0; } }
+    @media (min-width: 576px) {
+      .footer__link {
+        padding: 10px; } }
+  .footer__fb {
+    min-width: 300px;
+    max-width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px; }
+  .footer__social-list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    font-size: 33px; }
+
+.popover, .popover_always-sticky {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 0; }
+  @media (min-width: 576px) {
+    .popover, .popover_always-sticky {
+      position: sticky; } }
+  .popover__background, .popover-always-sticky__background {
+    background-color: rgba(64, 48, 0, 0.9);
+    width: 100%;
+    height: 200vh; }
+    @media (min-width: 576px) {
+      .popover__background, .popover-always-sticky__background {
+        height: 100vh; } }
+
+.register {
+  background-color: #403000;
+  margin: 0 auto;
+  width: 50%;
+  min-width: 300px;
+  max-width: 600px;
+  position: relative; }
+  .register__cancel-btn {
+    position: absolute;
+    left: calc(100% - 44px);
+    top: -44px; }
+  .register__choose {
+    padding: 0;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    background-color: #806000; }
+  .register__form {
+    position: relative;
+    background-color: #806000;
+    padding: 5px;
+    height: 528px; }
+    @media (min-width: 576px) {
+      .register__form {
+        height: auto; } }
+  .register__input {
+    width: 100%; }
+  .register__note {
+    font-size: 8px; }
+  .register .deactive {
+    opacity: 0.6;
+    background-color: #403000; }
 
 .filter {
   padding-top: 70px;
