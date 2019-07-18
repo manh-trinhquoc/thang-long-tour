@@ -83,33 +83,6 @@
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
     <script type="text/javascript" src="js/detail-blog.js"></script>
-    <!-- firebase auth -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-    <!-- Add Firebase products that you want to use -->
-    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
-    <!-- custome -->
-    <script defer type="text/javascript" src="js/firebase.js"></script>
-    <!-- face book chat-->
-    <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml: true,
-            version: 'v3.3'
-        });
-    };
-
-    (function(d, s, id) {
-        console.log("facebook function");
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
     <!-- Your customer chat code -->
     <div class="fb-customerchat" attribution=setup_tool page_id="2448958151999364" theme_color="#4A381D" logged_in_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3" logged_out_greeting="Đây là tính năng thử nghiệm phục vụ cho đồ án lớp web front-end 3">
     </div>

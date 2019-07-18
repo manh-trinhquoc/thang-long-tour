@@ -1,21 +1,31 @@
-// hiển thị địa điểm
-let xmlhttp2 = new XMLHttpRequest();
-let url2 = "json/places.json";
-let allPlacesData = {};
+let placePromise = new Promise(function(resolve, reject) {
+    // hiển thị địa điểm
+    let xmlhttp = new XMLHttpRequest();
+    let url = "json/places.json";
 
-xmlhttp2.open("GET", url2, true);
-xmlhttp2.send();
-xmlhttp2.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        allPlacesData = JSON.parse(this.responseText);
-        // show place detail
-        let id = document.location.href.split('=')[1];
-        showDetailPlace(allPlacesData[id]);
-        // Show các địa danh khác
-        let visiblePlaces = getSimilar(allPlacesData, id);
-        displayPlaces(visiblePlaces, "place-result", 4, 2);
-    }
-};
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let allPlacesData = JSON.parse(this.responseText);
+            resolve(allPlacesData);
+        }
+    };
+});
+
+placePromise.then(function(resolve) {
+    // console.log('resolve');
+    // console.log(resolve);
+    let allPlacesData = resolve;
+    // show place detail
+    let id = document.location.href.split('=')[1];
+    showDetailPlace(allPlacesData[id]);
+    // Show các địa danh khác
+    let visiblePlaces = getSimilar(allPlacesData, id);
+    displayPlaces(visiblePlaces, "place-result", 4, 2);
+});
+
+
 
 function showDetailPlace(placeObj) {
     // hiển thị chi tiết bài viết về tour
@@ -65,20 +75,28 @@ xmlhttp.onreadystatechange = function() {
     }
 };
 
-// Hiển thị tour liên quan
-let xmlhttp3 = new XMLHttpRequest();
-let url3 = "json/tours.json";
-xmlhttp3.open("GET", url3, true);
-xmlhttp3.send();
-xmlhttp3.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        let allToursData = JSON.parse(this.responseText);
-        let id = document.location.href.split('=')[1];
-        let conditionObj = {
-            destination: allPlacesData[id]['location-related'][0]
+
+let tourPromise = new Promise(function(resolve, reject) {
+    // Hiển thị tour liên quan
+    let xmlhttp = new XMLHttpRequest();
+    let url = "json/tours.json";
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let allToursData = JSON.parse(this.responseText);
+            resolve(allToursData);
         }
-        // console.log(JSON.stringify(conditionObj))
-        visibleTours = filterCondition(allToursData, conditionObj);
-        displayTours(visibleTours, undefined, "filter-tour", 1, 4);
+    };
+});
+
+Promise.all([placePromise, tourPromise]).then(function(resolve) {
+    let [allPlacesData, allToursData] = resolve;
+    let id = document.location.href.split('=')[1];
+    let conditionObj = {
+        destination: allPlacesData[id]['location-related'][0]
     }
-};
+    // console.log(JSON.stringify(conditionObj))
+    visibleTours = filterCondition(allToursData, conditionObj);
+    displayTours(visibleTours, undefined, "filter-tour", 1, 4);
+})

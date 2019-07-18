@@ -1,21 +1,29 @@
-// hiển thị bài blog
-let xmlhttp2 = new XMLHttpRequest();
-let url2 = "json/blogs.json";
-let allBlogsData = {};
+let blogPromise = new Promise(function(resolve, reject) {
+    // hiển thị bài blog
+    let xmlhttp = new XMLHttpRequest();
+    let url = "json/blogs.json";
 
-xmlhttp2.open("GET", url2, true);
-xmlhttp2.send();
-xmlhttp2.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        allBlogsData = JSON.parse(this.responseText);
-        // show blog detail
-        let id = document.location.href.split('=')[1];
-        showDetailBlog(allBlogsData[id]);
-        // Show các bài viết khác
-        let visibleBlogs = getSimilar(allBlogsData, id);
-        displayBlogs(visibleBlogs, "blog-result", 4, 2);
-    }
-};
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let allBlogsData = JSON.parse(this.responseText);
+            resolve(allBlogsData);
+
+        }
+    };
+});
+
+blogPromise.then(function(resolve) {
+    // show blog detail
+    let allBlogsData = resolve;
+    let id = document.location.href.split('=')[1];
+    showDetailBlog(allBlogsData[id]);
+    // Show các bài viết khác
+    let visibleBlogs = getSimilar(allBlogsData, id);
+    displayBlogs(visibleBlogs, "blog-result", 4, 2);
+});
+
 
 function showDetailBlog(blogObj) {
     // hiển thị chi tiết bài viết về blog
@@ -52,20 +60,28 @@ xmlhttp.onreadystatechange = function() {
     }
 };
 
-// Hiển thị tour liên quan
-let xmlhttp3 = new XMLHttpRequest();
-let url3 = "json/tours.json";
-xmlhttp3.open("GET", url3, true);
-xmlhttp3.send();
-xmlhttp3.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        let allToursData = JSON.parse(this.responseText);
-        let id = document.location.href.split('=')[1];
-        let conditionObj = {
-            destination: allBlogsData[id]['location-related'][0]
+let tourPromise = new Promise(function(resolve, reject) {
+    // Hiển thị tour liên quan
+    let xmlhttp = new XMLHttpRequest();
+    let url = "json/tours.json";
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let allToursData = JSON.parse(this.responseText);
+            resolve(allToursData);
+
         }
-        // console.log(JSON.stringify(conditionObj))
-        visibleTours = filterCondition(allToursData, conditionObj);
-        displayTours(visibleTours, undefined, "filter-tour", 1, 4);
+    };
+});
+
+Promise.all([blogPromise, tourPromise]).then(function(resolve) {
+    let [allBlogsData, allToursData] = resolve;
+    let id = document.location.href.split('=')[1];
+    let conditionObj = {
+        destination: allBlogsData[id]['location-related'][0]
     }
-};
+    // console.log(JSON.stringify(conditionObj))
+    visibleTours = filterCondition(allToursData, conditionObj);
+    displayTours(visibleTours, undefined, "filter-tour", 1, 4);
+});

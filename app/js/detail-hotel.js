@@ -1,22 +1,30 @@
-// hiển thị khách sạn
-let xmlhttp2 = new XMLHttpRequest();
-let url2 = "json/hotels.json";
-let allHotelsData = {};
+let hotelPromise = new Promise(function(resolve, reject) {
+    // hiển thị khách sạn
+    let xmlhttp = new XMLHttpRequest();
+    let url = "json/hotels.json";
 
-xmlhttp2.open("GET", url2, true);
-xmlhttp2.send();
-xmlhttp2.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        allHotelsData = JSON.parse(this.responseText);
-        // show hotel detail
-        let id = document.location.href.split('=')[1];
-        showDetailHotel(allHotelsData[id]);
-        // Show các khách sạn khác cùng khu vực
-        let visibleHotels = filterConditionArr(allHotelsData, allHotelsData[id]['location-related'], 'location-related');
-        // console.log(JSON.stringify(visibleHotels));
-        displayHotels(visibleHotels, "filter-hotel", 4, 2);
-    }
-};
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let allHotelsData = JSON.parse(this.responseText);
+            resolve(allHotelsData);
+
+        }
+    };
+});
+
+hotelPromise.then(function(resolve) {
+    // show hotel detail
+    let allHotelsData = resolve;
+    let id = document.location.href.split('=')[1];
+    showDetailHotel(allHotelsData[id]);
+    // Show các khách sạn khác cùng khu vực
+    let visibleHotels = filterConditionArr(allHotelsData, allHotelsData[id]['location-related'], 'location-related');
+    // console.log(JSON.stringify(visibleHotels));
+    displayHotels(visibleHotels, "filter-hotel", 4, 2);
+});
+
 
 function showDetailHotel(hotelObj) {
     // hiển thị chi tiết bài viết về tour
@@ -57,20 +65,29 @@ function showDetailHotel(hotelObj) {
     };
 }
 
-// Hiển thị tour liên quan
-let xmlhttp3 = new XMLHttpRequest();
-let url3 = "json/tours.json";
-xmlhttp3.open("GET", url3, true);
-xmlhttp3.send();
-xmlhttp3.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        let allToursData = JSON.parse(this.responseText);
-        let id = document.location.href.split('=')[1];
-        let conditionObj = {
-            destination: allHotelsData[id]['location-related'][0]
+
+let tourPromise = new Promise(function(resolve, reject) {
+    // Hiển thị tour liên quan
+    let xmlhttp = new XMLHttpRequest();
+    let url = "json/tours.json";
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let allToursData = JSON.parse(this.responseText);
+            resolve(allToursData);
+
         }
-        // console.log(JSON.stringify(conditionObj))
-        visibleTours = filterCondition(allToursData, conditionObj);
-        displayTours(visibleTours, undefined, "filter-tour", 4, 2);
+    };
+});
+
+Promise.all([hotelPromise, tourPromise]).then(function(resolve) {
+    let [allHotelsData, allToursData] = resolve;
+    let id = document.location.href.split('=')[1];
+    let conditionObj = {
+        destination: allHotelsData[id]['location-related'][0]
     }
-};
+    // console.log(JSON.stringify(conditionObj))
+    visibleTours = filterCondition(allToursData, conditionObj);
+    displayTours(visibleTours, undefined, "filter-tour", 4, 2);
+});
