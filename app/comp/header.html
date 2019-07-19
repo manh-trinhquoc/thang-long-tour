@@ -9,10 +9,14 @@
     <a href="find-hotels.html">Khách sạn</a>
     <a href="find-blogs.html">Blog du lịch</a>
     <a href="about.html">Liên hệ</a>
-    <form class="topnav__search search a" action="#">
-        <input type="text" placeholder="Search.." name="search" class="input__text search__input-text">
-        <button type="submit" class="search__button"><i class="fa fa-search"></i></button>
+    <form class="topnav__search search a" onsubmit="return executeQuery();" id="cse-search-box-form-id">
+        <!-- This is the input searc box -->
+        <input type="text" placeholder="Search.." name="search" class="input__text search__input-text" id="cse-search-input-box-id">
+        <!-- This is the search button -->
+        <button type="submit" class="search__button" value="Search"><i class="fa fa-search"></i></button>
+        <!-- This is the search result -->
     </form>
+    <div class="gcse-searchresults-only" id="search-gg-result"></div>
     <div class="a" id="topnav__register">
         <button class="topnav__sign-in" onclick="togglePopover('register-popover')"><i class="fas fa-user"></i></button>
     </div>
@@ -24,3 +28,4 @@
         </div>
     </div>
 </div>
+<form>

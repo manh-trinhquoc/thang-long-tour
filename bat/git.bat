@@ -1,4 +1,4 @@
 cd F:\thang-long-tour
 git add .
-git commit -m "use promise, async await"
+git commit -m "finish google search"
 git push

@@ -336,3 +336,19 @@
 @import 'comp/_banner.scss';
 @import 'comp/_footer.scss';
 @import 'comp/_register-popover.scss';
+
+.search-gg {
+
+
+    &-input {
+        background-color: blue;
+        padding: 10px;
+    }
+}
+
+#search-gg {
+    background-color: blue;
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+}

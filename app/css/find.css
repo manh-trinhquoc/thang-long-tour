@@ -173,7 +173,7 @@ ul {
 
 .btn, .btn_no-bg, .btn_icon, .btn_sm, .btn_md {
   margin: 0 auto;
-  color: white;
+  color: black;
   text-align: center;
   background-color: #E6AC00;
   padding: 10px;
@@ -230,14 +230,14 @@ ul {
 
 .input__select, .input__select_background, .input__date {
   background-color: #806000;
-  color: white; }
+  color: black; }
   .input__select_background {
     background-color: #403000; }
 
 .input__checkbox {
   width: 20px;
   height: 20px;
-  color: white; }
+  color: black; }
   .input__checkbox:after {
     width: 20px;
     height: 20px;
@@ -247,13 +247,13 @@ ul {
   .input__checkbox:checked:after {
     content: "\2714";
     text-align: center;
-    color: white; }
+    color: black; }
 
 .input__radio-checkbox {
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  color: white; }
+  color: black; }
   .input__radio-checkbox:after {
     width: 20px;
     height: 20px;
@@ -264,7 +264,7 @@ ul {
   .input__radio-checkbox:checked:after {
     content: "\2714";
     text-align: center;
-    color: white; }
+    color: black; }
 
 /*input[type="checkbox"] {
     cursor: pointer;
@@ -381,7 +381,7 @@ ul {
   .header img {
     max-width: 50%; }
   .header i {
-    color: white; }
+    color: black; }
 
 .topnav {
   background-color: transparent;
@@ -429,15 +429,12 @@ ul {
       width: 44px;
       position: relative;
       background-color: transparent; }
-      .topnav__search:hover input {
-        width: 300px;
-        background-color: #FFBF00;
-        color: white; }
     .topnav input {
       position: absolute;
       right: 0;
-      width: 0;
-      transition: 0.5s linear; } }
+      width: 300px;
+      color: black;
+      background-color: white; } }
 
 .search, .search-inpage {
   position: relative;
@@ -457,7 +454,7 @@ ul {
     border: none; }
   .search-result {
     background-color: #FFBF00;
-    color: white; }
+    color: black; }
 
 .dropdown {
   position: absolute;
@@ -471,7 +468,7 @@ ul {
   .dropdown button {
     width: 100%;
     font-size: 1rem;
-    color: white; }
+    color: black; }
   .dropdown:before {
     content: '';
     width: 0;
@@ -487,6 +484,13 @@ ul {
     color: #FFBF00; }
   .dropdown-wrapper {
     position: relative; }
+
+#search-gg-result {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  visibility: hidden; }
 
 .banner {
   width: 100%;
@@ -653,6 +657,16 @@ ul {
     opacity: 0.6;
     background-color: #403000; }
 
+.search-gg-input {
+  background-color: blue;
+  padding: 10px; }
+
+#search-gg {
+  background-color: blue;
+  height: 0px;
+  width: 0px;
+  visibility: hidden; }
+
 .filter {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -716,7 +730,7 @@ ul {
     .pagination {
       padding-right: 20px; } }
   .pagination a {
-    color: white;
+    color: black;
     padding: 10px;
     display: inline-block;
     min-width: 44px;
@@ -764,7 +778,7 @@ ul {
   margin-right: auto;
   background-color: #403000; }
   .search-inpage input {
-    color: white; }
+    color: black; }
 
 .place-result, .blog-result {
   position: relative;

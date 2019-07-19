@@ -85,21 +85,14 @@
             width: $search-height;
             position: relative;
             background-color: transparent;
-
-            &:hover {
-                input {
-                    width: 300px;
-                    background-color: $text-color;
-                    color: $text-no-color;
-                }
-            }
         }
 
         input {
             position: absolute;
             right: 0;
-            width: 0;
-            transition: 0.5s linear;
+            width: 300px;
+            color: $text-no-color;
+            background-color: white;
         }
     }
 }
@@ -172,4 +165,12 @@
     &-wrapper {
         position: relative;
     }
+}
+
+#search-gg-result {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
 }

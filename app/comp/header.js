@@ -27,6 +27,17 @@ function signOut() {
     });
     console.groupEnd();
     toggleRegisterDropdown();
-
-
 }
+
+function executeQuery() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+        element.clearAllResults();
+    } else {
+        element.execute(input.value);
+    }
+    return false;
+}
+
+loadScript('https://cse.google.com/cse.js?cx=017304219906317488510:iiffvytem58', false, true);
