@@ -1,15 +1,18 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyBLun8W025GfovROcAH9hiI3XaU8TVM0vY",
-    authDomain: "thang-long-tour.firebaseapp.com",
-    databaseURL: "https://thang-long-tour.firebaseio.com",
-    projectId: "thang-long-tour",
-    storageBucket: "",
-    messagingSenderId: "686130862617",
-    appId: "1:686130862617:web:705408b2e99ddd3d"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+function clearCurrentUserInfo() {
+    currentUserObj.isLoggedIn = false;
+    currentUserObj.email = '';
+    currentUserObj.photoURL = '';
+    currentUserObj.historyViewed = '';
+    currentUserObj.tourbooked = ''
+    currentUserObj.oldTours = '';
+}
+
+function autoFillInput() {
+    let elem = document.getElementById('js-user-name');
+    elem.innerText = currentUserObj.displayName;
+    elem = document.getElementById('js-user-phone');
+    elem = document.getElementById('js-user-email');
+}
 
 /**
  * initApp handles setting up UI event listeners and registering Firebase auth listeners:
@@ -55,11 +58,7 @@ function initApp() {
                 return;
             }
             currentUserObj.isLoggedIn = false;
-            currentUserObj.email = '';
-            currentUserObj.photoURL = '';
-            currentUserObj.historyViewed = '';
-            currentUserObj.tourbooked = ''
-            currentUserObj.oldTours = '';
+            clearCurrentUserInfo();
             console.log('user sign out');
             console.log(currentUserObj);
             window.localStorage.clear();
@@ -69,8 +68,22 @@ function initApp() {
     });
 }
 
+// Your web app's Firebase configuration
+let firebaseConfig = {
+    apiKey: "AIzaSyBLun8W025GfovROcAH9hiI3XaU8TVM0vY",
+    authDomain: "thang-long-tour.firebaseapp.com",
+    databaseURL: "https://thang-long-tour.firebaseio.com",
+    projectId: "thang-long-tour",
+    storageBucket: "",
+    messagingSenderId: "686130862617",
+    appId: "1:686130862617:web:705408b2e99ddd3d"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+// Initialize an instance of Cloud Firestore:
+let db = firebase.firestore();
+
 window.onload = function() {
     initApp();
 };
-// Initialize an instance of Cloud Firestore:
-var db = firebase.firestore();
