@@ -43,7 +43,7 @@ let currentUserObj = {
     tourbooked: null,
     historyViewed: [],
     oldTours: [],
-    displayName: '';
+    displayName: ''
 }
 
 // Lấy thông tin về lịch sử duyệt web từ localStorage
