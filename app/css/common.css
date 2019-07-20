@@ -416,6 +416,8 @@ ul {
     background-color: transparent;
     padding: 0;
     border: none; }
+    .topnav__sign-in i, .dropdown a i, .dropdown button i {
+      color: black; }
   .topnav .a {
     padding: 0;
     padding-left: 16px; }

@@ -121,6 +121,13 @@ function convertNumbToString(numb) {
     return strArr.join('');
 }
 
+function formatDate(date) {
+    if (!date) return '';
+    let [year, month, day] = date.split('-');
+    let formatedDate = [day, month, year].join('/');
+    return formatedDate;
+}
+
 // Các hàm hiển thị tour lên màn hình
 function displayTours(productData, page, elemID, maxItemPerRow = 3, maxRow = 4) {
     // Khai báo hiển thị dữ liệu từ data
@@ -150,7 +157,7 @@ function displayTours(productData, page, elemID, maxItemPerRow = 3, maxRow = 4) 
                             <div class="card__img">
                                 <img src="${product.img[0]}" alt="demo image" />`
         if (product['sale-off'] < 0) {
-            elem += `<div class="card__sale">${product['sale-off']}</div>`
+            elem += `<div class="card__sale">${convertNumbToString(product['sale-off'])}</div>`
         }
 
         elem += `</div>
@@ -158,7 +165,7 @@ function displayTours(productData, page, elemID, maxItemPerRow = 3, maxRow = 4) 
                             <h3 class="card__header">${product.name}</h3>
                             <h5 class="card__price">${convertNumbToString(product.price)}</h5>
                             <h5 class="card__duration">Thời gian: ${product.day} ngày ${product.night} đêm</h5>
-                            <h5 class="card__start-date">Khởi hành: ${product['departure-date']}</h5>
+                            <h5 class="card__start-date">Khởi hành: ${formatDate(product['departure-date']) }</h5>
                         </a>
                     </div>`;
         if (countItemInRow >= maxItemPerRow) {

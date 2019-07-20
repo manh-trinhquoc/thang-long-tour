@@ -8,10 +8,18 @@ function clearCurrentUserInfo() {
 }
 
 function autoFillInput() {
+    console.group('autoFillInput');
     let elem = document.getElementById('js-user-name');
-    elem.innerText = currentUserObj.displayName;
+    if (!elem) {
+        console.groupEnd();
+        return;
+    }
+    elem.value = currentUserObj.displayName;
     elem = document.getElementById('js-user-phone');
+    elem.value = currentUserObj.phone;
     elem = document.getElementById('js-user-email');
+    elem.value = currentUserObj.email;
+    console.groupEnd();
 }
 
 /**
@@ -27,19 +35,22 @@ function initApp() {
             // User is signed in.
             currentUserObj.isAppInitialized = true;
             currentUserObj.isLoggedIn = true;
-            currentUserObj.displayName = user.displayName;
             currentUserObj.email = user.email;
             currentUserObj.photoURL = user.photoURL;
             // get user data from database
             let docRef = db.collection("users").doc(currentUserObj.email);
-
+            // console.log(user);
             docRef.get().then(function(doc) {
                 if (doc.exists) {
-                    let docData = doc.data()
+                    let docData = doc.data();
                     // console.log("Document data:", docData);
                     currentUserObj.historyViewed = docData.historyViewed;
                     currentUserObj.tourbooked = docData.tourbooked;
                     currentUserObj.oldTours = docData.oldTours;
+                    currentUserObj.phone = docData.phone;
+                    currentUserObj.displayName = docData.fullName;
+                    console.log(JSON.stringify(currentUserObj));
+                    autoFillInput()
                 } else {
                     // doc.data() will be undefined in this case
                     console.log("No such document!");
@@ -48,7 +59,7 @@ function initApp() {
                 console.log("Error getting document:", error);
             });
             console.log('user sign in');
-            console.log(JSON.stringify(currentUserObj));
+
             manageView();
         } else {
             // User is signed out.

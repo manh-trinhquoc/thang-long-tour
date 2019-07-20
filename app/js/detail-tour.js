@@ -76,7 +76,7 @@ function showBookInfo(tourObj) {
                     <h2>Giá</h2>
                     <p class="card__price">${convertNumbToString(tourObj.price) }</p>
                     <h2>Ngày khởi hành</h2>
-                    <p>${tourObj['departure-date']}</p>`
+                    <p>${formatDate(tourObj['departure-date'])}</p>`
 
     document.getElementById('book-info').innerHTML = elem;
     document.getElementById('tour-title').innerText = tourObj['name-full'];
