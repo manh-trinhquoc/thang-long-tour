@@ -11,8 +11,11 @@
 
 .tour-list {
     @include container;
-    border-bottom: 1px solid $page-color-darker;
     position: relative;
+
+    &:not(:last-of-type) {
+        border-bottom: 1px solid $page-color-darker;
+    }
 }
 
 .row {

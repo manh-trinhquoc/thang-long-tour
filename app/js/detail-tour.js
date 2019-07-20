@@ -74,7 +74,7 @@ function showBookInfo(tourObj) {
     let elem = `<h2 class="title">Thời gian</h2>
                     <p>${tourObj.day} ngày ${tourObj.night} đêm</p>
                     <h2>Giá</h2>
-                    <p class="card__price">${tourObj.price}</p>
+                    <p class="card__price">${convertNumbToString(tourObj.price) }</p>
                     <h2>Ngày khởi hành</h2>
                     <p>${tourObj['departure-date']}</p>`
 

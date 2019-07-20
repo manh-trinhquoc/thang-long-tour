@@ -109,6 +109,18 @@ function convertDataArrToObj(dataArr) {
     return dataObj;
 }
 
+function convertNumbToString(numb) {
+    let strArr = `${numb}`.split('');
+    let maxIndex = strArr.length - 1;
+    for (let i = maxIndex; i >= 0; i--) {
+        // i < max index - 1
+        if ((maxIndex - i) % 3 == 0 && i != maxIndex) {
+            strArr.splice(i + 1, 0, '.');
+        }
+    }
+    return strArr.join('');
+}
+
 // Các hàm hiển thị tour lên màn hình
 function displayTours(productData, page, elemID, maxItemPerRow = 3, maxRow = 4) {
     // Khai báo hiển thị dữ liệu từ data
@@ -144,7 +156,7 @@ function displayTours(productData, page, elemID, maxItemPerRow = 3, maxRow = 4) 
         elem += `</div>
                             <h4 class="card__country">${product.destination}</h4>
                             <h3 class="card__header">${product.name}</h3>
-                            <h5 class="card__price">${product.price}</h5>
+                            <h5 class="card__price">${convertNumbToString(product.price)}</h5>
                             <h5 class="card__duration">Thời gian: ${product.day} ngày ${product.night} đêm</h5>
                             <h5 class="card__start-date">Khởi hành: ${product['departure-date']}</h5>
                         </a>

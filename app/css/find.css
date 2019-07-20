@@ -92,8 +92,9 @@ ul {
   padding-bottom: 70px;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom: 1px solid #687672;
   position: relative; }
+  .tour-list:not(:last-of-type) {
+    border-bottom: 1px solid #687672; }
 
 .row, .row_justify_start, .row_align_start, .row_no-wrap, .filter-hotel__result {
   flex-wrap: wrap;

@@ -1,4 +1,4 @@
 cd F:\thang-long-tour
 git add .
-git commit -m "working on auto fill input"
+git commit -m "finish hien thi so tien"
 git push
