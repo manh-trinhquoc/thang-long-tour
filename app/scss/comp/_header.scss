@@ -2,6 +2,7 @@
 
 .logo {
     width: 290px;
+    filter: $text-color-filter;
 }
 
 .header {
@@ -24,7 +25,7 @@
 
 
     i {
-        color: $text-no-color;
+        color: $text-color;
 
     }
 }
@@ -72,6 +73,8 @@
 
     form {
         margin-left: auto;
+        max-width: 200px;
+        width: 100%;
     }
 
     button {
@@ -90,7 +93,6 @@
         input {
             position: absolute;
             right: 0;
-            width: 300px;
             color: $text-no-color;
             background-color: white;
         }
@@ -142,7 +144,7 @@
         @extend .topnav__sign-in;
         width: 100%;
         font-size: 1rem;
-        color: $text-no-color;
+        color: $text-color;
     }
 
     &:before {

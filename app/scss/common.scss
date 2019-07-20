@@ -100,12 +100,12 @@
     }
 
     &__country {
-        color: $text-color-darker;
+        color: $text-color;
         padding-top: $padding-xs;
     }
 
     &__header {
-        color: $text-color;
+        color: $text-color-darker;
         padding-top: $padding-xs;
         padding-bottom: $padding-xs;
         height: 60px;
@@ -124,7 +124,6 @@
 
         &:after {
             content: ' vnd';
-            color: $text-color-darker;
         }
     }
 
@@ -141,12 +140,16 @@
 .btn {
 
     margin: 0 auto;
-    color: $text-no-color;
+    color: $page-color;
     text-align: center;
-    background-color: $btn-bg-color;
+    background-color: $text-color;
     padding: $btn-padding;
     border: none;
     cursor: pointer;
+
+    & a {
+        color: $page-color;
+    }
 
     &_no-bg {
         @extend .btn;
@@ -230,11 +233,12 @@
     &__select {
         @extend .input__text;
         background-color: $page-color;
-        color: $text-no-color;
+        color: $text-color-darker;
 
         &_background {
             @extend .input__select;
             background-color: $page-color-darker;
+            margin-left: $padding-sm;
         }
     }
 

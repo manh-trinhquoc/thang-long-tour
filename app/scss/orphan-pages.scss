@@ -3,6 +3,11 @@
 
 .contact {
     @include container;
+    color: $text-color;
+
+    &__title {
+        color: $text-color-darker;
+    }
 
     &__note {
         padding-left: $padding-md;

@@ -2,6 +2,7 @@
     padding-bottom: $padding-xs;
     padding-top: $padding-xs;
     background-color: $page-color-darker;
+    color: $text-color;
 
     &__inner-wrapper {
         @extend %responsive-max-width;

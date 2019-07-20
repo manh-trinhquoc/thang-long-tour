@@ -2,6 +2,7 @@
 /*component special in find page: find-tour, find-hotel, find-place, find-news*/
 /*general variable and common component show in every pages*/
 /*Cac mau sac chinh*/
+/*$text-color: #FFBF00;*/
 /*font size*/
 /*tag size*/
 .tour-list, .breadcrumb, .header, .banner__nav, .banner__wrapper, .footer__inner-wrapper, .filter, .search-gg, .detail__wrapper {
@@ -54,25 +55,27 @@
 
 html {
   font-size: 16px;
-  color: white;
+  color: black;
   font-family: Arial; }
 
 body {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0) 200px) no-repeat, #806000;
-  margin: 0; }
+  margin: 0;
+  /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0) 200px) no-repeat, $page-color;*/
+  background: linear-gradient(180deg, #687672 0, rgba(104, 118, 114, 0.8) 110px, #F4D7E7 180px), #F4D7E7; }
 
 button:hover {
   cursor: pointer; }
 
 h2 {
-  text-align: center; }
+  text-align: center;
+  color: #D1A827; }
 
 a {
-  color: white;
+  color: #D1A827;
   text-decoration: none; }
 
 i {
-  color: #FFBF00; }
+  color: #D1A827; }
 
 ul {
   list-style-type: none;
@@ -90,7 +93,7 @@ ul {
   padding-bottom: 70px;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom: 1px solid #403000;
+  border-bottom: 1px solid #687672;
   position: relative; }
 
 .row, .row_justify_start, .row_align_start, .row_no-wrap, .filter-hotel__result {
@@ -150,10 +153,10 @@ ul {
     background-color: red;
     padding: 5px; }
   .card__country, .card-hotel__category {
-    color: #E6AC00;
+    color: #D1A827;
     padding-top: 5px; }
   .card__header, .card__header-full, .card-hotel__name {
-    color: #FFBF00;
+    color: #3F4234;
     padding-top: 5px;
     padding-bottom: 5px;
     height: 60px;
@@ -165,21 +168,22 @@ ul {
   .card__price {
     padding-top: 10px; }
     .card__price:after {
-      content: ' vnd';
-      color: #E6AC00; }
+      content: ' vnd'; }
   .card__duration, .card__start-date {
-    color: #FFBF00; }
+    color: #D1A827; }
   .card__upload-date {
-    color: #E6AC00; }
+    color: #3F4234; }
 
 .btn, .btn_no-bg, .btn_icon, .btn_sm, .btn_md {
   margin: 0 auto;
-  color: black;
+  color: #F4D7E7;
   text-align: center;
-  background-color: #E6AC00;
+  background-color: #D1A827;
   padding: 10px;
   border: none;
   cursor: pointer; }
+  .btn a, .btn_no-bg a, .btn_icon a, .btn_sm a, .btn_md a {
+    color: #F4D7E7; }
   .btn_no-bg {
     background-color: inherit; }
   .btn__wrapper {
@@ -230,10 +234,11 @@ ul {
   padding-bottom: 20px; }
 
 .input__select, .input__select_background, .input__date {
-  background-color: #806000;
-  color: black; }
+  background-color: #F4D7E7;
+  color: #3F4234; }
   .input__select_background {
-    background-color: #403000; }
+    background-color: #687672;
+    margin-left: 10px; }
 
 .input__checkbox {
   width: 20px;
@@ -242,7 +247,7 @@ ul {
   .input__checkbox:after {
     width: 20px;
     height: 20px;
-    background: #806000;
+    background: #F4D7E7;
     content: "";
     display: inline-block; }
   .input__checkbox:checked:after {
@@ -259,7 +264,7 @@ ul {
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background: #806000;
+    background: #F4D7E7;
     content: "";
     display: inline-block; }
   .input__radio-checkbox:checked:after {
@@ -290,7 +295,7 @@ ul {
     padding-left: 5px;
     padding-right: 5px; }
   .breadcrumb .active {
-    color: #FFBF00; }
+    color: #D1A827; }
 
 .map-marker {
   padding-left: 5px;
@@ -320,11 +325,9 @@ ul {
 .topnav > a,
 .topnav > .a {
   display: block;
-  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px; }
+  text-decoration: none; }
 
 /* Change the color of links on hover */
 .topnav a:hover,
@@ -368,7 +371,8 @@ ul {
     width: 100%; } }
 
 .logo {
-  width: 290px; }
+  width: 290px;
+  filter: invert(80%) sepia(65%) saturate(2893%) hue-rotate(359deg) brightness(102%) contrast(105%); }
 
 .header {
   padding-top: 20px;
@@ -382,7 +386,7 @@ ul {
   .header img {
     max-width: 50%; }
   .header i {
-    color: black; }
+    color: #D1A827; }
 
 .topnav {
   background-color: transparent;
@@ -420,7 +424,9 @@ ul {
       .topnav .a {
         padding: 0; } }
   .topnav form {
-    margin-left: auto; }
+    margin-left: auto;
+    max-width: 200px;
+    width: 100%; }
   .topnav button {
     font-size: 23px; }
   @media (min-width: 576px) {
@@ -433,7 +439,6 @@ ul {
     .topnav input {
       position: absolute;
       right: 0;
-      width: 300px;
       color: black;
       background-color: white; } }
 
@@ -454,7 +459,7 @@ ul {
     background-color: transparent;
     border: none; }
   .search-result {
-    background-color: #FFBF00;
+    background-color: #D1A827;
     color: black; }
 
 .dropdown {
@@ -469,7 +474,7 @@ ul {
   .dropdown button {
     width: 100%;
     font-size: 1rem;
-    color: black; }
+    color: #D1A827; }
   .dropdown:before {
     content: '';
     width: 0;
@@ -482,7 +487,7 @@ ul {
     top: -10px;
     right: 11px; }
   .dropdown-control i {
-    color: #FFBF00; }
+    color: #D1A827; }
   .dropdown-wrapper {
     position: relative; }
 
@@ -582,7 +587,8 @@ ul {
 .footer {
   padding-bottom: 5px;
   padding-top: 5px;
-  background-color: #403000; }
+  background-color: #687672;
+  color: #D1A827; }
   .footer__logo {
     text-align: center;
     padding: 10px; }
@@ -627,7 +633,7 @@ ul {
         height: 100vh; } }
 
 .register {
-  background-color: #403000;
+  background-color: #687672;
   margin: 0 auto;
   width: 50%;
   min-width: 300px;
@@ -641,10 +647,10 @@ ul {
     padding: 0;
     flex-wrap: nowrap;
     flex-flow: row;
-    background-color: #806000; }
+    background-color: #F4D7E7; }
   .register__form {
     position: relative;
-    background-color: #806000;
+    background-color: #F4D7E7;
     padding: 5px;
     height: 528px; }
     @media (min-width: 576px) {
@@ -656,7 +662,7 @@ ul {
     font-size: 8px; }
   .register .deactive {
     opacity: 0.6;
-    background-color: #403000; }
+    background-color: #687672; }
 
 .search-gg-input {
   background-color: blue;
@@ -675,7 +681,8 @@ ul {
   padding-right: 5px;
   position: relative; }
   .filter__form {
-    background-color: #403000;
+    background-color: #687672;
+    color: #D1A827;
     padding: 10px; }
   @media (min-width: 576px) {
     .filter__form-wrapper {
@@ -699,7 +706,8 @@ ul {
       .filter__item_arrange {
         text-align: left; } }
     .filter__item_arrange p {
-      padding-left: 10px; }
+      padding-left: 10px;
+      color: #D1A827; }
   .filter__button {
     padding-top: 40px; }
   .filter__result {
@@ -731,7 +739,7 @@ ul {
     .pagination {
       padding-right: 20px; } }
   .pagination a {
-    color: black;
+    color: #D1A827;
     padding: 10px;
     display: inline-block;
     min-width: 44px;
@@ -741,7 +749,7 @@ ul {
     text-decoration: none;
     transition: background-color .3s; }
   .pagination .active {
-    background-color: #BF8F00;
+    background-color: #687672;
     color: white; }
   .pagination .disable {
     visibility: hidden; }
@@ -759,7 +767,7 @@ ul {
   padding-top: 0;
   margin-top: 0; }
   .card-hotel__address {
-    color: #E6AC00;
+    color: #3F4234;
     padding-top: 10px; }
 
 .search-gg {
@@ -777,7 +785,7 @@ ul {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #403000; }
+  background-color: white; }
   .search-inpage input {
     color: black; }
 
@@ -800,14 +808,15 @@ ul {
     padding-bottom: 70px;
     padding-left: 5px;
     padding-right: 5px;
-    border-bottom: 1px solid #403000; }
+    border-bottom: 1px solid #687672; }
 
 .tour-info {
   text-align: center;
   width: 90%;
   margin-left: auto;
   margin-bottom: 20px;
-  background-color: #403000;
+  background-color: #687672;
+  color: #D1A827;
   margin-right: auto; }
   @media (min-width: 576px) {
     .tour-info {
@@ -815,7 +824,7 @@ ul {
   .tour-info h2 {
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #FFBF00; }
+    color: #D1A827; }
   .tour-info p {
     font-size: 18px; }
 
@@ -832,7 +841,7 @@ ul {
 
 .book-tour {
   width: 100%;
-  background-color: #403000;
+  background-color: #687672;
   padding: 5px;
   position: relative; }
   @media (min-width: 576px) {

@@ -7,6 +7,7 @@
 
     &__form {
         background-color: $page-color-darker;
+        color: $text-color;
         padding: $padding-sm;
     }
 
@@ -36,6 +37,7 @@
 
         p {
             padding-left: $padding-sm;
+            color: $text-color;
         }
     }
 
@@ -77,7 +79,7 @@
     @include media(padding-right, $padding-md);
 
     a {
-        color: $text-no-color;
+        color: $text-color;
         padding: $padding-sm;
         display: inline-block;
         min-width: $search-height;
@@ -89,7 +91,7 @@
     }
 
     .active {
-        background-color: $page-color-lighter;
+        background-color: $page-color-darker;
         color: white;
     }
 
@@ -144,7 +146,7 @@
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    background-color: $page-color-darker;
+    background-color: white;
 
     input {
         color: $text-no-color;
