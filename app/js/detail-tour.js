@@ -1,5 +1,5 @@
 // Thêm data vào lịch sử nếu ko phải là reload trang
-console.log('Thêm lịch sử xem tour');
+// console.log('Thêm lịch sử xem tour');
 let tourID = window.location.href.split("=")[1];
 let lastID = currentUserObj.historyViewed[0]
 if (tourID != lastID) {
@@ -13,6 +13,7 @@ if (tourID != lastID) {
     for (; currentUserObj.historyViewed.length > 8;) {
         currentUserObj.historyViewed.pop();
     }
+    // ghi ngược vào local storage
     localStorage.setItem('historyViewed', JSON.stringify(currentUserObj.historyViewed));
     console.group('add tourID to historyViewed');
     console.log(JSON.stringify(currentUserObj.historyViewed));
@@ -80,4 +81,17 @@ function showBookInfo(tourObj) {
 
     document.getElementById('book-info').innerHTML = elem;
     document.getElementById('tour-title').innerText = tourObj['name-full'];
+}
+
+function submitBookTour() {
+    hidePopover('book-tour-popover');
+    let tourID = document.href.split('=')[1];
+    // book tour infomation được lưu vào database của firebase
+    db.collection("bookTour").doc(email).set(currentUserObj).then(function() {
+        alert(`Bạn ${fullName} đã tạo tài khoản thành công.\n Email: ${email}.\n Số điện thoại: ${phone}.
+                \n Password: ${password}.`);
+        console.log('Tạo bản ghi thành công');
+    }).catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
 }

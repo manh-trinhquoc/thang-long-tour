@@ -38,14 +38,13 @@ window.fbAsyncInit = function() {
 
 // Tạo object lưu thông tin về user
 let currentUserObj = {
-    isAppInitialized: false,
+    isAuthInitialized: false,
     isLoggedIn: false,
     tourbooked: null,
     historyViewed: [],
     oldTours: [],
     displayName: ''
-}
-
+};
 // Lấy thông tin về lịch sử duyệt web từ localStorage
 console.group('Lấy thông tin về lịch sử duyệt web từ localStorage')
 if (localStorage.getItem('historyViewed')) {

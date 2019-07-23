@@ -1,6 +1,6 @@
 let checkPersonalPageInitFinished = new Promise(function(resolve, reject) {
     let timer = setInterval(function() {
-        if (currentUserObj.isAppInitialized) {
+        if (currentUserObj.isAuthInitialized) {
             clearInterval(timer);
             resolve();
         }

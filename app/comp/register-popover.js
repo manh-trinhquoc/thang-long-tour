@@ -121,7 +121,7 @@ function submitSignUp(event) {
     let isAllValidated = true;
     let elem = document.getElementById('sign-up-name');
     if (!isValidated(['cannotEmpty'], elem)) isAllValidated = false;
-    let fullName = elem.value;
+    let displayName = elem.value;
 
     elem = document.getElementById('sign-up-phone');
     if (!isValidated(['cannotEmpty', 'isPhoneNumber'], elem)) isAllValidated = false;
@@ -146,19 +146,18 @@ function submitSignUp(event) {
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
         console.group('createUserWithEmailAndPassword');
         user = firebase.auth().currentUser;
-        console.log(user);
-        currentUserObj.fullName = fullName;
+        // console.log(user);
+        currentUserObj.displayName = displayName;
         currentUserObj.phone = phone;
         currentUserObj.email = email;
         currentUserObj.password = password;
         // user infomation được lưu vào database của firebase
         db.collection("users").doc(email).set(currentUserObj).then(function() {
-                alert(`Bạn ${fullName} đã tạo tài khoản thành công.\n Email: ${email}.\n Số điện thoại: ${phone}.\n Password: ${password}.`);
-                console.log('Tạo bản ghi thành công');
-            })
-            .catch(function(error) {
-                console.error("Error adding document: ", error);
-            });
+            alert(`Bạn ${displayName} đã tạo tài khoản thành công.\n Email: ${email}.\n Số điện thoại: ${phone}.\n Password: ${password}.`);
+            console.log('Tạo bản ghi thành công');
+        }).catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
 
         console.groupEnd();
     }).catch(function(error) {
@@ -189,12 +188,12 @@ function submitSignIn(event) {
     let elem = document.getElementById('sign-in-email');
     if (!isValidated(['cannotEmpty', 'isEmail'], elem)) isAllValidated = false;
     let email = elem.value;
-    console.log(email);
+    // console.log(email);
 
     elem = document.getElementById('sign-in-pass');
     if (!isValidated(['cannotEmpty', 'longerThan6Digit'], elem)) isAllValidated = false;
     let password = elem.value;
-    console.log(password);
+    // console.log(password);
 
     console.log('isAllValidated: ' + isAllValidated);
     if (!isAllValidated) return;
@@ -202,7 +201,27 @@ function submitSignIn(event) {
     // [START authwithemail]
     firebase.auth().signInWithEmailAndPassword(email, password).then(function(resolved) {
         // login thanh cong
-        // console.log(resolved);
+        currentUserObj.isLoggedIn = true;
+        // get user data from database
+        let docRef = db.collection("users").doc(email);
+        docRef.get().then(function(doc) {
+            if (doc.exists) {
+                let docData = doc.data();
+                // thêm lịch sử duyệt web cũ từ database
+                currentUserObj.historyViewed.push(...docData.historyViewed);
+                for (; currentUserObj.historyViewed.length > 8;) {
+                    currentUserObj.historyViewed.pop();
+                }
+                // ghi ngược vào local storage
+                localStorage.setItem('historyViewed', JSON.stringify(currentUserObj.historyViewed));
+            } else {
+                // doc.data() will be undefined in this case
+                console.log("No such document!");
+            }
+        }).catch(function(error) {
+            console.log("Error getting document:", error);
+        });
+
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -210,8 +229,6 @@ function submitSignIn(event) {
         // [START_EXCLUDE]
         if (errorCode === 'auth/wrong-password') {
             alert('Mật khẩu bạn nhập không chính xác');
-        } else {
-            alert(errorMessage);
         }
         console.log(error);
         // [END_EXCLUDE]

@@ -8,7 +8,7 @@
 
 html {
     font-size: 16px;
-    color: $text-no-color;
+    color: $text-color-darker;
     font-family: Arial;
 }
 
@@ -23,13 +23,14 @@ button:hover {
     cursor: pointer;
 }
 
-h2 {
+h2,
+i {
     text-align: center;
-    color: $text-color;
+    color: inherit;
 }
 
 a {
-    color: $text-color;
+    color: inherit;
     text-decoration: none;
 }
 

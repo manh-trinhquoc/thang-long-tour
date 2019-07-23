@@ -2,6 +2,10 @@
     width: 100%;
     position: relative;
 
+    a {
+        color: $text-color;
+    }
+
     &__content {
         position: absolute;
         top: 0;

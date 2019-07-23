@@ -3,7 +3,7 @@
 
 .contact {
     @include container;
-    color: $text-color;
+    color: $text-color-darker-1;
 
     &__title {
         color: $text-color-darker;

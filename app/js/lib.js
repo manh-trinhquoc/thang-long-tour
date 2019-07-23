@@ -78,14 +78,13 @@ function includeHTML() {
             }
         });
     });
+    console.groupEnd();
     return Promise.all(promiseArr).then(function(resolve) {
         console.log('includeHTML replaced all elements')
         return new Promise(function(resolve, reject) {
             resolve(1);
         });
     });
-    console.log('includeHTML reach end-line of function');
-    console.groupEnd();
 }
 
 // Các hàm chung thông thường
@@ -114,7 +113,7 @@ function convertNumbToString(numb) {
     let maxIndex = strArr.length - 1;
     for (let i = maxIndex; i >= 0; i--) {
         // i < max index - 1
-        if ((maxIndex - i) % 3 == 0 && i != maxIndex) {
+        if ((maxIndex - i) % 3 == 0 && i != maxIndex && strArr[i] != '-') {
             strArr.splice(i + 1, 0, '.');
         }
     }
@@ -377,7 +376,7 @@ function displayBlogs(productData, elemID, maxItemPerRow = 3, maxRow = 4) {
                             <div class="card__img">
                                 <img src="${product.img[0]}" alt="demo image" />
                              </div>
-                            <h4 class="card__upload-date">${product['upload-date']}</h4>
+                            <h4 class="card__upload-date">${formatDate(product['upload-date'])}</h4>
                             <h3 class="card__header-full">${product.name.toLowerCase()}</h3>
                         </a>
                     </div>`;

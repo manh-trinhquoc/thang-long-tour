@@ -80,6 +80,7 @@
     @include media(margin-left, 0);
     position: relative;
     padding: $padding-sm;
+    color: $text-color-darker-1;
 
     &__img {
         height: 170px;
@@ -100,10 +101,10 @@
         left: 0;
         background-color: red;
         padding: $padding-xs;
+        color: $text-color;
     }
 
     &__country {
-        color: $text-color;
         padding-top: $padding-xs;
     }
 
@@ -123,7 +124,6 @@
     }
 
     &__price {
-        padding-top: $padding-sm;
 
         &:after {
             content: ' vnd';
@@ -131,13 +131,16 @@
     }
 
     &__duration,
-    &__start-date {
-        color: $text-color;
+    &__start-date,
+    &__upload-date,
+    a {
+        color: $text-color-darker-1;
     }
 
-    &__upload-date {
-        color: $text-color-darker;
+    h5 {
+        padding-top: $padding-xs;
     }
+
 }
 
 .btn {
@@ -154,10 +157,7 @@
         color: $page-color;
     }
 
-    &_no-bg {
-        @extend .btn;
-        background-color: inherit;
-    }
+
 
     &__wrapper {
         width: 100%;

@@ -16,7 +16,7 @@
 }
 
 .register {
-
+    color: $text-color-darker-1;
     background-color: $page-color-darker;
     margin: 0 auto;
     width: 50%;
@@ -56,6 +56,12 @@
     .deactive {
         opacity: 0.6;
         background-color: $page-color-darker;
+        color: $text-color;
     }
+}
 
+.btn_no-bg {
+    @extend .btn;
+    background-color: inherit;
+    color: $text-color-darker-1;
 }

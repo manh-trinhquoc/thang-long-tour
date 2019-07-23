@@ -54,7 +54,7 @@
 
 html {
   font-size: 16px;
-  color: black;
+  color: #3F4234;
   font-family: Arial; }
 
 body {
@@ -65,12 +65,13 @@ body {
 button:hover {
   cursor: pointer; }
 
-h2 {
+h2,
+i {
   text-align: center;
-  color: #D1A827; }
+  color: inherit; }
 
 a {
-  color: #D1A827;
+  color: inherit;
   text-decoration: none; }
 
 i {
@@ -129,7 +130,8 @@ ul {
   height: 350px;
   margin: 20px;
   position: relative;
-  padding: 10px; }
+  padding: 10px;
+  color: #987a1c; }
   @media (min-width: 576px) {
     .card, .card-hotel {
       margin-left: 0; } }
@@ -151,9 +153,9 @@ ul {
     bottom: 0;
     left: 0;
     background-color: red;
-    padding: 5px; }
+    padding: 5px;
+    color: #D1A827; }
   .card__country, .card-hotel__category {
-    color: #D1A827;
     padding-top: 5px; }
   .card__header, .card__header-full, .card-hotel__name {
     color: #3F4234;
@@ -165,16 +167,16 @@ ul {
     font-size: 1.1rem; }
     .card__header-full {
       height: 150px; }
-  .card__price {
-    padding-top: 10px; }
-    .card__price:after {
-      content: ' vnd'; }
-  .card__duration, .card__start-date {
-    color: #D1A827; }
-  .card__upload-date {
-    color: #3F4234; }
+  .card__price:after {
+    content: ' vnd'; }
+  .card__duration, .card__start-date, .card__upload-date,
+  .card a,
+  .card-hotel a {
+    color: #987a1c; }
+  .card h5, .card-hotel h5 {
+    padding-top: 5px; }
 
-.btn, .btn_no-bg, .btn_icon, .btn_sm, .btn_md {
+.btn, .btn_icon, .btn_sm, .btn_md, .btn_no-bg {
   margin: 0 auto;
   color: #F4D7E7;
   text-align: center;
@@ -182,10 +184,8 @@ ul {
   padding: 10px;
   border: none;
   cursor: pointer; }
-  .btn a, .btn_no-bg a, .btn_icon a, .btn_sm a, .btn_md a {
+  .btn a, .btn_icon a, .btn_sm a, .btn_md a, .btn_no-bg a {
     color: #F4D7E7; }
-  .btn_no-bg {
-    background-color: inherit; }
   .btn__wrapper {
     width: 100%;
     padding: 20px; }
@@ -228,7 +228,7 @@ ul {
 .input__remark {
   width: 100%;
   height: 22px;
-  font-size: 8px;
+  font-size: 10px;
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -385,7 +385,8 @@ ul {
     z-index: 1; }
   .header img {
     max-width: 50%; }
-  .header i {
+  .header i,
+  .header a {
     color: #D1A827; }
 
 .topnav {
@@ -503,6 +504,8 @@ ul {
 .banner {
   width: 100%;
   position: relative; }
+  .banner a {
+    color: #D1A827; }
   .banner__content {
     position: absolute;
     top: 0;
@@ -581,7 +584,7 @@ ul {
 .nav-background {
   position: absolute;
   bottom: 4px;
-  background-color: rgba(64, 48, 0, 0.5);
+  background-color: rgba(104, 118, 114, 0.8);
   width: 100%; }
   .nav-background__item {
     visibility: hidden; }
@@ -616,6 +619,10 @@ ul {
     display: flex;
     justify-content: space-between;
     font-size: 33px; }
+  .footer li,
+  .footer i,
+  .footer a {
+    color: #D1A827; }
 
 .popover {
   position: absolute;
@@ -635,6 +642,7 @@ ul {
         height: 100vh; } }
 
 .register {
+  color: #987a1c;
   background-color: #687672;
   margin: 0 auto;
   width: 50%;
@@ -661,10 +669,15 @@ ul {
   .register__input {
     width: 100%; }
   .register__note {
-    font-size: 8px; }
+    font-size: 10px; }
   .register .deactive {
     opacity: 0.6;
-    background-color: #687672; }
+    background-color: #687672;
+    color: #D1A827; }
+
+.btn_no-bg {
+  background-color: inherit;
+  color: #987a1c; }
 
 .search-gg-input {
   background-color: blue;
@@ -681,7 +694,8 @@ ul {
   padding-bottom: 70px;
   padding-left: 5px;
   padding-right: 5px;
-  position: relative; }
+  position: relative;
+  color: #987a1c; }
   .filter__form {
     background-color: #687672;
     color: #D1A827;
@@ -708,8 +722,7 @@ ul {
       .filter__item_arrange {
         text-align: left; } }
     .filter__item_arrange p {
-      padding-left: 10px;
-      color: #D1A827; }
+      padding-left: 10px; }
   .filter__button {
     padding-top: 40px; }
   .filter__result {
@@ -736,12 +749,12 @@ ul {
 .pagination {
   width: 100%;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  color: #987a1c; }
   @media (min-width: 576px) {
     .pagination {
       padding-right: 20px; } }
   .pagination a {
-    color: #D1A827;
     padding: 10px;
     display: inline-block;
     min-width: 44px;
@@ -769,7 +782,6 @@ ul {
   padding-top: 0;
   margin-top: 0; }
   .card-hotel__address {
-    color: #3F4234;
     padding-top: 10px; }
 
 .search-gg {

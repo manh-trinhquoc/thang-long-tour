@@ -2,14 +2,15 @@
 $page-color: #F4D7E7;
 $page-color-darker: #687672;
 $page-color-darker_trans: rgba(64, 48, 0, 0.9);
-$page-color-darker_trans-more: rgba(64, 48, 0, 0.5);
+$page-color-darker_trans-more: rgba(104, 118, 114, 0.8);
 /*$text-color: #FFBF00;*/
 $text-color: #D1A827;
+$text-color-darker-1: #987a1c;
 $text-color-filter: invert(80%) sepia(65%) saturate(2893%) hue-rotate(359deg) brightness(102%) contrast(105%);
 $text-color-darker: #3F4234;
 $text-no-color: black;
 /*font size*/
-$text-size-xs: 8px;
+$text-size-xs: 10px;
 $text-size-sm: 13px;
 $text-size-md: 18px;
 $text-size-lg: 35px;

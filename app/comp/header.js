@@ -7,19 +7,29 @@ function toggleRegisterDropdown() {
     document.getElementById('register-dropdown').toggleAttribute('hidden');
 }
 
+function clearCurrentUserInfo() {
+    currentUserObj.isLoggedIn = false;
+    currentUserObj.email = '';
+    currentUserObj.photoURL = '';
+    currentUserObj.historyViewed = '';
+    currentUserObj.tourbooked = ''
+    currentUserObj.oldTours = '';
+}
+
 function signOut() {
     console.group('signOut');
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
+        // user infomation vào database của firebase để update thông historyViewde
+        db.collection("users").doc(currentUserObj.email).set(currentUserObj).then(function() {
+            console.log(`Bạn ${currentUserObj.displayName} đã cập nhật thông tin user trên database`);
+        }).catch(function(error) {
+            console.error("Error modify document: ", error);
+        });
         console.log('Sign-out successful.');
-        currentUserObj.isLoggedIn = false;
-        currentUserObj.email = '';
-        currentUserObj.photoURL = '';
-        currentUserObj.historyViewed = '';
-        currentUserObj.tourbooked = ''
-        currentUserObj.oldTours = '';
-        // thay thế nút bấm
-        manageView();
+        clearCurrentUserInfo();
+        window.localStorage.clear();
+        location.reload(true);
     }).catch(function(error) {
         // An error happened.
         console.log('Sign-out error');
