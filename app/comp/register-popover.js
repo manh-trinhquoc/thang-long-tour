@@ -239,8 +239,11 @@ function submitSignIn(event) {
         // [START_EXCLUDE]
         if (errorCode === 'auth/wrong-password') {
             alert('Mật khẩu bạn nhập không chính xác');
+        } else if (errorCode === 'auth/user-not-found') {
+            alert('Email của bạn chưa được đăng ký. \nHãy đăng ký để sử dụng dịch vụ.')
+        } else {
+            console.log(error);
         }
-        console.log(error);
         // [END_EXCLUDE]
     });
     // [END authwithemail]

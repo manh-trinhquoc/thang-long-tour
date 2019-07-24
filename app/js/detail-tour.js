@@ -90,6 +90,7 @@ function submitBookTour() {
     console.group('submitBookTour');
     hidePopover('book-tour-popover');
     let tourID = document.location.href.split('=')[1];
+    if (!Array.isArray(currentUserObj.tourbooked)) currentUserObj.tourbooked = [];
     for (let each of currentUserObj.tourbooked) {
         // nếu tour đã có trong list thì sẽ không thêm vào nữa
         if (each.id == tourID) {
@@ -102,6 +103,12 @@ function submitBookTour() {
     let tour = JSON.parse(JSON.stringify(allToursData[tourID]));
     tour.id = tourID;
     currentUserObj.tourbooked.push(tour);
+
+    // nếu người dùng chưa đăng nhập thì dừng ở bước này
+    if (!currentUserObj.isLoggedIn) {
+        alert('Bạn đã đặt tour thành công. \nChúng tôi sẽ liên hệ trong thời gian sớm nhất');
+        return;
+    }
 
     // book tour infomation được lưu vào database của firebase
     db.collection("users").doc(currentUserObj.email).set(currentUserObj).then(function() {
