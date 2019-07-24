@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    <url>
+        <loc>https://manh-trinhquoc.github.io/thang-long-tour/</loc>
+        <lastmod>2019-07-24T06:00:29+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://manh-trinhquoc.github.io/thang-long-tour/index.html</loc>
+        <lastmod>2019-07-24T06:00:29+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://manh-trinhquoc.github.io/thang-long-tour/find-tours.html</loc>
+        <lastmod>2019-07-24T06:00:29+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://manh-trinhquoc.github.io/thang-long-tour/find-places.html</loc>
+        <lastmod>2019-07-24T06:00:29+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://manh-trinhquoc.github.io/thang-long-tour/find-hotels.html</loc>
+        <lastmod>2019-07-24T06:00:29+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://manh-trinhquoc.github.io/thang-long-tour/find-blogs.html</loc>
+        <lastmod>2019-07-24T06:00:29+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://manh-trinhquoc.github.io/thang-long-tour/about.html</loc>
+        <lastmod>2019-07-24T06:00:29+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+</urlset>
