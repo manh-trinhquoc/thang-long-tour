@@ -370,7 +370,7 @@ ul {
     width: 100%; } }
 
 .logo {
-  width: 290px;
+  width: 280px;
   filter: invert(80%) sepia(65%) saturate(2893%) hue-rotate(359deg) brightness(102%) contrast(105%); }
 
 .header {
@@ -886,6 +886,7 @@ ul {
 
 .fb-comments,
 .fb-like {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 /*# sourceMappingURL=detail.css.map */
