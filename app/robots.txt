@@ -13,3 +13,4 @@ Disallow: /detail-blog.html
 Disallow: /detail-hotel.html
 Disallow: /detail-place.html
 Disallow: /detail-tour.html
+Sitemap: /sitemap.xml
