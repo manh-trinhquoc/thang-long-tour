@@ -44,7 +44,7 @@
         "night": 3,
         "departure": "Hồ Chí Minh",
         "destination": "Hàn Quốc",
-        "departure-date": "2019-07-01",
+        "departure-date": "2019-07-31",
         "trip-type": ["international", "bike"],
         "img": ["img/korean-1.jpg"],
         "link": "html/t001.html",

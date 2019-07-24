@@ -41,25 +41,13 @@
         <li><a href="" class="active">Trang cá nhân</a></li>
     </ul>
     <main class="personal">
-        <div class="col_4">
+        <div class="col_6">
             <h2 class="title_left">Tour sắp đi</h2>
-            <div class="row">
-                <div class="card">
-                    <a href="detail-tour.html">
-                        <div class="card__img">
-                            <img src="img/india-1.jpg" alt="demo image" />
-                            <div class="card__sale">-600.000</div>
-                        </div>
-                        <h4 class="card__country">Ấn độ</h4>
-                        <h3 class="card__header">Tour du lịch Bắc Ấn độ: Ladakh - “tiểu tây tạng trên đất ấn</h3>
-                        <h5 class="card__price">4.500.000</h5>
-                        <h5 class="card__duration">Thời gian: 04 ngày 03 đêm</h5>
-                        <h5 class="card__start-date">Khởi hành: 28/04; 29/04; 2/5</h5>
-                    </a>
-                </div>
+            <div id="next-tour">
+                <!-- js inject data here -->
             </div>
         </div>
-        <div class="col_8">
+        <div class="col_6">
             <h2 class="title_left">Thông tin khách hàng</h2>
             <div class="row">
                 <div class="col">
@@ -72,17 +60,23 @@
                     <p class="input__remark"></p>
                 </div>
             </div>
-            <input class="input__text" type="text" placeholder="Email*" id="js-user-email" />
+            <input class="input__text" type="text" placeholder="Email*" id="js-user-email" readonly="" />
             <p class="input__remark"></p>
-            <input class="input__text" type="text" placeholder="Mật khẩu cũ*" />
+            <div style="position: relative;">
+                <button type="button" class="btn-show-pass" onclick="showPassWord2()" id="js-user-show-pass">
+                    <i class="fas fa-eye-slash"></i>
+                </button>
+                <input class="input__text" type="password" placeholder="Mật khẩu cũ*" id="js-user-pass" />
+                <p class="input__remark"></p>
+            </div>
+            <input class="input__text" type="password" placeholder="Mật khẩu mới*" id="js-new-pass" />
             <p class="input__remark"></p>
-            <input class="input__text" type="text" placeholder="Mật khẩu mới*" />
+            <input class="input__text" type="password" placeholder="Nhắc lại mật khẩu*" id="js-new-pass-2" />
             <p class="input__remark"></p>
-            <input class="input__text" type="text" placeholder="Nhắc lại mật khẩu*" />
-            <p class="input__remark"></p>
+            <p class="register__note">Các trường có dấu * bắt buộc phải điền</p>
             <div class="btn__wrapper">
-                <button type="submit" class="btn_sm">Lưu</button>
-                <button type="submit" class="btn_sm">Hủy</button>
+                <button type="submit" class="btn_sm" onclick="saveUserChanges()">Lưu</button>
+                <button type="submit" class="btn_sm" onclick="discardUserChanges()">Hủy</button>
             </div>
         </div>
     </main>
@@ -94,20 +88,8 @@
     </section>
     <section class="tour-list">
         <h2 class="title">Tour đã đi</h2>
-        <div class="row">
-            <div class="card">
-                <a href="detail-tour.html">
-                    <div class="card__img">
-                        <img src="img/india-1.jpg" alt="demo image" />
-                        <div class="card__sale">-600.000</div>
-                    </div>
-                    <h4 class="card__country">Ấn độ</h4>
-                    <h3 class="card__header">Tour du lịch Bắc Ấn độ: Ladakh - “tiểu tây tạng trên đất ấn</h3>
-                    <h5 class="card__price">4.500.000</h5>
-                    <h5 class="card__duration">Thời gian: 04 ngày 03 đêm</h5>
-                    <h5 class="card__start-date">Khởi hành: 28/04; 29/04; 2/5</h5>
-                </a>
-            </div>
+        <div id="last-tour">
+            <!-- js inject data here -->
         </div>
     </section>
     <footer class="footer" include-html="comp/footer.html">

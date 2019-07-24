@@ -81,12 +81,6 @@ $btn-bg-color: $text-color-darker;
     }
 }
 
-%sm-screen-padding {
-    @media (max-width: 576px) {
-        padding: $padding-xs;
-    }
-}
-
 @mixin container {
     padding-top: $padding-lg;
     @extend %responsive-max-width;

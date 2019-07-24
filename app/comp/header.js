@@ -9,11 +9,11 @@ function toggleRegisterDropdown() {
 
 function clearCurrentUserInfo() {
     currentUserObj.isLoggedIn = false;
+    currentUserObj.fetchedProfile = false;
     currentUserObj.email = '';
-    currentUserObj.photoURL = '';
     currentUserObj.historyViewed = '';
-    currentUserObj.tourbooked = ''
-    currentUserObj.oldTours = '';
+    currentUserObj.tourbooked = '';
+    currentUserObj.password = '';
 }
 
 function signOut() {
@@ -50,4 +50,4 @@ function executeQuery() {
     return false;
 }
 
-loadScript('https://cse.google.com/cse.js?cx=017304219906317488510:iiffvytem58', false, true);
+loadScript('https://cse.google.com/cse.js?cx=017304219906317488510:iiffvytem58', true, true);

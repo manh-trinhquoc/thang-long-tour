@@ -71,6 +71,7 @@ function isValidated(conditionArr, ...elemArr) {
         if (condition == 'isEmail') isEmail(elemArr[0]);
         if (condition == 'isPhoneNumber') isPhoneNumber(elemArr[0]);
         if (condition == 'longerThan6Digit') longerThan6Digit(elemArr[0]);
+        if (condition == 'isEqualOldPass') isEqualOldPass(elemArr[0], elemArr[1]);
         if (!isAllValidated) break;
     };
     return isAllValidated;
@@ -109,8 +110,15 @@ function isValidated(conditionArr, ...elemArr) {
     function longerThan6Digit(elem) {
         if (elem.value.length < 6) {
             isAllValidated = false;
-            elem.nextElementSibling.textContent = 'Mật khẩu phải dài hơn 6 kí tự';
+            elem.nextElementSibling.textContent = 'Mật khẩu phải dài hơn 5 kí tự';
         } else elem.nextElementSibling.textContent = '';
+    }
+
+    function isEqualOldPass(elem1, oldPass) {
+        if (elem1.value != oldPass) {
+            isAllValidated = false;
+            elem1.nextElementSibling.textContent = 'Bạn đã nhập sai mật khẩu';
+        } else elem1.nextElementSibling.textContent = '';
     }
 }
 
@@ -201,19 +209,21 @@ function submitSignIn(event) {
     // [START authwithemail]
     firebase.auth().signInWithEmailAndPassword(email, password).then(function(resolved) {
         // login thanh cong
+        console.log('firebase login successful');
         currentUserObj.isLoggedIn = true;
-        // get user data from database
+        // thêm lịch sử duyệt web cũ từ database
         let docRef = db.collection("users").doc(email);
         docRef.get().then(function(doc) {
             if (doc.exists) {
                 let docData = doc.data();
-                // thêm lịch sử duyệt web cũ từ database
                 currentUserObj.historyViewed.push(...docData.historyViewed);
                 for (; currentUserObj.historyViewed.length > 8;) {
                     currentUserObj.historyViewed.pop();
                 }
                 // ghi ngược vào local storage
                 localStorage.setItem('historyViewed', JSON.stringify(currentUserObj.historyViewed));
+                // reload lại trang để cập nhật thông tin
+                location.reload(true);
             } else {
                 // doc.data() will be undefined in this case
                 console.log("No such document!");

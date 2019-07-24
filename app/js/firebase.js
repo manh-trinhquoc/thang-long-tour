@@ -10,6 +10,7 @@ function autoFillInput() {
     elem.value = currentUserObj.phone;
     elem = document.getElementById('js-user-email');
     elem.value = currentUserObj.email;
+    // document.getElementById('js-user-pass').value = currentUserObj.password;
     console.groupEnd();
 }
 
@@ -27,7 +28,6 @@ function initApp() {
             currentUserObj.isAuthInitialized = true;
             currentUserObj.isLoggedIn = true;
             currentUserObj.email = user.email;
-            currentUserObj.photoURL = user.photoURL;
             // get user data from database
             let docRef = db.collection("users").doc(currentUserObj.email);
             // console.log(user);
@@ -35,10 +35,11 @@ function initApp() {
                 if (doc.exists) {
                     let docData = doc.data();
                     currentUserObj.tourbooked = docData.tourbooked;
-                    currentUserObj.oldTours = docData.oldTours;
                     currentUserObj.phone = docData.phone;
                     currentUserObj.displayName = docData.displayName;
-                    console.log(JSON.stringify(currentUserObj));
+                    currentUserObj.fetchedProfile = true;
+                    currentUserObj.password = docData.password;
+                    // console.log(JSON.stringify(currentUserObj));
                     autoFillInput();
                 } else {
                     // doc.data() will be undefined in this case
@@ -56,7 +57,7 @@ function initApp() {
                 currentUserObj.isAuthInitialized = true;
             }
             currentUserObj.isLoggedIn = false;
-            console.log('user sign not login');
+            console.log('user not login');
         }
         manageView();
         console.groupEnd();

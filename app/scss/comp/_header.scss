@@ -7,9 +7,12 @@
 
 .header {
     @extend %responsive-max-width;
-    @extend %sm-screen-padding;
     padding-top: $padding-md;
     margin: 0 auto;
+
+    @media (max-width: 576px) {
+        padding: $padding-xs;
+    }
 
     &__wrapper {
         position: absolute;

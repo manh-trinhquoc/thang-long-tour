@@ -25,16 +25,19 @@ let xmlhttp = new XMLHttpRequest();
 let url = "json/tours.json";
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
+let allToursData = {};
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        let allToursData = JSON.parse(this.responseText);
+        allToursData = JSON.parse(this.responseText);
         // show tour detail
         let id = document.location.href.split('=')[1];
         showBookInfo(allToursData[id]);
         showDetailTour(allToursData[id]);
+
         // show tour tương tự
         visibleTours = getSimilar(allToursData, id);
         displayTours(visibleTours, undefined, "filter-similar-tour", 4, 2);
+
         // show tour đã xem gần đây
         visibleTours = getRecentlyViewedTours(allToursData, currentUserObj.historyViewed);
         displayTours(visibleTours, undefined, "filter-history", 4, 2);
@@ -84,14 +87,29 @@ function showBookInfo(tourObj) {
 }
 
 function submitBookTour() {
+    console.group('submitBookTour');
     hidePopover('book-tour-popover');
-    let tourID = document.href.split('=')[1];
+    let tourID = document.location.href.split('=')[1];
+    for (let each of currentUserObj.tourbooked) {
+        // nếu tour đã có trong list thì sẽ không thêm vào nữa
+        if (each.id == tourID) {
+            alert('Bạn đã đặt tour này từ trước');
+            console.groupEnd();
+            return;
+        }
+    }
+
+    let tour = JSON.parse(JSON.stringify(allToursData[tourID]));
+    tour.id = tourID;
+    currentUserObj.tourbooked.push(tour);
+
     // book tour infomation được lưu vào database của firebase
-    db.collection("bookTour").doc(email).set(currentUserObj).then(function() {
-        alert(`Bạn ${fullName} đã tạo tài khoản thành công.\n Email: ${email}.\n Số điện thoại: ${phone}.
-                \n Password: ${password}.`);
-        console.log('Tạo bản ghi thành công');
+    db.collection("users").doc(currentUserObj.email).set(currentUserObj).then(function() {
+        alert('Bạn đã đặt tour thành công. \nHãy đến trang cá nhân để xem chi tiết.');
     }).catch(function(error) {
-        console.error("Error adding document: ", error);
+        console.error("lưu thông tin đặt tour thất bại: ", error);
+        alert('Đã xảy ra lỗi trong quá trình đặt tour. \nMời bạn thử lại sau.');
     });
+
+    console.groupEnd();
 }

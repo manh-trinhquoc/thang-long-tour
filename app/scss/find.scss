@@ -5,6 +5,7 @@
     @include container;
     position: relative;
     color: $text-color-darker-1;
+    @include media(flex-wrap, nowrap, 760px);
 
     &__form {
         background-color: $page-color-darker;

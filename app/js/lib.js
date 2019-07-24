@@ -91,7 +91,7 @@ function includeHTML() {
 function convertDataObjToArr(dataObj) {
     let dataArr = [];
     for (id in dataObj) {
-        let item = dataObj[id];
+        let item = JSON.parse(JSON.stringify(dataObj[id]));
         item.id = id;
         dataArr.push(item);
     }
@@ -101,7 +101,7 @@ function convertDataObjToArr(dataObj) {
 function convertDataArrToObj(dataArr) {
     let dataObj = {};
     for (each of dataArr) {
-        let id = each.id;
+        let id = JSON.parse(JSON.stringify(each.id));
         delete each.id;
         dataObj[id] = each;
     }
