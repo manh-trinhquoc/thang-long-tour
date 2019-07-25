@@ -57,7 +57,7 @@ function copy() {
     }).pipe(dest('F://gulp-build/'));
 }
 
-exports.build = copy;
+exports.copy = copy;
 
 /**
  * Push to git hub width ghPages
@@ -78,11 +78,25 @@ function add() {
         .pipe(git.add());
 }
 
+exports.gitadd = add;
+
 function commit() {
     return src('./')
-        .pipe(git.commit('test gulp-git'));
+        .pipe(git.commit('test gulp-git add commit push in exports.build'));
 }
 
-
-exports.gitadd = add;
 exports.gitcommit = commit;
+
+function push() {
+    git.push('origin', 'master', function(err) {
+        if (err) throw err;
+    });
+}
+
+exports.gitpush = push;
+
+exports.build = function() {
+    add();
+    commit();
+    push();
+}
