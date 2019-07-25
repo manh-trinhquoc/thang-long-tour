@@ -74,10 +74,15 @@ let git = require('gulp-git');
 // Run git add
 // src is the file(s) to add (or ./*)
 function add() {
-    return src('./*')
+    return src('.')
         .pipe(git.add());
 }
 
+function commit() {
+    return src(['./', '!node_modules/'])
+        .pipe(git.commit('test gulp-git'));
+}
 
 
 exports.gitadd = add;
+exports.gitcommit = commit;
