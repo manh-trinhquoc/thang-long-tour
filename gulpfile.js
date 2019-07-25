@@ -79,7 +79,7 @@ function add() {
 }
 
 function commit() {
-    return src(['./', '!node_modules/'])
+    return src('./')
         .pipe(git.commit('test gulp-git'));
 }
 
