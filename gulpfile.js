@@ -64,9 +64,9 @@ exports.build = copy;
  */
 // let ghPages = require('gulp-gh-pages');
 
-// exports.gitHub = function() {
-//     return src('./**/*')
-//         .pipe(ghPages())
+// exports.github = function() {
+//     return src(['**/*', '.gitignore', '!node_modules/', '!.git', '!package-lock.json'])
+//         .pipe(ghPages({ branch: 'master' }))
 // };
 
 // git with gulp-git
@@ -78,4 +78,6 @@ function add() {
         .pipe(git.add());
 }
 
-exports.github = add;
+
+
+exports.gitadd = add;
