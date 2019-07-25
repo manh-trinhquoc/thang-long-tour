@@ -1,6 +1,6 @@
 // variable change depend on project
 let remotePath = 'F://server/gulp-build/';
-let commitMessage = 'test remotePath, commitMessage';
+let commitMessage = 'test remotePath, commitMessage series';
 
 
 // 
@@ -153,5 +153,5 @@ exports.clean = clean;
 
 //build task include everything
 
-exports.build = parallel(series(add, commit, push), series(clean, copy,
+exports.build = series(series(add, commit, push), series(clean, copy,
     addremote, commitremote, pushremote));
