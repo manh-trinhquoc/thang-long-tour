@@ -1,6 +1,6 @@
 // variable change depend on project
 let remotePath = 'F://server/gulp-build/';
-let commitMessage = 'test remotePath, commitMessage series';
+let commitMessage = 'gulp build release. have work flow with auto clean, copy and push github';
 
 
 // 
