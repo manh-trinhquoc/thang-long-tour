@@ -109,6 +109,15 @@ function addremote() {
 
 exports.gitaddremote = addremote;
 
+function commitremote() {
+    return src(['./'], {
+            base: 'F://gulp-build'
+        })
+        .pipe(git.commit('test F://gulp-build'));
+}
+
+exports.gitcommitremote = commitremote;
+
 // delete files programmatically
 let del = require('del');
 
