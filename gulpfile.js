@@ -82,21 +82,18 @@ exports.gitadd = add;
 
 function commit() {
     return src('./')
-        .pipe(git.commit('test gulp-git add commit push in exports.build'));
+        .pipe(git.commit('test gulp-git add commit push in exports.build 2'));
 }
 
 exports.gitcommit = commit;
 
-function push() {
+function push(cb) {
     git.push('origin', 'master', function(err) {
         if (err) throw err;
     });
+    cb();
 }
 
 exports.gitpush = push;
 
-exports.build = function() {
-    add();
-    commit();
-    push();
-}
+exports.build = series(add, commit, push);
