@@ -19,9 +19,13 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "node-sass": "^4.12.0",
     "sass": "^1.22.4"
+  },
+  "dependencies": {
+    "gulp-git": "^2.9.0"
   }
 }
