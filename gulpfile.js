@@ -96,4 +96,26 @@ function push(cb) {
 
 exports.gitpush = push;
 
-exports.build = series(add, commit, push);
+//do 3 action in series
+exports.github = series(add, commit, push);
+
+// git in a different folder 
+function addremote() {
+    return src(['.'], {
+            base: 'F://gulp-build'
+        })
+        .pipe(git.add());
+}
+
+exports.gitaddremote = addremote;
+
+// delete files programmatically
+let del = require('del');
+
+function clean() {
+    return del(['F://gulp-build/**/*'], {
+        force: true
+    });
+}
+
+exports.clean = clean;
