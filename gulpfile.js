@@ -82,7 +82,9 @@ exports.gitadd = add;
 
 function commit() {
     return src('./')
-        .pipe(git.commit('test gulp-git add commit push in exports.build 2'));
+        // ********************************************************************
+        // commit develope folder
+        .pipe(git.commit('test exports.build'));
 }
 
 exports.gitcommit = commit;
@@ -101,22 +103,35 @@ exports.github = series(add, commit, push);
 
 // git in a different folder 
 function addremote() {
-    return src(['.'], {
-            base: 'F://gulp-build'
-        })
+    process.chdir('F://gulp-build/');
+    return src('.')
         .pipe(git.add());
 }
 
 exports.gitaddremote = addremote;
 
 function commitremote() {
-    return src(['./'], {
-            base: 'F://gulp-build'
-        })
-        .pipe(git.commit('test F://gulp-build'));
+    process.chdir('F://gulp-build/');
+    return src('./')
+        // ********************************************************************
+        // commit distribution folder
+        .pipe(git.commit('test exports.build'));
 }
 
 exports.gitcommitremote = commitremote;
+
+function pushremote(cb) {
+    process.chdir('F://gulp-build/');
+    git.push('origin', 'master', function(err) {
+        if (err) throw err;
+    });
+    cb();
+}
+
+exports.gitpushremote = pushremote;
+
+//do 3 action in series
+exports.githubremote = series(addremote, commitremote, pushremote);
 
 // delete files programmatically
 let del = require('del');
@@ -128,3 +143,8 @@ function clean() {
 }
 
 exports.clean = clean;
+
+//build task include everything
+
+exports.build = parallel(series(add, commit, push), series(clean, copy,
+    addremote, commitremote, pushremote));
