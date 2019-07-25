@@ -1,9 +1,15 @@
+// variable change depend on project
+let remotePath = 'F://server/gulp-build/';
+let commitMessage = 'test remotePath, commitMessage';
+
+
+// 
 const { src, dest, watch, series, parallel } = require('gulp');
 
-var SASS = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+let SASS = require('gulp-sass');
+let sourcemaps = require('gulp-sourcemaps');
 
-var browserSync = require('browser-sync');
+let browserSync = require('browser-sync');
 
 
 function sass() {
@@ -54,7 +60,7 @@ exports.browserSync = function() {
 function copy() {
     return src(['app/**/*', '!app/scss/**'], {
         base: 'app'
-    }).pipe(dest('F://gulp-build/'));
+    }).pipe(dest(remotePath));
 }
 
 exports.copy = copy;
@@ -84,7 +90,7 @@ function commit() {
     return src('./')
         // ********************************************************************
         // commit develope folder
-        .pipe(git.commit('test exports.build'));
+        .pipe(git.commit(commitMessage));
 }
 
 exports.gitcommit = commit;
@@ -102,8 +108,9 @@ exports.gitpush = push;
 exports.github = series(add, commit, push);
 
 // git in a different folder 
+
 function addremote() {
-    process.chdir('F://gulp-build/');
+    process.chdir(remotePath);
     return src('.')
         .pipe(git.add());
 }
@@ -111,17 +118,17 @@ function addremote() {
 exports.gitaddremote = addremote;
 
 function commitremote() {
-    process.chdir('F://gulp-build/');
+    process.chdir(remotePath);
     return src('./')
         // ********************************************************************
         // commit distribution folder
-        .pipe(git.commit('test exports.build'));
+        .pipe(git.commit(commitMessage));
 }
 
 exports.gitcommitremote = commitremote;
 
 function pushremote(cb) {
-    process.chdir('F://gulp-build/');
+    process.chdir(remotePath);
     git.push('origin', 'master', function(err) {
         if (err) throw err;
     });
@@ -137,7 +144,7 @@ exports.githubremote = series(addremote, commitremote, pushremote);
 let del = require('del');
 
 function clean() {
-    return del(['F://gulp-build/**/*'], {
+    return del([remotePath + '**/*'], {
         force: true
     });
 }
