@@ -1,300 +1,293 @@
 /*general variable and common component show in every pages*/
-@import 'comp/_lib.scss';
-@import 'comp/_redefine.scss';
+@import "comp/_lib.scss";
+@import "comp/_redefine.scss";
 
 .img {
-    &-responsive {
-        width: 100%;
-        max-width: 100%;
-    }
+  &-responsive {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .tour-list {
-    @include container;
-    position: relative;
+  @include container;
+  position: relative;
 
-    &:not(:last-of-type) {
-        border-bottom: 1px solid $page-color-darker;
-    }
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $page-color-darker;
+  }
 }
 
 .row {
-    @extend %d-flex_responsive;
-    @extend %d-flex_center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: $padding-xs;
-    padding-bottom: $padding-xs;
+  @extend %d-flex_responsive;
+  @extend %d-flex_center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: $padding-xs;
+  padding-bottom: $padding-xs;
 
-    &_justify_start {
-        @extend .row;
-        justify-content: flex-start;
-    }
+  &_justify_start {
+    @extend .row;
+    justify-content: flex-start;
+  }
 
-    &_no-wrap {
-        @extend .row_align_start;
-        flex-wrap: nowrap;
-    }
+  &_no-wrap {
+    @extend .row_align_start;
+    flex-wrap: nowrap;
+  }
 
-    &_align_start {
-        @extend .row;
-        -ms-align-items: start;
-        align-items: start;
-    }
+  &_align_start {
+    @extend .row;
+    -ms-align-items: start;
+    align-items: start;
+  }
 }
 
 .col {
-    @include d-flex-col-responsive;
-    flex: 1 0 0%;
+  @include d-flex-col-responsive;
+  flex: 1 0 0%;
+  //   flex: 1 0 40%;
 
-    &_4 {
-        @extend .col;
-        flex: 1 1 33.33%;
-    }
+  &_4 {
+    @extend .col;
+    flex: 1 1 33.33%;
+  }
 
-    &_8 {
-        @extend .col;
-        flex: 1 1 66.65%;
-    }
+  &_8 {
+    @extend .col;
+    flex: 1 1 66.65%;
+  }
 
-    &_fill {
-        @extend .col;
-        max-width: $padding-sm;
-    }
+  &_fill {
+    @extend .col;
+    max-width: $padding-sm;
+  }
 
-    &_3 {
-        @extend .col;
-        flex: 1 1 25%;
-    }
+  &_3 {
+    @extend .col;
+    flex: 1 1 25%;
+  }
 
-    &_6 {
-        @extend .col;
-        flex: 1 1 50%;
-    }
+  &_6 {
+    @extend .col;
+    flex: 1 1 50%;
+  }
 
-    &_9 {
-        @extend .col;
-        flex: 1 1 75%;
-    }
+  &_9 {
+    @extend .col;
+    flex: 1 1 75%;
+  }
 }
 
 .card {
-    @extend .col;
-    height: 350px;
-    margin: $padding-md;
-    @include media(margin-left, 0);
+  @extend .col;
+  height: 350px;
+  margin: $padding-md;
+  @include media(margin-left, 0);
+  position: relative;
+  padding: $padding-sm;
+  color: $text-color-darker-1;
+
+  &__img {
+    height: 170px;
+    overflow: hidden;
+    background-color: inherit;
     position: relative;
-    padding: $padding-sm;
+    /*@extend %d-flex_center;*/
+    @include d-flex;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    padding: $padding-xs;
+    color: $text-color;
+  }
+
+  &__country {
+    padding-top: $padding-xs;
+  }
+
+  &__header {
+    color: $text-color-darker;
+    padding-top: $padding-xs;
+    padding-bottom: $padding-xs;
+    height: 60px;
+    overflow: hidden;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+
+    &-full {
+      @extend .card__header;
+      height: 150px;
+    }
+  }
+
+  &__price {
+    &:after {
+      content: " vnd";
+    }
+  }
+
+  &__duration,
+  &__start-date,
+  &__upload-date,
+  a {
     color: $text-color-darker-1;
+  }
 
-    &__img {
-        height: 170px;
-        overflow: hidden;
-        background-color: inherit;
-        position: relative;
-        /*@extend %d-flex_center;*/
-        @include d-flex;
-
-        img {
-            max-width: 100%;
-        }
-    }
-
-    &__sale {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: red;
-        padding: $padding-xs;
-        color: $text-color;
-    }
-
-    &__country {
-        padding-top: $padding-xs;
-    }
-
-    &__header {
-        color: $text-color-darker;
-        padding-top: $padding-xs;
-        padding-bottom: $padding-xs;
-        height: 60px;
-        overflow: hidden;
-        text-transform: capitalize;
-        font-size: 1.1rem;
-
-        &-full {
-            @extend .card__header;
-            height: 150px;
-        }
-    }
-
-    &__price {
-
-        &:after {
-            content: ' vnd';
-        }
-    }
-
-    &__duration,
-    &__start-date,
-    &__upload-date,
-    a {
-        color: $text-color-darker-1;
-    }
-
-    h5 {
-        padding-top: $padding-xs;
-    }
-
+  h5 {
+    padding-top: $padding-xs;
+  }
 }
 
 .btn {
+  margin: 0 auto;
+  color: $page-color;
+  text-align: center;
+  background-color: $text-color;
+  padding: $btn-padding;
+  border: none;
+  cursor: pointer;
 
-    margin: 0 auto;
+  & a {
     color: $page-color;
-    text-align: center;
-    background-color: $text-color;
-    padding: $btn-padding;
+  }
+
+  &__wrapper {
+    width: 100%;
+    @extend %d-flex_center;
+    padding: $padding-md;
+  }
+
+  &_icon {
+    @extend .btn;
+    width: $search-height;
+    height: $search-height;
+    font-size: $icon-size/1.2;
+    background-color: transparent;
+  }
+
+  &_sm {
+    @extend .btn;
+    width: $btn-sm;
+  }
+
+  &_md {
+    @extend .btn;
+    width: $btn-md;
+  }
+
+  &-show-pass {
+    font-size: $text-size-md + 5px;
+    width: $search-height;
+    height: $search-height;
+    position: absolute;
+    background-color: transparent;
     border: none;
     cursor: pointer;
-
-    & a {
-        color: $page-color;
-    }
-
-
-
-    &__wrapper {
-        width: 100%;
-        @extend %d-flex_center;
-        padding: $padding-md;
-    }
-
-    &_icon {
-        @extend .btn;
-        width: $search-height;
-        height: $search-height;
-        font-size: $icon-size/1.2;
-        background-color: transparent;
-    }
-
-    &_sm {
-        @extend .btn;
-        width: $btn-sm;
-    }
-
-    &_md {
-        @extend .btn;
-        width: $btn-md;
-
-    }
-
-    &-show-pass {
-        font-size: $text-size-md + 5px;
-        width: $search-height;
-        height: $search-height;
-        position: absolute;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        right: 0;
-        top: $search-height/2;
-        transform: translateY(-50%);
-    }
-
+    right: 0;
+    top: $search-height/2;
+    transform: translateY(-50%);
+  }
 }
 
 .title {
-    padding-top: $padding-md;
-    padding-bottom: $padding-md;
+  padding-top: $padding-md;
+  padding-bottom: $padding-md;
 
-    &_left {
-        @extend .title;
-        text-align: left;
+  &_left {
+    @extend .title;
+    text-align: left;
 
-        &-top {
-            @extend .title_left;
-            padding-top: 0;
-        }
+    &-top {
+      @extend .title_left;
+      padding-top: 0;
     }
+  }
 }
 
 .input {
+  &__text {
+    width: 100%;
+    padding: $padding-xs;
+    height: $search-height;
+    display: block;
+    border: none;
+  }
 
-    &__text {
-        width: 100%;
-        padding: $padding-xs;
-        height: $search-height;
-        display: block;
-        border: none;
+  &__remark {
+    width: 100%;
+    height: $search-height/2;
+    font-size: $text-size-xs;
+    margin: 0;
+    padding-top: $padding-md;
+    padding-bottom: $padding-md;
+  }
+
+  &__select {
+    @extend .input__text;
+    background-color: $page-color;
+    color: $text-color-darker;
+
+    &_background {
+      @extend .input__select;
+      background-color: $page-color-darker;
+      margin-left: $padding-sm;
+    }
+  }
+
+  &__checkbox {
+    width: $padding-md;
+    height: $padding-md;
+    color: $text-no-color;
+
+    &:after {
+      width: $padding-md;
+      height: $padding-md;
+      background: $page-color;
+      content: "";
+      display: inline-block;
     }
 
-    &__remark {
-        width: 100%;
-        height: $search-height/2;
-        font-size: $text-size-xs;
-        margin: 0;
-        padding-top: $padding-md;
-        padding-bottom: $padding-md;
+    &:checked:after {
+      content: "\2714";
+      text-align: center;
+      color: $text-no-color;
+    }
+  }
+
+  &__radio-checkbox {
+    width: $padding-md;
+    height: $padding-md;
+    border-radius: $padding-md/2;
+    color: $text-no-color;
+
+    &:after {
+      width: $padding-md;
+      height: $padding-md;
+      border-radius: $padding-md/2;
+      background: $page-color;
+      content: "";
+      display: inline-block;
     }
 
-    &__select {
-        @extend .input__text;
-        background-color: $page-color;
-        color: $text-color-darker;
-
-        &_background {
-            @extend .input__select;
-            background-color: $page-color-darker;
-            margin-left: $padding-sm;
-        }
+    &:checked:after {
+      content: "\2714";
+      text-align: center;
+      color: $text-no-color;
     }
+  }
 
-    &__checkbox {
-        width: $padding-md;
-        height: $padding-md;
-        color: $text-no-color;
-
-        &:after {
-            width: $padding-md;
-            height: $padding-md;
-            background: $page-color;
-            content: "";
-            display: inline-block;
-        }
-
-        &:checked:after {
-            content: "\2714";
-            text-align: center;
-            color: $text-no-color;
-        }
-    }
-
-    &__radio-checkbox {
-        width: $padding-md;
-        height: $padding-md;
-        border-radius: $padding-md/2;
-        color: $text-no-color;
-
-        &:after {
-            width: $padding-md;
-            height: $padding-md;
-            border-radius: $padding-md/2;
-            background: $page-color;
-            content: "";
-            display: inline-block;
-        }
-
-        &:checked:after {
-            content: "\2714";
-            text-align: center;
-            color: $text-no-color;
-        }
-    }
-
-    &__date {
-        @extend .input__select;
-    }
+  &__date {
+    @extend .input__select;
+  }
 }
 
 /*input[type="checkbox"] {
@@ -310,57 +303,53 @@
 }*/
 
 .breadcrumb {
-    @extend %responsive-max-width;
+  @extend %responsive-max-width;
+  padding-left: $padding-xs;
+  padding-right: $padding-xs;
+  margin-top: $padding-lg;
+
+  li {
+    display: inline-block;
+  }
+
+  li:not(:last-child):after {
+    content: "/";
+    display: inline-block;
     padding-left: $padding-xs;
     padding-right: $padding-xs;
-    margin-top: $padding-lg;
+  }
 
-    li {
-        display: inline-block;
-
-
-    }
-
-    li:not(:last-child):after {
-        content: "/";
-        display: inline-block;
-        padding-left: $padding-xs;
-        padding-right: $padding-xs;
-    }
-
-    .active {
-        color: $text-color;
-    }
+  .active {
+    color: $text-color;
+  }
 }
 
 .map-marker {
-    padding-left: $padding-xs;
-    padding-right: $padding-xs;
-    @include media(height, 500px);
+  padding-left: $padding-xs;
+  padding-right: $padding-xs;
+  @include media(height, 500px);
 
-    iframe {
-        width: 100%;
-        height: 100%;
-    }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-@import 'comp/_header.scss';
-@import 'comp/_banner.scss';
-@import 'comp/_footer.scss';
-@import 'comp/_register-popover.scss';
+@import "comp/_header.scss";
+@import "comp/_banner.scss";
+@import "comp/_footer.scss";
+@import "comp/_register-popover.scss";
 
 .search-gg {
-
-
-    &-input {
-        background-color: blue;
-        padding: 10px;
-    }
+  &-input {
+    background-color: blue;
+    padding: 10px;
+  }
 }
 
 #search-gg {
-    background-color: blue;
-    height: 0px;
-    width: 0px;
-    visibility: hidden;
+  background-color: blue;
+  height: 0px;
+  width: 0px;
+  visibility: hidden;
 }

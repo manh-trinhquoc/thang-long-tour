@@ -1,9 +1,15 @@
 // variable change depend on project
-let remotePath = "F://server/gulp-build/";
-let commitMessage = "auto beautiful";
+let remotePath = "../server/gulp-build/";
+let commitMessage = " ubuntu";
 
 //
-const { src, dest, watch, series, parallel } = require("gulp");
+const {
+  src,
+  dest,
+  watch,
+  series,
+  parallel
+} = require("gulp");
 
 let SASS = require("gulp-sass");
 let sourcemaps = require("gulp-sourcemaps");
@@ -21,26 +27,30 @@ function sass() {
 
 function watchSaas(cb) {
   // monitor scss file
-  watch(["app/**", "!app/css/**"], { ignoreInitial: false }, sass);
+  watch(["app/**", "!app/css/**"], {
+    ignoreInitial: false
+  }, sass);
   cb();
 }
 
-exports.default = function(cb) {
+exports.default = function (cb) {
   // compile sass and reload browser if anything change
   browserSync.init({
     server: {
       baseDir: "app"
     }
   });
-  watch(["app/**", "!app/css/**"], { ignoreInitial: false }, sass);
-  watch(["app/**", "!app/scss/**"], function(cb) {
+  watch(["app/**", "!app/css/**"], {
+    ignoreInitial: false
+  }, sass);
+  watch(["app/**", "!app/scss/**"], function (cb) {
     browserSync.reload();
     cb();
   });
   cb();
 };
 
-exports.browserSync = function() {
+exports.browserSync = function () {
   // reload browser if anything change. exclude scss file
   browserSync.init({
     server: {
@@ -48,7 +58,7 @@ exports.browserSync = function() {
     }
   });
 
-  watch(["app/**", "!app/css/**", "!app/scss/**"], function(cb) {
+  watch(["app/**", "!app/css/**", "!app/scss/**"], function (cb) {
     browserSync.reload();
     cb();
   });
@@ -85,16 +95,16 @@ exports.gitadd = add;
 function commit() {
   return (
     src("./")
-      // ********************************************************************
-      // commit develope folder
-      .pipe(git.commit(commitMessage))
+    // ********************************************************************
+    // commit develope folder
+    .pipe(git.commit(commitMessage))
   );
 }
 
 exports.gitcommit = commit;
 
 function push(cb) {
-  git.push("origin", "master", function(err) {
+  git.push("origin", "master", function (err) {
     if (err) throw err;
   });
   cb();
@@ -118,9 +128,9 @@ function commitremote() {
   process.chdir(remotePath);
   return (
     src("./")
-      // ********************************************************************
-      // commit distribution folder
-      .pipe(git.commit(commitMessage))
+    // ********************************************************************
+    // commit distribution folder
+    .pipe(git.commit(commitMessage))
   );
 }
 
@@ -128,7 +138,7 @@ exports.gitcommitremote = commitremote;
 
 function pushremote(cb) {
   process.chdir(remotePath);
-  git.push("origin", "master", function(err) {
+  git.push("origin", "master", function (err) {
     if (err) throw err;
   });
   cb();

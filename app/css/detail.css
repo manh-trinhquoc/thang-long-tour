@@ -167,7 +167,7 @@ ul {
     .card__header-full {
       height: 150px; }
   .card__price:after {
-    content: ' vnd'; }
+    content: " vnd"; }
   .card__duration, .card__start-date, .card__upload-date,
   .card a,
   .card-hotel a {
