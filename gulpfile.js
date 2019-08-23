@@ -1,7 +1,7 @@
 // variable change depend on project
 let remotePath = "../server/gulp-build/";
 let remoteGitPath = "../server/";
-let commitMessage = " ubuntu";
+let commitMessage = " test git save github credentical";
 
 //
 const {
