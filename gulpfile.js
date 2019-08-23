@@ -1,5 +1,6 @@
 // variable change depend on project
 let remotePath = "../server/gulp-build/";
+let remoteGitPath = "../server/";
 let commitMessage = " ubuntu";
 
 //
@@ -118,14 +119,14 @@ exports.github = series(add, commit, push);
 // git in a different folder
 
 function addremote() {
-  process.chdir(remotePath);
+  process.chdir(remoteGitPath);
   return src(".").pipe(git.add());
 }
 
 exports.gitaddremote = addremote;
 
 function commitremote() {
-  process.chdir(remotePath);
+  process.chdir(remoteGitPath);
   return (
     src("./")
     // ********************************************************************
@@ -137,7 +138,7 @@ function commitremote() {
 exports.gitcommitremote = commitremote;
 
 function pushremote(cb) {
-  process.chdir(remotePath);
+  process.chdir(remoteGitPath);
   git.push("origin", "master", function (err) {
     if (err) throw err;
   });
