@@ -24,7 +24,7 @@
     "gulp-inject": "^5.0.4",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "sass": "^1.22.4"
   },
   "dependencies": {
